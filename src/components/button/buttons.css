@@ -1,0 +1,43 @@
+.button:hover {
+  background-color: #cccccc;
+}
+
+.button.primary:not(.outlined) {
+  color: var(--color);
+  background-color: var(--primary-color);
+}
+
+.button.primary:hover:not(.outlined) {
+  background-color: var(--primary-color-hover);
+}
+
+.button.secondary:not(.outlined) {
+  color: var(--color);
+  background-color: var(--secondary-color);
+}
+
+.button.secondary:hover:not(.outlined) {
+  background-color: var(--secondary-color-hover);
+}
+
+.button.primary.outlined {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+}
+
+.button.primary.outlined:hover {
+  color: var(--color);
+  background-color: var(--primary-color);
+}
+
+.button.secondary.outlined {
+  color: var(--secondary-color);
+  background-color: transparent;
+  border: 2px solid var(--secondary-color);
+}
+
+.button.secondary.outlined:hover {
+  color: var(--color);
+  background-color: var(--secondary-color);
+}
