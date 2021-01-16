@@ -25,7 +25,10 @@ const SocialDiv = styled.a`
             padding-left: 3px;
         }
     }
+`;
 
+const ListElement = styled.li`
+    margin: 12px 0;
 `;
 
 export const ContactPage = () => {
@@ -49,12 +52,12 @@ export const ContactPage = () => {
             <h2>Coordonates</h2>
             <p>You can contact or meet me with this different informations :</p>
             <ul style={{ listStyle: "none", fontSize: 17 }}>
-                <li>
+                <ListElement>
                     <FontAwesomeIcon icon={faPhone} /> (+33) 6 99 12 07 22
-                </li>
-                <li>
+                </ListElement>
+                <ListElement>
                     <FontAwesomeIcon icon={faHome} /> 12 Rue de Suresnes, Colombelles, Normandy, France
-                </li>
+                </ListElement>
             </ul>
         </section>
     </>

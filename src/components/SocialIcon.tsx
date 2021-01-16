@@ -18,7 +18,7 @@ export const SocialIconClickable = (props: {
 }
 
 export const SocialIconContainer = styled.div`
-display: flex;
-text-align: center;
-justify-content: space-evenly;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
 `;

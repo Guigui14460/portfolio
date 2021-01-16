@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Marginer from "../marginer";
 
 import { Link } from "react-router-dom";
-import { deviceSize } from "../responsive";
+import { deviceSize } from "../Responsive";
 import { useMediaQuery } from "react-responsive";
 
 const NavbarContainer = styled.nav<{ useTransparent: boolean }>`
@@ -24,9 +24,7 @@ const AnchorLink = styled(Link)<{ fontSize: number | undefined }>`
     font-size: ${({ fontSize }) => (fontSize !== undefined ? fontSize + "px" : "15px")};
     color: var(--color);
     cursor: pointer;
-    text-decoration: none;
     outline: none;
-    transition: all 200ms ease-in-out;
 
     &:hover, &:focus {
         color: var(--color);
@@ -53,5 +51,6 @@ const Navbar = (props: { useTransparent: boolean; }) => {
         </AccessibilityContainer>
     </NavbarContainer>
 }
+// TODO: à modifier sur les petits téléphones
 
 export default Navbar;

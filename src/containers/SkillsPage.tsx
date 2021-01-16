@@ -1,13 +1,177 @@
 import React from 'react';
+import styled from 'styled-components';
+import Marginer from '../components/marginer';
 import { SkillLevel } from '../components/ProgressBarSkill';
 import ProgressBarSkill from '../components/ProgressBarSkill';
+import { Link } from 'react-router-dom';
+import Grid from '../components/grid';
+
+import { motivationIcon, curiousIcon, timeIcon, brainstormingIcon } from "../images/Images";
+import { firebaseIcon, mysqlIcon, postgresqlIcon, mongodbIcon, sqliteIcon, vuejsIcon, djangoIcon, reactjsIcon, jupyterIcon, numpyIcon, pandasIcon, scipyIcon, matplotlibIcon, seabornIcon } from "../images/Icons"
+
+const SkillIcon = styled.img<{ width: number }>`
+    width: ${({ width }) => width}px;
+    height: auto;
+`;
+
+const ElementItem = styled.a`
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+    & > img {
+        margin-right: 10px;
+    }
+`;
+
+
+const ElementContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+`;
 
 export const SkillsPage = () => {
-    return <div>Skills
-        <div style={{width: "300px", border: "1px solid white"}}>
-        <ProgressBarSkill name="Python" percentage={50} level={SkillLevel.Expert} color="#dbcf21" />
-        <ProgressBarSkill name="C" percentage={75} level={SkillLevel.Intermediate} color="#e7762b" />
-        <ProgressBarSkill name="ReactJS" percentage={12} level={SkillLevel.Beginner} color="#21db2a" />
-        </div>
-    </div>
+    return <>
+        <h1>Skills</h1>
+        <section>
+            <h2>Soft skill</h2>
+            <Marginer direction="vertical" margin={20} />
+            <Grid row style={{ textAlign: "center" }}>
+                <Grid column sm={12} md={6} lg={3}>
+                    <SkillIcon width={100} src={motivationIcon} alt="Motivation icon" />
+                    <h3>Motivated</h3>
+                    <p>I am a person who is always motivated when I undertake any kind of activity. Motivation is one of the most useful skills in our daily life, it allows us to continue and get closer to our goals.<br/>
+                        You can see <Link to="/about#sentences">my sentences</Link> to understand how important this skill is to me.</p>
+                </Grid>
+                <Grid column sm={12} md={6} lg={3}>
+                    <SkillIcon width={100} src={curiousIcon} alt="Curious icon" />
+                    <h3>Curious</h3>
+                    <p>Curiosity is very important. It allows us to deepen our knowledge in different fields. In the world of computer development, in particular, it is even more so, in order to know better and more languages, frameworks or libraries for the project we are working on, or for another one in the future.</p>
+                </Grid>
+                <Grid column sm={12} md={6} lg={3}>
+                    <SkillIcon width={100} src={timeIcon} alt="Time icon" />
+                    <h3>Patient</h3>
+                    <p>Patience, in my opinion, is essential in computer science. Indeed, when we develop any kind of program, we encounter some problems that are more or less difficult to solve. This skill allows us to be able to reflect on it in order to calmly understand what is wrong. As they say, "To those who know how to wait, time opens its doors".</p>
+                </Grid>
+                <Grid column sm={12} md={6} lg={3}>
+                    <SkillIcon width={100} src={brainstormingIcon} alt="Brainstorming icon" />
+                    <h3>Problem solving</h3>
+                    <p>As said before, we can encounter a lot of problems in all existing areas. In computer science, problems are omnipresent so this quality is fundamental. Indeed, without it, it is impossible to work because during the development of a project, we are constantly confronted with new problems, whether it is writing code, interpretation, compilation, or deployment in production.</p>
+                </Grid>
+            </Grid>
+        </section>
+        <section>
+            {/* TODO: https://www.react-reveal.com/docs/ */}
+            <h2>Hard skills</h2>
+            <Grid row style={{ textAlign: "center" }}>
+                <Grid column sm={12} md={7}>
+                    <h3>Programming languages</h3>
+                    <Grid row style={{ alignItems: 'flex-end' }}>
+                        <Grid column sm={12} md={4}>
+                            <ProgressBarSkill name="Python" percentage={50} level={SkillLevel.Expert} color="#3572a5" />
+                        </Grid>
+                        <Grid column sm={6} md={4}>
+                            <ProgressBarSkill name="Java" percentage={50} level={SkillLevel.Expert} color="#b07219" />
+                        </Grid>
+                        <Grid column sm={6} md={4}>
+                            <ProgressBarSkill name="C" percentage={50} level={SkillLevel.Intermediate} color="#555555" />
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <ProgressBarSkill name="Javascript" percentage={50} level={SkillLevel.Expert} color="#f1e05a" />
+                        </Grid>
+                        <Grid column sm={6} md={6}>
+                            <ProgressBarSkill name="Typescript" percentage={50} level={SkillLevel.Intermediate} color="#2b7489" />
+                        </Grid>
+                        <Grid column sm={6} md={4}>
+                            <ProgressBarSkill name="PHP" percentage={50} level={SkillLevel.Intermediate} color="#4f5d95" />
+                        </Grid>
+                        <Grid column sm={12} md={4}>
+                            <ProgressBarSkill name="Dart (Flutter)" percentage={50} level={SkillLevel.Intermediate} color="#00b4ab" />
+                        </Grid>
+                        <Grid column sm={6} md={4}>
+                            <ProgressBarSkill name="HTML/CSS" percentage={50} level={SkillLevel.Expert} color="#e34c26" />
+                        </Grid>
+                        <Grid column sm={6} md={6}>
+                            <ProgressBarSkill name="Haskell" percentage={50} level={SkillLevel.Intermediate} color="#5e5086" />
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <ProgressBarSkill name="Sass/Scss" percentage={50} level={SkillLevel.Intermediate} color="#cf5c92" />
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid column sm={12} md={5}>
+                    <h3>Databases</h3>
+                    <ElementContainer>
+                        <ElementItem href="https://sqlite.org/index.html" title="SQLite" target="_blank" rel="noreferrer">
+                            <SkillIcon width={50} src={sqliteIcon} title="SQLite" alt="SQLite icon" />
+                            SQLite
+                        </ElementItem>
+                        <ElementItem href="https://www.mysql.com/" title="MySQL" target="_blank" rel="noreferrer">
+                            <SkillIcon width={50} src={mysqlIcon} title="MySQL" alt="MySQL icon" />
+                            MySQL/MariaDB
+                        </ElementItem>
+                        <ElementItem href="https://www.postgresql.org/" title="PostgreSQL" target="_blank" rel="noreferrer">
+                            <SkillIcon width={50} src={postgresqlIcon} title="PostgreSQL" alt="PostgreSQL icon" />
+                            PostgreSQL
+                        </ElementItem>
+                        <ElementItem href="https://www.mongodb.com/" title="MongoDB" target="_blank" rel="noreferrer">
+                            <SkillIcon width={50} src={mongodbIcon} title="MongoDB" alt="MongoDB icon" />
+                            MongoDB
+                        </ElementItem>
+                        <ElementItem href="https://firebase.google.com/" title="Firebase" target="_blank" rel="noreferrer">
+                            <SkillIcon width={50} src={firebaseIcon} title="Firebase" alt="Firebase icon" />
+                            Firebase
+                        </ElementItem>
+                    </ElementContainer>
+                </Grid>
+                <Grid column sm={12} md={6}>
+                    <h3>Some frameworks</h3>
+                    <ElementContainer>
+                        <ElementItem href="https://www.djangoproject.com/" title="Django" target="_blank" rel="noreferrer">
+                            <SkillIcon width={100} src={djangoIcon} title="Django" alt="Django icon" />
+                            Django
+                        </ElementItem>
+                        <ElementItem href="https://reactjs.org/" title="ReactJS" target="_blank" rel="noreferrer">
+                            <SkillIcon width={50} src={reactjsIcon} title="ReactJS" alt="ReactJS icon" />
+                            ReactJS
+                        </ElementItem>
+                        <ElementItem href="https://vuejs.org/" title="VueJS" target="_blank" rel="noreferrer">
+                            <SkillIcon width={50} src={vuejsIcon} title="VueJS" alt="VueJS icon" />
+                            VueJS
+                        </ElementItem>
+                    </ElementContainer>
+                </Grid>
+                <Grid column sm={12} md={6}>
+                    <h3>Scientific libraries/environment</h3>
+                    <ElementContainer>
+                        <ElementItem href="https://jupyter.org/" title="Jupyter" target="_blank" rel="noreferrer">
+                            <SkillIcon width={50} src={jupyterIcon} title="Jupyter" alt="Jupyter icon" />
+                            Jupyter Notebook
+                        </ElementItem>
+                        <ElementItem href="https://numpy.org/" title="NumPy" target="_blank" rel="noreferrer">
+                            <SkillIcon width={50} src={numpyIcon} title="NumPy" alt="NumPy icon" />
+                            NumPy
+                        </ElementItem>
+                        <ElementItem href="https://pandas.pydata.org/" title="Pandas" target="_blank" rel="noreferrer">
+                            <SkillIcon width={100} src={pandasIcon} title="Pandas" alt="Pandas icon" />
+                            Pandas
+                        </ElementItem>
+                        <ElementItem href="https://www.scipy.org/" title="SciPy" target="_blank" rel="noreferrer">
+                            <SkillIcon width={50} src={scipyIcon} title="SciPy" alt="SciPy icon" />
+                            SciPy
+                        </ElementItem>
+                        <ElementItem href="https://matplotlib.org/" title="Matplotlib" target="_blank" rel="noreferrer">
+                            <SkillIcon width={100} src={matplotlibIcon} title="Matplotlib" alt="Matplotlib icon" />
+                            Matplotlib
+                        </ElementItem>
+                        <ElementItem href="https://seaborn.pydata.org/index.html" title="Seaborn" target="_blank" rel="noreferrer">
+                            <SkillIcon width={100} src={seabornIcon} title="Seaborn" alt="Seaborn icon" />
+                            Seaborn
+                        </ElementItem>
+                    </ElementContainer>
+                </Grid>
+            </Grid>
+        </section>
+    </>
 }

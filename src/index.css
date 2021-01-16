@@ -7,6 +7,12 @@
   --color: #dddddd;
 }
 
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -28,14 +34,21 @@ main {
   flex-grow: 1;
 }
 
-*,
-::after,
-::before {
-  box-sizing: border-box;
+section {
+  margin: 0 auto 60px auto;
+}
+
+article {
+  margin: 30px auto 0 auto;
+}
+article:first-of-type {
+  margin-top: 0;
 }
 
 a {
   color: #4281e7;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
 }
 a:hover,
 a:focus {
@@ -49,10 +62,6 @@ h1 {
 .container {
   width: 90%;
   margin: 10px auto;
-}
-
-section {
-  margin: 0 auto 60px auto;
 }
 
 @media (min-width: 768px) {
@@ -69,6 +78,6 @@ section {
 
 @media (min-width: 1324px) {
   .container {
-    width: 50%;
+    width: 60%;
   }
 }
