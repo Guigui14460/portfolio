@@ -71,8 +71,6 @@ export const SkillsPage = () => {
                         {Object.entries(languageInformations).map(([key, val], index) => {
                             let sm: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined = 12;
                             let md: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined = 4;
-                            console.log(index % 5 === 3 || index % 5 === 4);
-                            console.log(index);
                             if(index % 5 === 3 || index % 5 === 4){
                                 md = 6;
                             }
