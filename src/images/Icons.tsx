@@ -11,6 +11,7 @@ import reactjsIcon from "./reactjs.svg";
 import seabornIcon from "./seaborn.svg";
 import scipyIcon from "./scipy.png";
 import sqliteIcon from "./sqlite.png";
+import tensorflowIcon from "./tensorflow.svg";
 import vuejsIcon from "./vuejs.png";
 
 export {
@@ -27,5 +28,6 @@ export {
     seabornIcon,
     scipyIcon,
     sqliteIcon,
+    tensorflowIcon,
     vuejsIcon,
 };

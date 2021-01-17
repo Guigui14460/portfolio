@@ -9,6 +9,10 @@ export const AboutPage = (props: any) => {
     return <>
         <h1>About me</h1>
         <section>
+            <h2>My history</h2>
+            {/* TODO: Faire cette partie */}
+        </section>
+        <section>
             <h2>Work philosophy</h2>
             <article id="sentences">
                 <h3>My sentences</h3>
@@ -28,6 +32,52 @@ export const AboutPage = (props: any) => {
                     <li><GreatPeopleLink target="_blank" href="https://www.wikiwand.com/en/Robert_Kiyosaki">Robert Kiyosaki</GreatPeopleLink> : for his demonstration on how to effectively manage money and the importance of financial literacy for everyone.</li>
                     <li><GreatPeopleLink target="_blank" href="https://www.wikiwand.com/en/Albert_Einstein">Albert Einstein</GreatPeopleLink> : why not put it on ! His great intelligence put at the service of the understanding of the world around us, which has revolutionized physics and has brought enormous benefits to humanity and science.</li>
                 </ul>
+            </article>
+        </section>
+        <section>
+            <h2>Educational background and diplomas</h2>
+            <article>
+                <h3>Etablishments</h3>
+                <ul>
+                    <li>From Sep 2011 to July 2015 : Henri Sellier Lower Secondary School, Colombelles, Normandy, France</li>
+                    <li>From Sep 2015 to July 2018 : Salvador Allende High School, Hérouville-Saint-Clair, Normandy, France</li>
+                    <li>From Sep 2018 to June 2021 : University of Caen Normandy, France</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Download my diplomas</h3>
+                <ul>
+                    <li><a download href="high_school_diploma.pdf">High School diploma (scientific option)</a></li>
+                    <li><a download href="university_first_year.pdf">Marks of 1st year in University of Caen Normandy</a></li>
+                    <li><a download href="university_second_year.pdf">Marks of 2nd year in University of Caen Normandy</a></li>
+                </ul>
+            </article>
+        </section>
+        <section>
+            <h2>Hobbies</h2>
+            <article>
+                <h3>Computer science</h3>
+                <ul>
+                    <li>Artificial intelligence (Machine Learning and Deep Learning particularly)</li>
+                    <li>Algorithmic</li>
+                    <li>Quantum computing</li>
+                    <li>Scientific computing and parallelism</li>
+                    <li>Cryptography</li>
+                    <li>Data analysis</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Physics</h3>
+                <ul>
+                    <li>Astrophysics / astronomy / cosmology</li>
+                    <li>Quantum physics</li>
+                    <li>Particle theory</li>
+                    <li>General relativity theory</li>
+                </ul>
+            </article>
+            <article>
+                <h3>History</h3>
+                <p>All historical periods and from all countries</p>
             </article>
         </section>
     </>

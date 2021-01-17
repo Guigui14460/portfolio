@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styled from 'styled-components';
 import { SocialIcon } from '../components/SocialIcon';
-import { emailAddress, socialAccounts } from '../model/data';
+import { address, emailAddress, phoneLongVersion, phoneShortVersion, socialAccounts } from '../model/data';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPhone, faHome } from '@fortawesome/free-solid-svg-icons';
 library.add(faPhone, faHome);
@@ -42,21 +42,21 @@ export const ContactPage = () => {
             <h2>Via social networks</h2>
             <p>You can contact me via different social networks :</p>
             <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-evenly", alignItems: "center"}}>
-                {socialAccounts.map<JSX.Element>((value, index) => {return <SocialDiv href={value.url} rel="noreferrer" target="_blank" >
-                    <SocialIcon key={index} size="2x" colorUsed={value.iconColor} icon={value.iconProperties} />
+                {socialAccounts.map<JSX.Element>((value, index) => {return <SocialDiv key={index} href={value.url} rel="noreferrer" target="_blank" >
+                    <SocialIcon key={index} size="2x" colorused={value.iconColor} icon={value.iconProperties} />
                     <span>{value.name}<span>({value.username})</span></span>
                 </SocialDiv>})}
             </div>
         </section>
         <section>
-            <h2>Coordonates</h2>
+            <h2>Contact information</h2>
             <p>You can contact or meet me with this different informations :</p>
             <ul style={{ listStyle: "none", fontSize: 17 }}>
                 <ListElement>
-                    <FontAwesomeIcon icon={faPhone} /> (+33) 6 99 12 07 22
+                    <FontAwesomeIcon icon={faPhone} /> <a href={"tel:" + phoneShortVersion}>{phoneLongVersion}</a>
                 </ListElement>
                 <ListElement>
-                    <FontAwesomeIcon icon={faHome} /> 12 Rue de Suresnes, Colombelles, Normandy, France
+                    <FontAwesomeIcon icon={faHome} /> {address}
                 </ListElement>
             </ul>
         </section>

@@ -50,13 +50,17 @@ a {
   text-decoration: none;
   transition: all 200ms ease-in-out;
 }
-a:hover,
-a:focus {
+a:not(.button-link):hover,
+a:not(.button-link):focus {
   filter: contrast(0.6);
 }
 
 h1 {
   text-align: center;
+}
+
+.primary {
+  color: #0d4194;
 }
 
 .container {

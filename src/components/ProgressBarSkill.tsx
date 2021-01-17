@@ -3,16 +3,11 @@ import React from 'react';
 import styled from 'styled-components';
 import Marginer from './marginer';
 import { hexToRgb, contrast } from '../utils';
-
-export enum SkillLevel {
-    Beginner,
-    Intermediate,
-    Expert,
-};
+import { SkillLevel } from '../model/Language';
 
 const ProgressBarWrapper = styled(motion.div)<{ color: string }>`
     width: 100%;
-    height: 12px;
+    height: 10px;
     background-color: ${({ color }) => (contrast(hexToRgb(color), hexToRgb("#4b4747")) < 2 ? "#ffffff" : "#4b4747")};
     border-radius: 50px;
     overflow: hidden;

@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Marginer from '../components/marginer';
-import { SkillLevel } from '../components/ProgressBarSkill';
 import ProgressBarSkill from '../components/ProgressBarSkill';
 import { Link } from 'react-router-dom';
 import Grid from '../components/grid';
 
 import { motivationIcon, curiousIcon, timeIcon, brainstormingIcon } from "../images/Images";
-import { firebaseIcon, mysqlIcon, postgresqlIcon, mongodbIcon, sqliteIcon, vuejsIcon, djangoIcon, reactjsIcon, jupyterIcon, numpyIcon, pandasIcon, scipyIcon, matplotlibIcon, seabornIcon } from "../images/Icons"
+import { firebaseIcon, mysqlIcon, postgresqlIcon, mongodbIcon, sqliteIcon, vuejsIcon, djangoIcon, reactjsIcon, jupyterIcon, numpyIcon, pandasIcon, scipyIcon, matplotlibIcon, tensorflowIcon, seabornIcon } from "../images/Icons"
+import languageInformations from '../model/Language';
 
 const SkillIcon = styled.img<{ width: number }>`
     width: ${({ width }) => width}px;
@@ -68,39 +68,38 @@ export const SkillsPage = () => {
                 <Grid column sm={12} md={7}>
                     <h3>Programming languages</h3>
                     <Grid row style={{ alignItems: 'flex-end' }}>
-                        <Grid column sm={12} md={4}>
-                            <ProgressBarSkill name="Python" percentage={50} level={SkillLevel.Expert} color="#3572a5" />
-                        </Grid>
-                        <Grid column sm={6} md={4}>
-                            <ProgressBarSkill name="Java" percentage={50} level={SkillLevel.Expert} color="#b07219" />
-                        </Grid>
-                        <Grid column sm={6} md={4}>
-                            <ProgressBarSkill name="C" percentage={50} level={SkillLevel.Intermediate} color="#555555" />
-                        </Grid>
-                        <Grid column sm={12} md={6}>
-                            <ProgressBarSkill name="Javascript" percentage={50} level={SkillLevel.Expert} color="#f1e05a" />
-                        </Grid>
-                        <Grid column sm={6} md={6}>
-                            <ProgressBarSkill name="Typescript" percentage={50} level={SkillLevel.Intermediate} color="#2b7489" />
-                        </Grid>
-                        <Grid column sm={6} md={4}>
-                            <ProgressBarSkill name="PHP" percentage={50} level={SkillLevel.Intermediate} color="#4f5d95" />
-                        </Grid>
-                        <Grid column sm={12} md={4}>
-                            <ProgressBarSkill name="Dart (Flutter)" percentage={50} level={SkillLevel.Intermediate} color="#00b4ab" />
-                        </Grid>
-                        <Grid column sm={6} md={4}>
-                            <ProgressBarSkill name="HTML/CSS" percentage={50} level={SkillLevel.Expert} color="#e34c26" />
-                        </Grid>
-                        <Grid column sm={6} md={6}>
-                            <ProgressBarSkill name="Haskell" percentage={50} level={SkillLevel.Intermediate} color="#5e5086" />
-                        </Grid>
-                        <Grid column sm={12} md={6}>
-                            <ProgressBarSkill name="Sass/Scss" percentage={50} level={SkillLevel.Intermediate} color="#cf5c92" />
-                        </Grid>
+                        {Object.entries(languageInformations).map(([key, val], index) => {
+                            let sm: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined = 12;
+                            let md: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined = 4;
+                            console.log(index % 5 === 3 || index % 5 === 4);
+                            console.log(index);
+                            if(index % 5 === 3 || index % 5 === 4){
+                                md = 6;
+                            }
+                            return <Grid column sm={sm} md={md}>
+                                <ProgressBarSkill name={val.name} percentage={val.percentage} level={val.level} color={val.color} />
+                            </Grid>;
+                        })}
                     </Grid>
                 </Grid>
                 <Grid column sm={12} md={5}>
+                    <h3>Some frameworks</h3>
+                    <ElementContainer>
+                        <ElementItem href="https://www.djangoproject.com/" title="Django" target="_blank" rel="noreferrer">
+                            <SkillIcon width={100} src={djangoIcon} title="Django" alt="Django icon" />
+                            Django
+                        </ElementItem>
+                        <ElementItem href="https://reactjs.org/" title="ReactJS" target="_blank" rel="noreferrer">
+                            <SkillIcon width={50} src={reactjsIcon} title="ReactJS" alt="ReactJS icon" />
+                            ReactJS
+                        </ElementItem>
+                        <ElementItem href="https://vuejs.org/" title="VueJS" target="_blank" rel="noreferrer">
+                            <SkillIcon width={50} src={vuejsIcon} title="VueJS" alt="VueJS icon" />
+                            VueJS
+                        </ElementItem>
+                    </ElementContainer>
+                </Grid>
+                <Grid column sm={12} md={6}>
                     <h3>Databases</h3>
                     <ElementContainer>
                         <ElementItem href="https://sqlite.org/index.html" title="SQLite" target="_blank" rel="noreferrer">
@@ -122,23 +121,6 @@ export const SkillsPage = () => {
                         <ElementItem href="https://firebase.google.com/" title="Firebase" target="_blank" rel="noreferrer">
                             <SkillIcon width={50} src={firebaseIcon} title="Firebase" alt="Firebase icon" />
                             Firebase
-                        </ElementItem>
-                    </ElementContainer>
-                </Grid>
-                <Grid column sm={12} md={6}>
-                    <h3>Some frameworks</h3>
-                    <ElementContainer>
-                        <ElementItem href="https://www.djangoproject.com/" title="Django" target="_blank" rel="noreferrer">
-                            <SkillIcon width={100} src={djangoIcon} title="Django" alt="Django icon" />
-                            Django
-                        </ElementItem>
-                        <ElementItem href="https://reactjs.org/" title="ReactJS" target="_blank" rel="noreferrer">
-                            <SkillIcon width={50} src={reactjsIcon} title="ReactJS" alt="ReactJS icon" />
-                            ReactJS
-                        </ElementItem>
-                        <ElementItem href="https://vuejs.org/" title="VueJS" target="_blank" rel="noreferrer">
-                            <SkillIcon width={50} src={vuejsIcon} title="VueJS" alt="VueJS icon" />
-                            VueJS
                         </ElementItem>
                     </ElementContainer>
                 </Grid>
@@ -165,11 +147,32 @@ export const SkillsPage = () => {
                             <SkillIcon width={100} src={matplotlibIcon} title="Matplotlib" alt="Matplotlib icon" />
                             Matplotlib
                         </ElementItem>
+                        <ElementItem href="https://www.tensorflow.org/" title="TensorFlow" target="_blank" rel="noreferrer">
+                            <SkillIcon width={100} src={tensorflowIcon} title="TensorFlow" alt="TensorFlow icon" />
+                            TensorFlow
+                        </ElementItem>
                         <ElementItem href="https://seaborn.pydata.org/index.html" title="Seaborn" target="_blank" rel="noreferrer">
                             <SkillIcon width={100} src={seabornIcon} title="Seaborn" alt="Seaborn icon" />
                             Seaborn
                         </ElementItem>
                     </ElementContainer>
+                </Grid>
+                <Grid column sm={12}>
+                    <h3>Worked area</h3>
+                    <ul style={{ textAlign: 'left' }}>
+                        <li>Mathematics (probabilities, statistics, linear algebra, logic and reasoning, arrangements, algebric structures)</li>
+                        <li>Web technologies</li>
+                        <li>Software design</li>
+                        <li>Scientific computing and parallism</li>
+                        <li>System architecture and microcontrollers</li>
+                        <li>Programming paradagims (OOP, imperative, functionnal, procedural)</li>
+                        <li>Algorithmic and graphs</li>
+                        <li>System &amp; Networks</li>
+                        <li>Databases</li>
+                        <li>Decision Support and Artificial Intelligence</li>
+                        <li>Mobile applications</li>
+                        <li>Language theory and compilation</li>
+                    </ul>
                 </Grid>
             </Grid>
         </section>

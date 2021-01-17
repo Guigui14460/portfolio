@@ -1,9 +1,9 @@
-import { LanguageOrFrameworkOrLibrary } from './LanguageOrFrameworkOrLibrary';
+import { Language } from './Language';
 
 export interface Project {
     name: string;
     description: string;
     repoUrl: string;
     owner: string;
-    languagesAndFrameworksAndLibraryUsed: LanguageOrFrameworkOrLibrary[];
+    languages: Language[];
 }

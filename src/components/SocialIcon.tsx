@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-export const SocialIcon = styled(FontAwesomeIcon)<{ colorUsed: string }>`
-    color: ${({ colorUsed }) => colorUsed};
+export const SocialIcon = styled(FontAwesomeIcon)<{ colorused: string }>`
+    color: ${({ colorused }) => colorused};
 `;
 
 export const SocialIconClickable = (props: { 
@@ -13,7 +13,7 @@ export const SocialIconClickable = (props: {
     iconColor: string; }) : JSX.Element => {
     const { url, title, iconProps, iconSize, iconColor } = props;
     return <a href={url} title={title} target="_blank" rel="noreferrer">
-        <SocialIcon icon={iconProps} size={iconSize} colorUsed={iconColor} />
+        <SocialIcon icon={iconProps} size={iconSize} colorused={iconColor} />
     </a>
 }
 
