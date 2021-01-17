@@ -23,7 +23,7 @@ export const HomePage = () => {
             <p>I would like to obtain a master's degree specialized in artificial intelligence and machine learning because this technology can help society evolve.</p>
             <p>I would also like to create my own company to offer expertise in artificial intelligence to clients, and to train people in this field. This, by having an R&D space to participate in the growing improvement that this field is undergoing with the next coming technological revolutions such as quantum computing.</p>
             <div style={{ textAlign: 'center' }}>
-                <ButtonLink targetLink="/about" className="secondary outlined">Contact me</ButtonLink>
+                <ButtonLink targetLink="/about" className="secondary outlined">About me</ButtonLink>
             </div>
         </section>
         <section>
