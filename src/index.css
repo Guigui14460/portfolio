@@ -1,8 +1,10 @@
 :root {
   --primary-color: #3678e0;
   --primary-color-hover: #2657a7;
-  --secondary-color: #d66a27;
-  --secondary-color-hover: #a75523;
+  --secondary-color: #e0801f;
+  --secondary-color-hover: #d1781d;
+  --ternary-color: #de4721;
+  --ternary-color-hover: #ba4b2f;
   --background-color: #333333;
   --color: #dddddd;
 }
@@ -15,6 +17,7 @@
 
 html {
   font-family: "Roboto", sans-serif;
+  font-size: 14px;
 }
 
 body {
@@ -59,22 +62,24 @@ h1 {
   text-align: center;
 }
 
-.primary {
-  color: #0d4194;
-}
-
 .container {
   width: 90%;
   margin: 10px auto;
 }
 
 @media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
   .container {
     width: 80%;
   }
 }
 
 @media (min-width: 992px) {
+  html {
+    font-size: 18px;
+  }
   .container {
     width: 70%;
   }

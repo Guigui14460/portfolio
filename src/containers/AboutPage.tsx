@@ -9,7 +9,7 @@ export const AboutPage = (props: any) => {
     return <>
         <h1>About me</h1>
         <section>
-            <h2>My history</h2>
+            <h2>Biography</h2>
             {/* TODO: Faire cette partie */}
         </section>
         <section>
@@ -28,7 +28,7 @@ export const AboutPage = (props: any) => {
                 <p>I have great admiration for these different great men :</p>
                 <ul>
                     <li><GreatPeopleLink target="_blank" href="https://www.wikiwand.com/en/Elon_Musk">Elon Musk</GreatPeopleLink> : for these ideas of greatness in order to improve humanity, his hard work that allows him to do things and achieve them like no one before.</li>
-                    <li><GreatPeopleLink target="_blank" href="https://www.wikiwand.com/en/David_Goggins">David Goggins</GreatPeopleLink> : for his motivation when he undertakes something.</li>
+                    <li><GreatPeopleLink target="_blank" href="https://www.wikiwand.com/en/David_Goggins">David Goggins</GreatPeopleLink> : for his motivation, its strength and determination when he undertakes something.</li>
                     <li><GreatPeopleLink target="_blank" href="https://www.wikiwand.com/en/Robert_Kiyosaki">Robert Kiyosaki</GreatPeopleLink> : for his demonstration on how to effectively manage money and the importance of financial literacy for everyone.</li>
                     <li><GreatPeopleLink target="_blank" href="https://www.wikiwand.com/en/Albert_Einstein">Albert Einstein</GreatPeopleLink> : why not put it on ! His great intelligence put at the service of the understanding of the world around us, which has revolutionized physics and has brought enormous benefits to humanity and science.</li>
                 </ul>

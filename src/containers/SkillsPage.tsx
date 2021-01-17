@@ -62,7 +62,6 @@ export const SkillsPage = () => {
             </Grid>
         </section>
         <section>
-            {/* TODO: https://www.react-reveal.com/docs/ */}
             <h2>Hard skills</h2>
             <Grid row style={{ textAlign: "center" }}>
                 <Grid column sm={12} md={7}>
@@ -74,7 +73,7 @@ export const SkillsPage = () => {
                             if(index % 5 === 3 || index % 5 === 4){
                                 md = 6;
                             }
-                            return <Grid column sm={sm} md={md}>
+                            return <Grid key={index} column sm={sm} md={md}>
                                 <ProgressBarSkill name={val.name} percentage={val.percentage} level={val.level} color={val.color} />
                             </Grid>;
                         })}

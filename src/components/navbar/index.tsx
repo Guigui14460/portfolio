@@ -6,18 +6,21 @@ import { Link } from "react-router-dom";
 import { deviceSize } from "../Responsive";
 import { useMediaQuery } from "react-responsive";
 
-const NavbarContainer = styled.nav<{ useTransparent: boolean }>`
-    height: 65px;
-    display: flex;
+const NavbarContainer = styled.nav<{ useTransparent: boolean, verySmallMobile: boolean }>`
+    height: ${({ verySmallMobile }) => (!verySmallMobile ? "65px" : "65px")};
+    display: ${({ verySmallMobile }) => (!verySmallMobile ? "flex" : "block")};
+    text-align: ${({ verySmallMobile }) => (!verySmallMobile ? "initial" : "center")};
     align-items: center;
     justify-content: space-between;
     background-color: ${({ useTransparent }) => useTransparent ? "transparent" : "var(--primary-color)"};
 `
 
-const AccessibilityContainer = styled.div`
-    height: 100%;
+const AccessibilityContainer = styled.div<{ verySmallMobile: boolean }>`
+    height: ${({ verySmallMobile }) => (!verySmallMobile ? "100%" : "auto")};
     display: flex;
     align-items: center;
+    justify-content: ${({ verySmallMobile }) => (!verySmallMobile ? "initial" : "center")};
+    margin-top: ${({ verySmallMobile }) => (!verySmallMobile ? "initial" : "1em")};
 `;
 
 const AnchorLink = styled(Link)<{ fontSize: number | undefined }>`
@@ -38,19 +41,19 @@ const BrandLogo = styled(AnchorLink)`
 const Navbar = (props: { useTransparent: boolean; }) => {
     const { useTransparent } = props;
     const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
-    return <NavbarContainer className="container" useTransparent={useTransparent}>
-        <BrandLogo fontSize={!isMobile ? 24 : undefined} to="/">Guillaume Letellier</BrandLogo>
-        <AccessibilityContainer>
-            <AnchorLink fontSize={!isMobile ? 17 : undefined} to="/projects">Projects</AnchorLink>
+    const verySmallMobile = useMediaQuery({ maxWidth: 360 });
+    return <NavbarContainer verySmallMobile={verySmallMobile} className="container" useTransparent={useTransparent}>
+        <BrandLogo fontSize={!isMobile ? 22 : undefined} to="/">Guillaume Letellier</BrandLogo>
+        <AccessibilityContainer verySmallMobile={verySmallMobile}>
+            <AnchorLink fontSize={!isMobile ? 16 : undefined} to="/projects">Projects</AnchorLink>
             <Marginer direction="horizontal" margin={10} />
-            <AnchorLink fontSize={!isMobile ? 17 : undefined} to="/skills">Skills</AnchorLink>
+            <AnchorLink fontSize={!isMobile ? 16 : undefined} to="/skills">Skills</AnchorLink>
             <Marginer direction="horizontal" margin={10} />
-            <AnchorLink fontSize={!isMobile ? 17 : undefined} to="/about">About</AnchorLink>
+            <AnchorLink fontSize={!isMobile ? 16 : undefined} to="/about">About</AnchorLink>
             <Marginer direction="horizontal" margin={10} />
-            <AnchorLink fontSize={!isMobile ? 17 : undefined} to="/contact">Contact</AnchorLink>
+            <AnchorLink fontSize={!isMobile ? 16 : undefined} to="/contact">Contact</AnchorLink>
         </AccessibilityContainer>
     </NavbarContainer>
 }
-// TODO: à modifier sur les petits téléphones
 
 export default Navbar;

@@ -20,6 +20,15 @@
   background-color: var(--secondary-color-hover);
 }
 
+.button.ternary:not(.outlined) {
+  color: var(--color);
+  background-color: var(--ternary-color);
+}
+
+.button.ternary:hover:not(.outlined) {
+  background-color: var(--ternary-color-hover);
+}
+
 .button.primary.outlined {
   color: var(--primary-color);
   background-color: transparent;
@@ -40,4 +49,15 @@
 .button.secondary.outlined:hover {
   color: var(--color);
   background-color: var(--secondary-color);
+}
+
+.button.ternary.outlined {
+  color: var(--ternary-color);
+  background-color: transparent;
+  border: 2px solid var(--ternary-color);
+}
+
+.button.ternary.outlined:hover {
+  color: var(--color);
+  background-color: var(--ternary-color);
 }

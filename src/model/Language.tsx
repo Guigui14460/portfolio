@@ -72,6 +72,12 @@ const languageInformations: {[id: string]: Language} = {
         percentage: 70,
         level: SkillLevel.Intermediate,
     },
+    "go": {
+        name: "Golang",
+        color: "#00add8",
+        percentage: 30,
+        level: SkillLevel.Beginner,
+    },
 };
 
 export default languageInformations;
