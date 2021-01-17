@@ -9,10 +9,6 @@ export const AboutPage = (props: any) => {
     return <>
         <h1>About me</h1>
         <section>
-            <h2>Biography</h2>
-            {/* TODO: Faire cette partie */}
-        </section>
-        <section>
             <h2>Work philosophy</h2>
             <article id="sentences">
                 <h3>My sentences</h3>

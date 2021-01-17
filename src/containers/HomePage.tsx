@@ -16,6 +16,7 @@ export const HomePage = () => {
                 <ButtonLink targetLink="/contact" className="primary">Contact me</ButtonLink>
             </div>
             <Marginer direction="vertical" margin={14} />
+            <p>I am passionate about IT, both in the design and development aspects. In particular, I am fascinated by artificial intelligence (including machine learning and deep learning), quantum computing, computational optimization and algorithmics.</p>
         </section>
         <section>
             <h2>My goals</h2>
