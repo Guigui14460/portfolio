@@ -13,6 +13,10 @@ For Windows user :
 For Unix user :
 - run `sudo apt-get install nodejs npm`
 
+And for both, run at the root of the project :
+```shell
+$ npm install
+```
 
 ## Commands
 To open the developer server and the application on the browser :
