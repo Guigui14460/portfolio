@@ -29,8 +29,8 @@ export const HomePage = () => {
         <section>
             <h2>Resume download section</h2>
             <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'space-evenly' }}>
-                <ButtonExternalLink title="English resume" targetLink="resume_en.pdf" download style={{ backgroundColor: "#36b558" }} size={1.2}>English version)</ButtonExternalLink>
-                <ButtonExternalLink title="French resume" targetLink="resume_fr.pdf" download style={{ backgroundColor: "#ded11b" }} size={1.2}>French version)</ButtonExternalLink>
+                <ButtonExternalLink title="English resume" targetLink="resume_en.pdf" download style={{ backgroundColor: "#36b558" }} size={1.2}>English (version)</ButtonExternalLink>
+                <ButtonExternalLink title="French resume" targetLink="resume_fr.pdf" download style={{ backgroundColor: "#ded11b" }} size={1.2}>French (version)</ButtonExternalLink>
             </div>
         </section>
         <section>
