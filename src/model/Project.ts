@@ -8,4 +8,5 @@ export interface Project {
     languages: Language[];
     officialSiteUrl?: string;
     notFinished?: boolean;
+    keywords?: string[];
 }

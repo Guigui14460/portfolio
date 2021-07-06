@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Marginer from '../components/marginer';
 import ProgressBarSkill from '../components/ProgressBarSkill';
@@ -41,7 +40,7 @@ export const SkillsPage = () => {
                 <Grid column sm={12} md={6} lg={3}>
                     <SkillIcon width={100} src={motivationIcon} alt="Motivation icon" />
                     <h3>Motivated</h3>
-                    <p>I am a person who is always motivated when I undertake any kind of activity. Motivation is one of the most useful skills in our daily life, it allows us to continue and get closer to our goals.<br/>
+                    <p>I am a person who is always motivated when I undertake any kind of activity. Motivation is one of the most useful skills in our daily life, it allows us to continue and get closer to our goals.<br />
                         You can see <Link to="/about#sentences">my sentences</Link> to understand how important this skill is to me.</p>
                 </Grid>
                 <Grid column sm={12} md={6} lg={3}>
@@ -70,7 +69,7 @@ export const SkillsPage = () => {
                         {Object.entries(languageInformations).map(([key, val], index) => {
                             let sm: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined = 12;
                             let md: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined = 4;
-                            if(index % 5 === 3 || index % 5 === 4){
+                            if (index % 5 === 3 || index % 5 === 4) {
                                 md = 6;
                             }
                             return <Grid key={index} column sm={sm} md={md}>

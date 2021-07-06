@@ -1,12 +1,12 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { 
+import {
     fab, faLinkedin, faTwitter, faFacebookSquare,
     faDiscord, faReddit
 } from "@fortawesome/free-brands-svg-icons"
 import { SocialAccount } from "./SocialAccount";
 import { Project } from './Project';
 import languageInformations from "./Language";
-import { Reference } from "./Reference";
+import { expType } from "./Experience";
 library.add(faLinkedin, fab, faTwitter, faFacebookSquare, faDiscord, faReddit);
 
 export const firstName: string = "Guillaume";
@@ -17,34 +17,6 @@ export const phoneShortVersion: string = "+33699120722";
 export const phoneLongVersion: string = "(+33) 6 99 12 07 22";
 export const address: string = "12 Rue de Suresnes, Colombelles, Normandy, France";
 
-export const worksInProgressProjectsData: Project[] = [
-    {
-        name: "Hello Caen Application",
-        // repoUrl: "https://github.com/Guigui14460/hello-caen-app",
-        description: "An application that allows you to securely store your credentials, notes, contacts, credit cards and other information locally. A safe is available to back up his files. This uses the AES encryption protocol. Others are available such as Blowfish, Twofish, RSA, etc...",
-        owner: "Hello Caen",
-        languages: [languageInformations["dart"]],
-        officialSiteUrl: "https://www.hellocaen.com/",
-        notFinished: true,
-    },
-    {
-        name: "Password manager",
-        // repoUrl: "https://github.com/Guigui14460/password-manager",
-        description: "An application that allows you to securely store your credentials, notes, contacts, credit cards and other information locally. A safe is available to back up his files. This uses the AES encryption protocol. Others are available such as Blowfish, Twofish, RSA, etc...",
-        owner: "Guigui14460",
-        languages: [languageInformations["java"]],
-        officialSiteUrl: undefined,
-        notFinished: true,
-    },
-    {
-        name: "Trading bot (for cryptocurrencies)",
-        repoUrl: "https://github.com/Guigui14460/trading_bot",
-        description: "Bot allowing to trade crypto-currencies mainly via different platforms. Different trading strategies are available for short, medium and long term via the different indicators existing in the trading world.",
-        owner: "Guigui14460",
-        languages: [languageInformations["python"]],
-        notFinished: true,
-    },
-];
 export const projectsData: Project[] = [
     {
         name: "Artificial neural network",
@@ -94,7 +66,6 @@ export const universityProjectsData: Project[] = [
         owner: "Hello Caen",
         languages: [languageInformations["dart"]],
         officialSiteUrl: "https://www.hellocaen.com/",
-        notFinished: true,
     },
     {
         name: "House generator",
@@ -126,12 +97,34 @@ export const universityProjectsData: Project[] = [
     },
 ];
 
+export const worksInProgressProjectsData: Project[] = [...universityProjectsData, ...projectsData].filter(project => project.notFinished);
+
 export const socialAccounts: SocialAccount[] = [
-    {name: "Twitter", username: "@GuiguiLet", url: "https://twitter.com/GuiguiLet", iconProperties: ["fab", "twitter"], iconColor: "#1DA1F2",},
-    {name: "LinkedIn", username: "Guillaume Letellier", url: "https://www.linkedin.com/in/guillaume-letellier-466418193/", iconProperties: ["fab", "linkedin"], iconColor: "#2867B2",},
-    {name: "Reddit",username: "Guigui14460",url: "https://twitter.com/GuiguiLet",iconProperties: ["fab", "reddit"],iconColor: "#FF4500",},
-    {name: "Discord", username: "Guigui#7684", url: "https://discordapp.com/users/339384664118657034/", iconProperties: ["fab", "discord"], iconColor: "#7289DA",},
-    {name: "Facebook", username: "Guigui Letellier", url: "https://www.facebook.com/guiguiletellier.14/", iconProperties: ["fab", "facebook-square"], iconColor: "#4267B2",},
+    { name: "Twitter", username: "@GuiguiLet", url: "https://twitter.com/GuiguiLet", iconProperties: ["fab", "twitter"], iconColor: "#1DA1F2", },
+    { name: "LinkedIn", username: "Guillaume Letellier", url: "https://www.linkedin.com/in/guillaume-letellier-466418193/", iconProperties: ["fab", "linkedin"], iconColor: "#2867B2", },
+    { name: "Reddit", username: "Guigui14460", url: "https://twitter.com/GuiguiLet", iconProperties: ["fab", "reddit"], iconColor: "#FF4500", },
+    { name: "Discord", username: "Guigui#7684", url: "https://discordapp.com/users/339384664118657034/", iconProperties: ["fab", "discord"], iconColor: "#7289DA", },
+    { name: "Facebook", username: "Guigui Letellier", url: "https://www.facebook.com/guiguiletellier.14/", iconProperties: ["fab", "facebook-square"], iconColor: "#4267B2", },
 ];
 
-export const referencesData: Reference[] = [];
+export const experiencesData: expType[] = [
+    {
+        title: "Data Scientist",
+        from: new Date("2021-04-01"),
+        to: new Date("2021-06-04"),
+        entreprise: "Orange Labs",
+        location: "Caen, France",
+        entrepriseUrl: "https://www.orange.com",
+        referent: {
+            firstName: "Étienne",
+            lastName: "Daspe",
+            jobDescription: "Software engineer",
+            url: "https://fr.linkedin.com/in/etiennedaspe",
+        },
+        associatedTo: "Orange Money",
+        associatedToUrl: "https://orangemoney.fr/",
+        subject: "Development of a demonstrator in Python as part of research work on the simulation of financial transactions",
+        description: "I explored and visualized data from the production platform. From this, I then created a test simulator generating financial transactions in order to create Machine Learning models to verify the realism of this simulator. Then, I interpreted these models in order to continuously improve the simulator. Finally, I used Deep Learning techniques to go further in the realism analysis.",
+        keywords: ["Machine Learning", "Deep Learning", "simulator", "finance", "data science"],
+    },
+];

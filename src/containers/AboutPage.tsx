@@ -1,11 +1,10 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const GreatPeopleLink = styled.a`
     font-weight: bold;
 `;
 
-export const AboutPage = (props: any) => {
+export const AboutPage = () => {
     return <>
         <h1>About me</h1>
         <section>
@@ -43,9 +42,10 @@ export const AboutPage = (props: any) => {
             <article>
                 <h3>Download my diplomas</h3>
                 <ul>
-                    <li><a download href="high_school_diploma.pdf">High School diploma (scientific option)</a></li>
-                    <li><a download href="university_first_year.pdf">Marks of 1st year in University of Caen Normandy</a></li>
-                    <li><a download href="university_second_year.pdf">Marks of 2nd year in University of Caen Normandy</a></li>
+                    <li><a target="_blank" href="high_school_diploma.pdf">High School diploma (scientific option)</a></li>
+                    <li><a target="_blank" href="university_first_year.pdf">Marks of 1st year at University of Caen Normandy</a></li>
+                    <li><a target="_blank" href="university_second_year.pdf">Marks of 2nd year at University of Caen Normandy</a></li>
+                    <li><a target="_blank" href="university_third_year.pdf">Marks of 3rd year at University of Caen Normandy</a></li>
                 </ul>
             </article>
         </section>
@@ -73,7 +73,11 @@ export const AboutPage = (props: any) => {
             </article>
             <article>
                 <h3>History</h3>
-                <p>All historical periods and from all countries</p>
+                <ul>
+                    <li>Ancient Egypt and Greece</li>
+                    <li>Modern age</li>
+                    <li>Contemporary age</li>
+                </ul>
             </article>
         </section>
     </>
