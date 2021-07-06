@@ -34,7 +34,7 @@ export const SkillsPage = () => {
     return <>
         <h1>Skills</h1>
         <section>
-            <h2>Soft skill</h2>
+            <h2>Soft skills</h2>
             <Marginer direction="vertical" margin={20} />
             <Grid row style={{ textAlign: "center" }}>
                 <Grid column sm={12} md={6} lg={3}>

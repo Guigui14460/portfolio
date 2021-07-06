@@ -62,7 +62,7 @@ export const universityProjectsData: Project[] = [
     {
         name: "Hello Caen Application",
         // repoUrl: "https://github.com/Guigui14460/hello-caen-app",
-        description: "An application that allows you to securely store your credentials, notes, contacts, credit cards and other information locally. A safe is available to back up his files. This uses the AES encryption protocol. Others are available such as Blowfish, Twofish, RSA, etc...",
+        description: "A mobile application available on Google Play and Apple Stores soon, which allows you to travel in Caen and discover some stores. You can use good deals in your favorite stores with a QR Code to benefit the reduction amount.",
         owner: "Hello Caen",
         languages: [languageInformations["dart"]],
         officialSiteUrl: "https://www.hellocaen.com/",
