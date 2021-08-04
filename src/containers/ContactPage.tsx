@@ -34,12 +34,12 @@ const ListElement = styled.li`
 export const ContactPage = () => {
     return <>
         <h1>Contact me</h1>
-        <section>
-            <h2>Via email</h2>
+        <section id="mail">
+            <h2>Via email (recommended)</h2>
             <p>You can contact me at this email address : <a href={"mailto:" + emailAddress} >{emailAddress}</a></p>
         </section>
-        <section>
-            <h2>Via social networks</h2>
+        <section id="social-networks">
+            <h2>Via social networks (recommended)</h2>
             <p>You can contact me via different social networks :</p>
             <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-evenly", alignItems: "center"}}>
                 {socialAccounts.map<JSX.Element>((value, index) => {return <SocialDiv key={index} href={value.url} rel="noreferrer" target="_blank" >
@@ -48,7 +48,7 @@ export const ContactPage = () => {
                 </SocialDiv>})}
             </div>
         </section>
-        <section>
+        <section id="personnal-info">
             <h2>Contact information</h2>
             <p>You can contact or meet me with this different informations :</p>
             <ul style={{ listStyle: "none", fontSize: 17 }}>
