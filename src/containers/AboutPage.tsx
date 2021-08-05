@@ -34,9 +34,10 @@ export const AboutPage = () => {
             <article>
                 <h3>Etablishments</h3>
                 <ul>
-                    <li>From Sep 2011 to July 2015 : Henri Sellier Lower Secondary School, Colombelles, Normandy, France</li>
-                    <li>From Sep 2015 to July 2018 : Salvador Allende High School, Hérouville-Saint-Clair, Normandy, France</li>
-                    <li>From Sep 2018 to June 2021 : University of Caen Normandy, France</li>
+                    <li>From Sep 2011 to July 2015 : Henri Sellier Lower Secondary School, Colombelles, France</li>
+                    <li>From Sep 2015 to July 2018 : Salvador Allende High School, Hérouville-Saint-Clair, France</li>
+                    <li>From Sep 2018 to June 2021 : University of Caen Normandy, France (BSc in Computer Science)</li>
+                    <li>From Sep 2021 to Today : University of Caen Normandy, France (MSc in Computer Science)</li>
                 </ul>
             </article>
             <article>
