@@ -19,6 +19,14 @@ export const address: string = "12 Rue de Suresnes, Colombelles, Normandy, Franc
 
 export const projectsData: Project[] = [
     {
+        name: "Kaggle compétitions",
+        // repoUrl: "https://github.com/Guigui14460/neural-network-from-scratch",
+        description: "I participate in a few Kaggle competitions to deepen my knowledge in data analysis and processing and in the creation and use of Machine Learning models",
+        owner: "Guigui14460",
+        languages: [languageInformations["python"]],
+        notFinished: true,
+    },
+    {
         name: "Artificial neural network",
         repoUrl: "https://github.com/Guigui14460/neural-network-from-scratch",
         description: "Implementation of an artificial neural network using the book nnfs.io. Python implementation with Numpy, tested with real examples (MNIST, regression). Work on mathematics to improve the optimization of the implementation.",
@@ -40,7 +48,6 @@ export const projectsData: Project[] = [
         description: "An application that allows you to securely store your credentials, notes, contacts, credit cards and other information locally. A safe is available to back up his files. This uses the AES encryption protocol. Others are available such as Blowfish, Twofish, RSA, etc...",
         owner: "Guigui14460",
         languages: [languageInformations["java"]],
-        notFinished: true,
         officialSiteUrl: undefined,
     },
     {
