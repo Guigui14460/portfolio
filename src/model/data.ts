@@ -19,7 +19,7 @@ export const address: string = "12 Rue de Suresnes, Colombelles, Normandy, Franc
 
 export const projectsData: Project[] = [
     {
-        name: "Kaggle compétitions",
+        name: "Kaggle competitions",
         // repoUrl: "https://github.com/Guigui14460/neural-network-from-scratch",
         description: "I participate in a few Kaggle competitions to deepen my knowledge in data analysis and processing and in the creation and use of Machine Learning models",
         owner: "Guigui14460",
