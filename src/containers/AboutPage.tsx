@@ -59,7 +59,6 @@ export const AboutPage = () => {
                     <li>Algorithmic</li>
                     <li>Quantum computing</li>
                     <li>Scientific computing and parallelism</li>
-                    <li>Cryptography</li>
                     <li>Data analysis</li>
                 </ul>
             </article>
