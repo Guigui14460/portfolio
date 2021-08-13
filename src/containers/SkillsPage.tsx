@@ -168,6 +168,7 @@ export const SkillsPage = () => {
                         <li>Decision Support and Artificial Intelligence</li>
                         <li>Mobile applications</li>
                         <li>Language theory and compilation</li>
+                        <li>Annual project : Movie recommendation system (collaborative filtering, content-based and hybrid)</li>
                     </ul>
                 </Grid>
             </Grid>
