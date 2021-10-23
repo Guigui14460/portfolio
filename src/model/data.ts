@@ -18,13 +18,21 @@ export const phoneLongVersion: string = "(+33) 6 99 12 07 22";
 export const address: string = "12 Rue de Suresnes, Colombelles, Normandy, France";
 
 export const projectsData: Project[] = [
+    // {
+    //     name: "Kaggle competitions",
+    //     description: "I participate in a few Kaggle competitions to deepen my knowledge in data analysis and processing and in the creation and use of Machine Learning models",
+    //     owner: "Guigui14460",
+    //     languages: [languageInformations["python"]],
+    //     notFinished: true,
+    // },
     {
-        name: "Kaggle competitions",
-        // repoUrl: "https://github.com/Guigui14460/neural-network-from-scratch",
-        description: "I participate in a few Kaggle competitions to deepen my knowledge in data analysis and processing and in the creation and use of Machine Learning models",
+        name: "Predictor of the effects of molecules on the human body",
+        description: "Application to predict the effects of a molecule on a human organism. Data taken from different databases belonging to the NCBI (National Center for Biotechnology Information).",
         owner: "Guigui14460",
         languages: [languageInformations["python"]],
+        isPrivate: true,
         notFinished: true,
+        keywords: ["artificial intelligence", "molecule effects", "command-line interface", "natural language processing", "machine learning", "graph neural networks"],
     },
     {
         name: "Artificial neural network",
@@ -33,6 +41,7 @@ export const projectsData: Project[] = [
         owner: "Guigui14460",
         languages: [languageInformations["python"]],
         officialSiteUrl: "http://nnfs.io",
+        keywords: ["artificial intelligence", "neural networks", "deep learning", "introduction"],
     },
     {
         name: "Trading bot (for cryptocurrencies)",
@@ -48,7 +57,8 @@ export const projectsData: Project[] = [
         description: "An application that allows you to securely store your credentials, notes, contacts, credit cards and other information locally. A safe is available to back up his files. This uses the AES encryption protocol. Others are available such as Blowfish, Twofish, RSA, etc...",
         owner: "Guigui14460",
         languages: [languageInformations["java"]],
-        officialSiteUrl: undefined,
+        isPrivate: true,
+        keywords: ["password secure storage", "data encryption/decryption"],
     },
     {
         name: "Automation of project creation for developers",
@@ -56,23 +66,37 @@ export const projectsData: Project[] = [
         description: "Open-source project allowing to generate the base of any project following the conventions of the chosen language. Allows to generate a project in one command line.",
         owner: "Guigui14460",
         languages: [languageInformations["python"]],
+        keywords: ["automation", "projects generation"],
     },
     {
         name: "ProgLangLearn",
         description: "Site offering training on computer science and the world of development. The trainings make it possible to learn a programming language or a framework by working on various projects of different scales.",
         owner: "Guigui14460",
         languages: [languageInformations["python"], languageInformations["html"], languageInformations["javascript"], languageInformations["sass"]],
+        isPrivate: true,
+        keywords: ["online courses", "exercises"],
     },
 ];
 
 export const universityProjectsData: Project[] = [
     {
+        name: "Multi-agent knowledge-based program interpreter",
+        description: "Construction of a program interpreter allowing to execute programs based on multi-agent systems using epistemic logic as reasoning. In fine, the project will be integrated to a project of the MAD group (Models, Agents, Decision) of the GREYC laboratory.",
+        owner: "Corentin Pierre and Guillaume Letellier",
+        languages: [languageInformations["java"]],
+        isPrivate: true,
+        notFinished: true,
+        officialSiteUrl: "https://www.greyc.fr/en/equipes/mad-2/",
+        keywords: ["artificial intelligence", "interpreter", "knowledge", "logical reasoning", "dynamic epistemic logic", "multi-agents system"],
+    },
+    {
         name: "Hello Caen Application",
-        // repoUrl: "https://github.com/Guigui14460/hello-caen-app",
         description: "A mobile application available on Google Play and Apple Stores soon, which allows you to travel in Caen and discover some stores. You can use good deals in your favorite stores with a QR Code to benefit the reduction amount.",
         owner: "Hello Caen",
         languages: [languageInformations["dart"]],
         officialSiteUrl: "https://www.hellocaen.com/",
+        isPrivate: true,
+        keywords: ["mobile application", "geolocalization", "merchants", "discount plans"],
     },
     {
         name: "House generator",
@@ -80,6 +104,7 @@ export const universityProjectsData: Project[] = [
         description: "Users can generate houses according to constraints (CSP), houses already built (extractions) and plan its construction (planning).",
         owner: "Guigui14460",
         languages: [languageInformations["java"]],
+        keywords: ["artificial intelligence", "constraint satisfaction problem", "planification", "knowledge extraction"],
     },
     {
         name: "Pandemic site",
@@ -87,6 +112,7 @@ export const universityProjectsData: Project[] = [
         description: "Site allowing to put into practice our knowledge in PHP.",
         owner: "Guigui14460",
         languages: [languageInformations["php"], languageInformations["html"]],
+        keywords: ["php website", "database connection"],
     },
     {
         name: "N-body simulator",
@@ -94,6 +120,7 @@ export const universityProjectsData: Project[] = [
         description: "Users can simulate N gravitationally interacting objects using Newton’s laws of motion. In this one, we can load a simulation, create one with a random generation of bodies. Calculation optimization with the Barnes-Hut algorithm.",
         owner: "Guigui14460",
         languages: [languageInformations["java"]],
+        keywords: ["star simulation"],
     },
     {
         name: "Wargame optimizer",
@@ -101,6 +128,7 @@ export const universityProjectsData: Project[] = [
         description: "Users can play a strategy game in front of a computer and can, among other things, ask an algorithm to generate an army for them that will allow them to win in the vast majority of cases.",
         owner: "Guigui14460",
         languages: [languageInformations["python"]],
+        keywords: ["video game", "wargame", "fighting simulation", "artificial intelligence", "evolutionnary algorithm"],
     },
 ];
 

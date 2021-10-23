@@ -11,7 +11,7 @@ export const ProjectsPage = () => {
             <Grid row>
                 {universityProjectsData.map((value, index) => {
                     return <Grid key={index} column sm={12} md={6} lg={4}>
-                        <Card notFinished={value.notFinished} name={value.name} officialSiteUrl={value.officialSiteUrl} description={value.description} repoURL={value.repoUrl} languages={value.languages} />
+                        <Card notFinished={value.notFinished} name={value.name} officialSiteUrl={value.officialSiteUrl} description={value.description} repoURL={value.repoUrl} languages={value.languages} isPrivate={value.isPrivate} keywords={value.keywords} />
                     </Grid>
                 })}
             </Grid>
@@ -21,7 +21,7 @@ export const ProjectsPage = () => {
             <Grid row>
                 {projectsData.map((value, index) => {
                     return <Grid key={index} column sm={12} md={6} lg={4}>
-                        <Card notFinished={value.notFinished} name={value.name} officialSiteUrl={value.officialSiteUrl} description={value.description} repoURL={value.repoUrl} languages={value.languages} />
+                        <Card notFinished={value.notFinished} name={value.name} officialSiteUrl={value.officialSiteUrl} description={value.description} repoURL={value.repoUrl} languages={value.languages} isPrivate={value.isPrivate} keywords={value.keywords} />
                     </Grid>
                 })}
             </Grid>

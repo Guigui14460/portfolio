@@ -9,4 +9,5 @@ export interface Project {
     officialSiteUrl?: string;
     notFinished?: boolean;
     keywords?: string[];
+    isPrivate?: boolean;
 }
