@@ -164,7 +164,7 @@ export const SkillsPage = () => {
                         <li>Parallel and distributed programming (C/C++ : vectorization, OpenMP, TBB, MPI)</li>
                         <li>System architecture and microcontrollers</li>
                         <li>Programming paradagims (OOP, imperative, functionnal, procedural)</li>
-                        <li>Algorithmic, graphs and tree-based search (Flow networks, dynamic programming, divide-and-conquer algorithm, greedy algorithms, Branch &amp; bound)</li>
+                        <li>Algorithmic, graphs and tree-based search (Flow networks, dynamic programming, divide-and-conquer algorithms, greedy algorithms, Branch &amp; bound algorithm)</li>
                         <li>System &amp; Networks (OSPF, BGP, MPLS, VPLS, virtualized datacenter)</li>
                         <li>Databases</li>
                         <li>Decision support and artificial intelligence</li>
@@ -172,7 +172,7 @@ export const SkillsPage = () => {
                         <li>Language theory and compilation</li>
                         <li>Scientific and IT culture</li>
                         <li>Numerical &amp; Functionnal Analysis</li>
-                        <li>Language engineering</li>
+                        <li>Language engineering (Natural Language Processing)</li>
                         <li>Annual project 3rd year : Movie recommendation system (collaborative filtering, content-based and hybrid)</li>
                         <li>Annual project 4rd year : Multi-agent knowledge-based program interpreter</li>
                     </ul>
