@@ -156,19 +156,25 @@ export const SkillsPage = () => {
                 <Grid column sm={12}>
                     <h3>Worked area</h3>
                     <ul style={{ textAlign: 'left' }}>
+                        <li>Communication &amp; English</li>
                         <li>Mathematics (probabilities, statistics, linear algebra, logic and reasoning, arrangements, algebric structures)</li>
-                        <li>Web technologies</li>
+                        <li>Web technologies (HTML/CSS, JavaScript, PHP)</li>
                         <li>Software design</li>
-                        <li>Scientific computing and parallism</li>
+                        <li>Scientific computing</li>
+                        <li>Parallel and distributed programming (C/C++ : vectorization, OpenMP, TBB, MPI)</li>
                         <li>System architecture and microcontrollers</li>
                         <li>Programming paradagims (OOP, imperative, functionnal, procedural)</li>
-                        <li>Algorithmic and graphs</li>
-                        <li>System &amp; Networks</li>
+                        <li>Algorithmic, graphs and tree-based search (Flow networks, dynamic programming, divide-and-conquer algorithm, greedy algorithms, Branch &amp; bound)</li>
+                        <li>System &amp; Networks (OSPF, BGP, MPLS, VPLS, virtulized datacenter)</li>
                         <li>Databases</li>
-                        <li>Decision Support and Artificial Intelligence</li>
+                        <li>Decision support and artificial intelligence</li>
                         <li>Mobile applications</li>
                         <li>Language theory and compilation</li>
-                        <li>Annual project : Movie recommendation system (collaborative filtering, content-based and hybrid)</li>
+                        <li>Scientific and IT culture</li>
+                        <li>Numerical &amp; Functionnal Analysis</li>
+                        <li>Language engineering</li>
+                        <li>Annual project 3rd year : Movie recommendation system (collaborative filtering, content-based and hybrid)</li>
+                        <li>Annual project 4rd year : Multi-agent knowledge-based program interpreter</li>
                     </ul>
                 </Grid>
             </Grid>
