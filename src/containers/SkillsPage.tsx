@@ -165,7 +165,7 @@ export const SkillsPage = () => {
                         <li>System architecture and microcontrollers</li>
                         <li>Programming paradagims (OOP, imperative, functionnal, procedural)</li>
                         <li>Algorithmic, graphs and tree-based search (Flow networks, dynamic programming, divide-and-conquer algorithm, greedy algorithms, Branch &amp; bound)</li>
-                        <li>System &amp; Networks (OSPF, BGP, MPLS, VPLS, virtulized datacenter)</li>
+                        <li>System &amp; Networks (OSPF, BGP, MPLS, VPLS, virtualized datacenter)</li>
                         <li>Databases</li>
                         <li>Decision support and artificial intelligence</li>
                         <li>Mobile applications</li>
