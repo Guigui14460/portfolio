@@ -135,10 +135,10 @@ export const universityProjectsData: Project[] = [
 export const worksInProgressProjectsData: Project[] = [...universityProjectsData, ...projectsData].filter(project => project.notFinished);
 
 export const socialAccounts: SocialAccount[] = [
-    { name: "Twitter", username: "@GuiguiLet", url: "https://twitter.com/GuiguiLet", iconProperties: ["fab", "twitter"], iconColor: "#1DA1F2", },
-    { name: "LinkedIn", username: "Guillaume Letellier", url: "https://www.linkedin.com/in/guillaume-letellier-466418193/", iconProperties: ["fab", "linkedin"], iconColor: "#2867B2", },
+    { name: "Twitter", username: "@HadesGuigui", url: "https://twitter.com/HadesGuigui", iconProperties: ["fab", "twitter"], iconColor: "#1DA1F2", },
+    { name: "LinkedIn", username: "Guillaume Letellier", url: "https://www.linkedin.com/in/guillaume-letellier/", iconProperties: ["fab", "linkedin"], iconColor: "#2867B2", },
     { name: "Reddit", username: "Guigui14460", url: "https://twitter.com/GuiguiLet", iconProperties: ["fab", "reddit"], iconColor: "#FF4500", },
-    { name: "Discord", username: "Guigui#7684", url: "https://discordapp.com/users/339384664118657034/", iconProperties: ["fab", "discord"], iconColor: "#7289DA", },
+    { name: "Discord", username: "HadesGuigui#7684", url: "https://discordapp.com/users/339384664118657034/", iconProperties: ["fab", "discord"], iconColor: "#7289DA", },
     { name: "Facebook", username: "Guigui Letellier", url: "https://www.facebook.com/guiguiletellier.14/", iconProperties: ["fab", "facebook-square"], iconColor: "#4267B2", },
 ];
 
