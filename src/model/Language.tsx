@@ -78,6 +78,18 @@ const languageInformations: {[id: string]: Language} = {
         percentage: 30,
         level: SkillLevel.Beginner,
     },
+    "r": {
+        name: "R",
+        color: "#198ce7",
+        percentage: 30,
+        level: SkillLevel.Beginner,
+    },
+    "cpp": {
+        name: "C++",
+        color: "#f34b7d",
+        percentage: 50,
+        level: SkillLevel.Intermediate,
+    },
 };
 
 export default languageInformations;

@@ -18,21 +18,25 @@ export const phoneLongVersion: string = "(+33) 6 99 12 07 22";
 export const address: string = "12 Rue de Suresnes, Colombelles, Normandy, France";
 
 export const projectsData: Project[] = [
-    // {
-    //     name: "Kaggle competitions",
-    //     description: "I participate in a few Kaggle competitions to deepen my knowledge in data analysis and processing and in the creation and use of Machine Learning models",
-    //     owner: "Guigui14460",
-    //     languages: [languageInformations["python"]],
-    //     notFinished: true,
-    // },
     {
         name: "Predictor of the effects of molecules on the human body",
+        // repoUrl: "https://github.com/Guigui14460/molecule-effects-prediction",
         description: "Application to predict the effects of a molecule on a human organism. Data taken from different databases belonging to the NCBI (National Center for Biotechnology Information).",
         owner: "Guigui14460",
         languages: [languageInformations["python"]],
         isPrivate: true,
         notFinished: true,
         keywords: ["artificial intelligence", "molecule effects", "command-line interface", "natural language processing", "machine learning", "graph neural networks"],
+    },
+    {
+        name: "Nebulae Generator",
+        // repoUrl: "https://github.com/Guigui14460/nebulae-generator",
+        description: "Creation of an AI which is able to generate new nebulae (planetary, dark, diffuse, protoplanetary or as supernova remnant) images with a GAN (Generative Adversarial Networks)",
+        owner: "Guigui14460",
+        languages: [languageInformations["python"]],
+        isPrivate: true,
+        notFinished: true,
+        keywords: ["deep learning", "tensorflow", "generative model"],
     },
     {
         name: "Artificial neural network",
@@ -70,32 +74,55 @@ export const projectsData: Project[] = [
     },
     {
         name: "ProgLangLearn",
+        repoUrl: "https://github.com/Guigui14460/proglanglearn",
         description: "Site offering training on computer science and the world of development. The trainings make it possible to learn a programming language or a framework by working on various projects of different scales.",
         owner: "Guigui14460",
         languages: [languageInformations["python"], languageInformations["html"], languageInformations["javascript"], languageInformations["sass"]],
-        isPrivate: true,
-        keywords: ["online courses", "exercises"],
+        keywords: ["educational website", "django", "web-development"],
     },
 ];
 
 export const universityProjectsData: Project[] = [
     {
+        name: "Conquerer game (Image Synthesis Project)",
+        repoUrl: "https://github.com/Guigui14460/image-synthesis-game-conquerer",
+        description: "Realization of a 2D or 3D game in C++ and OpenGL",
+        owner: "Raphaëlle Lemaire and Guillaume Letellier",
+        languages: [languageInformations["cpp"]],
+        keywords: ["game development", "opengl", "image synthesis"],
+    },
+    {
+        name: "Data visualization site of the delays of high speed trains in France",
+        repoUrl: "https://github.com/Guigui14460/data-visualization-french-high-speed-train-delays",
+        description: "Visualization site about the delays of the TGV (High Speed Trains) managed by the SNCF with MongoDB",
+        owner: "Guigui14460",
+        languages: [languageInformations["javascript"], languageInformations["python"]],
+        keywords: ["data visualization", "nosql database", "mongodb", "d3js", "nodejs", "graphql"],
+    },
+    {
+        name: "Data Analysis on Normandy river",
+        repoUrl: "https://github.com/Guigui14460/data-analysis-project",
+        description: "Analysis of observations of a dataset from different sensors placed along the Touques, a river in Normandy",
+        owner: "Guigui14460",
+        languages: [languageInformations["r"]],
+        keywords: ["data analysis"],
+    },
+    {
         name: "Multi-agent knowledge-based program interpreter",
+        repoUrl: "https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter",
         description: "Construction of a program interpreter allowing to execute programs based on multi-agent systems using epistemic logic as reasoning. In fine, the project will be integrated to a project of the MAD group (Models, Agents, Decision) of the GREYC laboratory.",
         owner: "Corentin Pierre and Guillaume Letellier",
         languages: [languageInformations["java"]],
-        isPrivate: true,
-        notFinished: true,
         officialSiteUrl: "https://www.greyc.fr/en/equipes/mad-2/",
-        keywords: ["artificial intelligence", "interpreter", "knowledge", "logical reasoning", "dynamic epistemic logic", "multi-agents system"],
+        keywords: ["artificial intelligence", "interpreter", "knowledge", "logical reasoning", "dynamic epistemic logic", "symbolic AI", "multi-agents system"],
     },
     {
         name: "Hello Caen Application",
+        repoUrl: "https://github.com/Guigui14460/hello-caen-app",
         description: "A mobile application available on Google Play and Apple Stores soon, which allows you to travel in Caen and discover some stores. You can use good deals in your favorite stores with a QR Code to benefit the reduction amount.",
-        owner: "Hello Caen",
+        owner: "Guillaume Letellier's team",
         languages: [languageInformations["dart"]],
         officialSiteUrl: "https://www.hellocaen.com/",
-        isPrivate: true,
         keywords: ["mobile application", "geolocalization", "merchants", "discount plans"],
     },
     {
@@ -112,7 +139,7 @@ export const universityProjectsData: Project[] = [
         description: "Site allowing to put into practice our knowledge in PHP.",
         owner: "Guigui14460",
         languages: [languageInformations["php"], languageInformations["html"]],
-        keywords: ["php website", "database connection"],
+        keywords: ["web development", "sql database"],
     },
     {
         name: "N-body simulator",
@@ -120,7 +147,7 @@ export const universityProjectsData: Project[] = [
         description: "Users can simulate N gravitationally interacting objects using Newton’s laws of motion. In this one, we can load a simulation, create one with a random generation of bodies. Calculation optimization with the Barnes-Hut algorithm.",
         owner: "Guigui14460",
         languages: [languageInformations["java"]],
-        keywords: ["star simulation"],
+        keywords: ["physics", "star simulation"],
     },
     {
         name: "Wargame optimizer",
@@ -160,6 +187,6 @@ export const experiencesData: expType[] = [
         associatedToUrl: "https://orangemoney.fr/",
         subject: "Development of a demonstrator in Python as part of research work on the simulation of financial transactions",
         description: "I explored and visualized data from the production platform. From this, I then created a test simulator generating financial transactions in order to create Machine Learning models to verify the realism of this simulator. Then, I interpreted these models in order to continuously improve the simulator. Finally, I used Deep Learning techniques to go further in the realism analysis.",
-        keywords: ["Machine Learning", "Deep Learning", "simulator", "finance", "data science"],
+        keywords: ["machine learning", "deep learning", "simulator", "finance", "data science"],
     },
 ];

@@ -23,7 +23,8 @@ export const HomePage = () => {
         <section>
             <h2>Short description of myself</h2>
             <p>Hello, I'm a french computer science student, come take a look at my portfolio and contact me if you want to hire me !</p>
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'space-evenly' }}>
+                <ButtonLink targetLink="/projects#top" className="ternary">See my projects</ButtonLink>
                 <ButtonLink targetLink="/contact" className="primary">Contact me</ButtonLink>
             </div>
             <Marginer direction="vertical" margin={14} />
