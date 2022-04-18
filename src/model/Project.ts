@@ -1,6 +1,7 @@
 import { Language } from './Language';
 
 export interface ProjectAuthor {
+    id: string;
     name: string;
     googleScholarProfile?: string;
     githubProfile?: string;

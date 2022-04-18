@@ -35,9 +35,8 @@ const CardWrapper = styled.div<{ notFinished?: boolean }>`
     }
 `;
 
-// TODO: add authors and links (with tooltip to click on profile urls)
 export const Card = (props: { project: Project }) => {
-    const { name, repoUrl, description, languages, officialSiteUrl, notFinished,  isPrivate, keywords } = props.project;
+    const { name, repoUrl, description, languages, officialSiteUrl, notFinished, isPrivate, keywords, authors, leader } = props.project;
     const isGithubRepo = repoUrl && repoUrl.includes("github");
     const isGitlabRepo = repoUrl && repoUrl.includes("gitlab");
     const icon = (isGithubRepo ? "github" : (isGitlabRepo ? "gitlab" : "reddit")); // reddit icon because we can't have a null icon
@@ -48,11 +47,19 @@ export const Card = (props: { project: Project }) => {
        {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
        {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
        {officialSiteUrl !== undefined ? <p>You can have more precision <a href={officialSiteUrl} rel="noreferrer" target="_blank">here</a>.</p> : null}
-        <p className="project__languages">Languages : {languages.map((value, index) => {
-            return <span style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }} key={index}>{value.name}</span>
+        <p className="project__languages">Languages : {languages.map((value, languageIndex) => {
+            return <span style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }} key={languageIndex}>{value.name}</span>
         })}</p>
-        {keywords ? <p className="project__languages" style={{ fontSize: "0.8em" }}>Keywords : {keywords.map((value, index) => {
-            return <span style={{ backgroundColor: "#dddddd", color: "#333333" }} key={index}>{value}</span>
+        {keywords ? <p className="project__languages" style={{ fontSize: "0.8em" }}>Keywords : {keywords.map((value, keywordIndex) => {
+            return <span key={keywordIndex} style={{ backgroundColor: "#dddddd", color: "#333333" }}>{value}</span>
         })}</p> : null}
+        {authors ? <p className='project__authors'>Authors : {authors.map((value, authorIndex) => {
+            if(value === undefined) return null;
+
+            let isLeader = false;
+            if(value === leader) isLeader = true;
+
+            return <>{(authorIndex !== 0) ? <>, </> : null}<span key={authorIndex} style={{ fontWeight: (isLeader ? "bold" : "normal") }} data-for="project-author-links" data-tip={value.id}>{value.name}</span></>
+        })}</p>: null}
     </CardWrapper>
 }

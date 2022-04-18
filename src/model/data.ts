@@ -28,11 +28,13 @@ export const socialAccounts: SocialAccount[] = [
 ];
 
 export const me: ProjectAuthor = {
+    id: "gl",
     name: firstName + " " + lastName,
     linkedInProfile: linkedInUrl,
     githubProfile: "https://github.com/Guigui14460",
     gitlabProfile: "https://gitlab.com/Guigui14460",
 };
+authorsList.set("gl", me);
 
 export const projectsData: Project[] = [
     {
@@ -172,7 +174,7 @@ export const universityProjectsData: Project[] = [
     },
     {
         name: "Pandemic site",
-        repoUrl: "https://github.com/Guigui14460/optimisateur-de-wargame",
+        repoUrl: "https://github.com/Guigui14460/pandemics-site",
         description: "Site allowing to put into practice our knowledge in PHP.",
         leader: me,
         authors: [me, authorsList.get("ab"), authorsList.get("ap"), authorsList.get("cp")],
