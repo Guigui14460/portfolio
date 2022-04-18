@@ -24,7 +24,7 @@ export const HomePage = () => {
             <h2>Short description of myself</h2>
             <p>Hello, I'm a french computer science student, come take a look at my portfolio and contact me if you want to hire me !</p>
             <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'space-evenly' }}>
-                <ButtonLink targetLink="/projects#top" className="ternary">See my projects</ButtonLink>
+                <ButtonLink targetLink="/projects" className="ternary">See my projects</ButtonLink>
                 <ButtonLink targetLink="/contact" className="primary">Contact me</ButtonLink>
             </div>
             <Marginer direction="vertical" margin={14} />
@@ -71,12 +71,12 @@ export const HomePage = () => {
             <Grid row>
                 {worksInProgressProjectsData.map((value, index) => {
                     return <Grid key={index} column sm={12} md={6} lg={4}>
-                        <Card notFinished={value.notFinished} name={value.name} officialSiteUrl={value.officialSiteUrl} description={value.description} repoURL={value.repoUrl} languages={value.languages} isPrivate={value.isPrivate} keywords={value.keywords} />
+                        <Card project={value} />
                     </Grid>
                 })}
             </Grid>
             <div style={{ textAlign: 'center' }}>
-                <ButtonLink className="ternary outlined" targetLink="/projects#top">More projects here</ButtonLink>
+                <ButtonLink className="ternary outlined" targetLink="/projects">More projects here</ButtonLink>
             </div>
         </section>
     </>;

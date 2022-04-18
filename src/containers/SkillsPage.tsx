@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Grid from '../components/grid';
 
 import { motivationIcon, curiousIcon, timeIcon, brainstormingIcon } from "../images/Images";
-import { firebaseIcon, mysqlIcon, postgresqlIcon, mongodbIcon, sqliteIcon, vuejsIcon, djangoIcon, reactjsIcon, jupyterIcon, numpyIcon, pandasIcon, scipyIcon, matplotlibIcon, tensorflowIcon, seabornIcon } from "../images/Icons"
+import { firebaseIcon, mysqlIcon, postgresqlIcon, mongodbIcon, sqliteIcon, vuejsIcon, djangoIcon, reactjsIcon, jupyterIcon, numpyIcon, pandasIcon, scipyIcon, matplotlibIcon, tensorflowIcon, seabornIcon, scikitLearnIcon } from "../images/Icons"
 import languageInformations from '../model/Language';
 
 const SkillIcon = styled.img<{ width: number }>`
@@ -151,30 +151,96 @@ export const SkillsPage = () => {
                             <SkillIcon width={100} src={seabornIcon} title="Seaborn" alt="Seaborn icon" />
                             Seaborn
                         </ElementItem>
+                        <ElementItem href='https://scikit-learn.org/' title='Scikit-Learn' target="_blank" rel="noreferrer">
+                            <SkillIcon width={100} src={scikitLearnIcon} title="Scikit-Learn" alt="Scikit-Learn icon" />
+                            Scikit-Learn
+                        </ElementItem>
                     </ElementContainer>
                 </Grid>
-                <Grid column sm={12}>
-                    <h3>Worked area</h3>
+            </Grid>
+        </section>
+        <section>
+            <h2>Worked area in University</h2>
+            <h3>Annual projects</h3>
+            <p>In the last year of Bachelor Science and in the two years of Master Science, the Computer Science Department offers the possibility to students
+            for realizing project during the year (1 ou 2 semesters depending on the year). The main goal is to apply some of our knowledge on a new subject including
+            project management skills, learn new things that we d'ont have time in courses or go deeper in a field. The chosen project made by an algorithm
+            developed to associate each student in a group and try to satisfies the projects ordering made by students.</p>
+            
+            <h4>Annual project 3rd year of BSc : <a href="https://github.com/Guigui14460/recommender-system" target="_blank" rel="noreferrer">Movie recommendation system</a></h4>
+            <p>
+                The goal of this project, proposed by <a href="https://alec.users.greyc.fr/" target="_blank" rel="noreferrer">Céline Alec</a> from 
+                the <a href="https://www.greyc.fr/en/equipes/codag-2/" target="_blank" rel="noreferrer">CODAG team</a> (Constraints, Ontologies, Data, Annotations, Graphs) 
+                of <a href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, was to realize a recommendation system (on any subject) 
+                in one month (due to teachers' organization problems). We had to test and use different approaches in the short time 
+                we had on a dataset of a few thousand movies that we found on Kaggle. We used three main approaches:
+            </p>
+            <ul>
+                <li>content-based: analysis of movie names, descriptions, and actors especially through TF-IDF;</li>
+                <li>based on user collaboration: each user rated movies and we use the ratings of the users close to the current one to choose the movies;</li>
+                <li>hybrid: combination of the two above mentioned.</li>
+            </ul>
+            <p>We also used the categorical approach to select the best movies in a certain category (action, horror, etc.).</p>
+            <h4>Annual project 1st year of MSc : <a href="https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter" target="_blank" rel="noreferrer">Multi-agent knowledge-based program interpreter</a></h4>
+            <p>
+                The goal of this project, proposed by <a href="https://zanuttini.users.greyc.fr/" target="_blank" rel="noreferrer">Bruno Zanuttini</a> from 
+                the <a href="https://www.greyc.fr/en/equipes/mad-2/" target="_blank" rel="noreferrer">MAD team</a> (Model, Agents, Decision) of <a href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, 
+                was to realize a knowledge-based program interpreter in a multi-agent execution context in order to complete a code base 
+                maintained and used by the team. The interpreter can be used to solve knowledge-based problems such as the "Muddy Children" puzzle.
+            </p>
+            <p>
+                In this project, each agent has a program that it executes based on the knowledge it has about the execution environment. 
+                Each condition is a knowledge formula associated with an action to be executed on the environment. A knowledge formula uses 
+                propositional logic and modal logic, and more particularly epistemic logic using knowledge logic (whether it is T, S4 or S5). 
+                In order to be able to evaluate them, we have implemented the Kripke structure. Being in a multi-agent environment, each agent 
+                can see the actions performed by the other agents. It is therefore important that each agent can deduce new knowledge from the 
+                actions of the others (if and only if they have knowledge of their program).
+            </p>
+            <br />
+
+            <h3>Topics and tools seen</h3>
+            <Grid row style={{ textAlign: "center" }}>
+                <Grid column sm={12} md={6} lg={3}>
+                    <h4>Mathematics, Algorithmics and CS Theory</h4>
                     <ul style={{ textAlign: 'left' }}>
-                        <li>Communication &amp; English</li>
                         <li>Mathematics (probabilities, statistics, linear algebra, logic and reasoning, arrangements, algebric structures)</li>
-                        <li>Web technologies (HTML/CSS, JavaScript, PHP)</li>
-                        <li>Software design</li>
-                        <li>Scientific computing</li>
-                        <li>Parallel and distributed programming (C/C++ : vectorization, OpenMP, TBB, MPI)</li>
-                        <li>System architecture and microcontrollers</li>
-                        <li>Programming paradagims (OOP, imperative, functionnal, procedural)</li>
                         <li>Algorithmic, graphs and tree-based search (Flow networks, dynamic programming, divide-and-conquer algorithms, greedy algorithms, Branch &amp; bound algorithm)</li>
-                        <li>System &amp; Networks (OSPF, BGP, MPLS, VPLS, virtualized datacenter)</li>
-                        <li>Databases</li>
-                        <li>Decision support and artificial intelligence</li>
-                        <li>Mobile applications</li>
                         <li>Language theory and compilation</li>
-                        <li>Scientific and IT culture</li>
                         <li>Numerical &amp; Functionnal Analysis</li>
-                        <li>Language engineering (Natural Language Processing)</li>
-                        <li>Annual project 3rd year : Movie recommendation system (collaborative filtering, content-based and hybrid)</li>
-                        <li>Annual project 4rd year : Multi-agent knowledge-based program interpreter</li>
+                        <li>Calculability &amp; complexity (Turing machines, problems complexity)</li>
+                    </ul>
+                </Grid>
+                <Grid column sm={12} md={6} lg={3}>
+                    <h4>Data Science &amp; AI</h4>
+                    <ul style={{ textAlign: 'left' }}>
+                        <li>Scientific computing</li>
+                        <li>Databases (SQL and NoSQL DBs)</li>
+                        <li>Decision support and artificial intelligence</li>
+                        <li>Language engineering (base of Natural Language Processing)</li>
+                        <li>Machine Learning (KNN, Bayesian networks, Linear Regression (and projection on other spaces), Logistic Classification, SVM (and kernel functions), Neural Networks)</li>
+                        <li>Data Analysis (descriptive stats, MCA, ICA, PCA)</li>
+                    </ul>
+                </Grid>
+                <Grid column sm={12} md={6} lg={3}>
+                    <h4>Development</h4>
+                    <ul style={{ textAlign: 'left' }}>
+                        <li>Programming paradagims (OOP, imperative, functionnal, procedural)</li>
+                        <li>Software design</li>
+                        <li>Web technologies (HTML/CSS, JavaScript, PHP)</li>
+                        <li>Parallel and distributed programming (C/C++ : vectorization, OpenMP, TBB, MPI)</li>
+                        <li>Mobile applications</li>
+                        <li>Image synthesis (OpenGL)</li>
+                    </ul>
+                </Grid>
+                <Grid column sm={12} md={6} lg={3}>
+                    <h4>Others</h4>
+                    <ul style={{ textAlign: 'left' }}>
+                        <li>Scientific and IT culture</li>
+                        <li>Communication &amp; English</li>
+                        <li>Project Management</li>
+                        <li>Software Creativity</li>
+                        <li>System architecture and microcontrollers</li>
+                        <li>System &amp; Networks (OSPF, BGP, MPLS, VPLS, virtualized datacenter)</li>
                     </ul>
                 </Grid>
             </Grid>
