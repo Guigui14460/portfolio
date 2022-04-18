@@ -1,8 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
 import { hexToRgb, contrast } from '../../utils';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { IconName, IconPrefix, library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '../../components/icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { Project } from '../../model/Project';
@@ -41,9 +40,8 @@ export const Card = (props: { project: Project }) => {
     const { name, repoUrl, description, languages, officialSiteUrl, notFinished,  isPrivate, keywords } = props.project;
     const isGithubRepo = repoUrl && repoUrl.includes("github");
     const isGitlabRepo = repoUrl && repoUrl.includes("gitlab");
-    const icon: [IconPrefix, IconName] = ["fab", (isGithubRepo ? "github" : (isGitlabRepo ? "gitlab" : "reddit"))]; // reddit icon because we can't have a null icon
-    const icon2: [IconPrefix, IconName] = ["fas", "lock"];
-    const iconsElement = <span style={{ width: "40px", textAlign: "right" }}>{(icon[1] !== "reddit" ? <span><FontAwesomeIcon size="1x" icon={icon} /> {(isPrivate ? <FontAwesomeIcon size="1x" icon={icon2} /> : null)}</span> : (isPrivate ? <FontAwesomeIcon size="1x" icon={icon2} /> : null))}</span>;
+    const icon = (isGithubRepo ? "github" : (isGitlabRepo ? "gitlab" : "reddit")); // reddit icon because we can't have a null icon
+    const iconsElement = <span style={{ width: "40px", textAlign: "right" }}>{(icon !== "reddit" ? <span><FontAwesomeIcon size="1x" iconName="github" type="brand" /> {(isPrivate ? <FontAwesomeIcon size="1x" iconName="lock" type="solid" /> : null)}</span> : (isPrivate ? <FontAwesomeIcon size="1x" iconName="lock" type="solid" /> : null))}</span>;
     const titleElement = <h3 className="project__name">{name} {iconsElement}</h3>;
     const descriptionElement = <p className="project__description">{description}</p>;
     return <CardWrapper notFinished={notFinished}>

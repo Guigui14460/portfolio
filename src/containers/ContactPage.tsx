@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import { FontAwesomeIcon } from "../components/icons"
 import styled from 'styled-components';
 import { SocialIcon } from '../components/SocialIcon';
 import { address, emailAddress, phoneLongVersion, phoneShortVersion, socialAccounts } from '../model/data';
@@ -53,10 +52,10 @@ export const ContactPage = () => {
             <p>You can contact or meet me with this different informations :</p>
             <ul style={{ listStyle: "none", fontSize: 17 }}>
                 <ListElement>
-                    <FontAwesomeIcon icon={faPhone} /> <a href={"tel:" + phoneShortVersion}>{phoneLongVersion}</a>
+                    <FontAwesomeIcon iconName="phone" type="solid" size="1x" /> <a href={"tel:" + phoneShortVersion}>{phoneLongVersion}</a>
                 </ListElement>
                 <ListElement>
-                    <FontAwesomeIcon icon={faHome} /> {address}
+                    <FontAwesomeIcon iconName="home" type="solid" size="1x" /> {address}
                 </ListElement>
             </ul>
         </section>
