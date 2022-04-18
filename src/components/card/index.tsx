@@ -1,11 +1,10 @@
-import React from 'react';
 import styled from 'styled-components';
-import { Language } from '../../model/Language';
 import { hexToRgb, contrast } from '../../utils';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { IconName, IconPrefix, library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '../../components/icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { Project } from '../../model/Project';
 library.add(faGithub, faGitlab, faLock);
 
 const CardWrapper = styled.div<{ notFinished?: boolean }>`
@@ -36,24 +35,31 @@ const CardWrapper = styled.div<{ notFinished?: boolean }>`
     }
 `;
 
-export const Card = (props: { name: string; notFinished?: boolean; officialSiteUrl?: string; repoURL?: string; description: string; languages: Language[]; isPrivate?: boolean, keywords?: string[] }) => {
-    const { name, repoURL, description, languages, officialSiteUrl, notFinished,  isPrivate, keywords } = props;
-    const isGithubRepo = repoURL && repoURL.includes("github");
-    const isGitlabRepo = repoURL && repoURL.includes("gitlab");
-    const icon: [IconPrefix, IconName] = ["fab", (isGithubRepo ? "github" : (isGitlabRepo ? "gitlab" : "reddit"))]; // reddit icon because we can't have a null icon
-    const icon2: [IconPrefix, IconName] = ["fas", "lock"];
-    const iconsElement = <span style={{ width: "40px", textAlign: "right" }}>{(icon[1] !== "reddit" ? <span><FontAwesomeIcon size="1x" icon={icon} /> {(isPrivate ? <FontAwesomeIcon size="1x" icon={icon2} /> : null)}</span> : (isPrivate ? <FontAwesomeIcon size="1x" icon={icon2} /> : null))}</span>;
+export const Card = (props: { project: Project }) => {
+    const { name, repoUrl, description, languages, officialSiteUrl, notFinished, isPrivate, keywords, authors, leader } = props.project;
+    const isGithubRepo = repoUrl && repoUrl.includes("github");
+    const isGitlabRepo = repoUrl && repoUrl.includes("gitlab");
+    const icon = (isGithubRepo ? "github" : (isGitlabRepo ? "gitlab" : "reddit")); // reddit icon because we can't have a null icon
+    const iconsElement = <span style={{ width: "40px", textAlign: "right" }}>{(icon !== "reddit" ? <span><FontAwesomeIcon size="1x" iconName="github" type="brand" /> {(isPrivate ? <FontAwesomeIcon size="1x" iconName="lock" type="solid" /> : null)}</span> : (isPrivate ? <FontAwesomeIcon size="1x" iconName="lock" type="solid" /> : null))}</span>;
     const titleElement = <h3 className="project__name">{name} {iconsElement}</h3>;
     const descriptionElement = <p className="project__description">{description}</p>;
     return <CardWrapper notFinished={notFinished}>
-       {repoURL ? <a className="project__repo-url" href={repoURL} target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
-       {repoURL ? <a className="project__repo-url" href={repoURL} target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
+       {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
+       {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
        {officialSiteUrl !== undefined ? <p>You can have more precision <a href={officialSiteUrl} rel="noreferrer" target="_blank">here</a>.</p> : null}
-        <p className="project__languages">Languages : {languages.map((value, index) => {
-            return <span style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }} key={index}>{value.name}</span>
+        <p className="project__languages">Languages : {languages.map((value, languageIndex) => {
+            return <span style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }} key={languageIndex}>{value.name}</span>
         })}</p>
-        {keywords ? <p className="project__languages" style={{ fontSize: "0.8em" }}>Keywords : {keywords.map((value, index) => {
-            return <span style={{ backgroundColor: "#dddddd", color: "#333333" }} key={index}>{value}</span>
+        {keywords ? <p className="project__languages" style={{ fontSize: "0.8em" }}>Keywords : {keywords.map((value, keywordIndex) => {
+            return <span key={keywordIndex} style={{ backgroundColor: "#dddddd", color: "#333333" }}>{value}</span>
         })}</p> : null}
+        {authors ? <p className='project__authors'>Authors : {authors.map((value, authorIndex) => {
+            if(value === undefined) return null;
+
+            let isLeader = false;
+            if(value === leader) isLeader = true;
+
+            return <>{(authorIndex !== 0) ? <>, </> : null}<span key={authorIndex} style={{ fontWeight: (isLeader ? "bold" : "normal") }} data-for="project-author-links" data-tip={value.id}>{value.name}</span></>
+        })}</p>: null}
     </CardWrapper>
 }

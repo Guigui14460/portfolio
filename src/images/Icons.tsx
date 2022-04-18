@@ -9,10 +9,15 @@ import pandasIcon from "./pandas.svg";
 import postgresqlIcon from "./postgresql.png";
 import reactjsIcon from "./reactjs.svg";
 import seabornIcon from "./seaborn.svg";
+import scikitLearnIcon from './scikit-learn.png';
 import scipyIcon from "./scipy.png";
 import sqliteIcon from "./sqlite.png";
 import tensorflowIcon from "./tensorflow.svg";
 import vuejsIcon from "./vuejs.png";
+import googleScholarIcon from './google-scholar.svg';
+import githubIcon from './github.svg';
+import gitlabIcon from './gitlab.svg';
+import linkedinIcon from './linkedin.svg';
 
 export {
     djangoIcon,
@@ -26,8 +31,13 @@ export {
     postgresqlIcon,
     reactjsIcon,
     seabornIcon,
+    scikitLearnIcon,
     scipyIcon,
     sqliteIcon,
     tensorflowIcon,
     vuejsIcon,
+    googleScholarIcon,
+    githubIcon,
+    gitlabIcon,
+    linkedinIcon,
 };
