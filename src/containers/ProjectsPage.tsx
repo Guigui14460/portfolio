@@ -5,7 +5,15 @@ import { projectsData, universityProjectsData } from '../model/data';
 export const ProjectsPage = () => {
     return <>
         <h1>Projects</h1>
-        <span style={{ color: "#ff0000", fontWeight: 700 }}>Each section are ordered by most recent to more older.</span>
+        <p style={{ color: "#ff0000", fontWeight: 700 }}>Only large projects are present. To have more, I advise you to look at my github and gitlab profiles to see a larger panel of projects (small as well as large).</p>
+        <p style={{ color: "#cfbd21", fontWeight: 700 }}>Each section are ordered by most recent to more older.</p>
+        {/*
+            TODO: filtering system with https://react-select.com/home
+            - make same anim as demo
+            - put language colour (bg)
+            - multi select of languages and keywords
+            - clearable et searchable
+        */}
         <section id="university-projects">
             <h2>University projects</h2>
             <Grid row>
