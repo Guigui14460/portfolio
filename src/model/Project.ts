@@ -8,6 +8,12 @@ export interface ProjectAuthor {
     linkedInProfile?: string;
     portfolioUrl?: string;
 };
+export const authorHasNoLinks = (author: ProjectAuthor|undefined) => {
+    if (author === undefined) return false;
+    return author.googleScholarProfile === undefined && author.githubProfile === undefined && 
+           author.gitlabProfile === undefined && author.linkedInProfile === undefined &&
+           author.portfolioUrl === undefined;
+}
 
 export interface Project {
     name: string;
