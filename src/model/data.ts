@@ -57,7 +57,7 @@ export const projectsData: Project[] = [
         languages: [languageInformations["python"]],
         isPrivate: true,
         notFinished: true,
-        keywords: ["deep learning", "tensorflow", "generative model"],
+        keywords: ["deep learning", "tensorflow", "generative model", "astronomy"],
     },
     {
         name: "Artificial neural network",
@@ -189,7 +189,7 @@ export const universityProjectsData: Project[] = [
         leader: me,
         authors: [me, authorsList.get("ap"), authorsList.get("am")],
         languages: [languageInformations["java"]],
-        keywords: ["physics", "star simulation"],
+        keywords: ["physics", "star simulation", "astrophysics"],
     },
     {
         name: "Wargame optimizer",
