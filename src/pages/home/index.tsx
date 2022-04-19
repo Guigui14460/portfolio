@@ -66,7 +66,7 @@ const HomePage = () => {
                             My referent : <a target="_blank" rel="noreferrer" href={value.referent.url}>{value.referent.firstName} {value.referent.lastName}</a>, {value.referent.jobDescription}
                         </p> : null}
                         {value.keywords != null ? <Keywords>Keywords : {value.keywords.map((value2, index2) => {
-                            return <span style={{ backgroundColor: "#cf9038", color: (contrast(hexToRgb("#cf9038"), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }} key={index2}>{value2}</span>
+                            return <span key={index2} style={{ backgroundColor: "#cf9038", color: (contrast(hexToRgb("#cf9038"), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}>{value2}</span>
                         })}</Keywords> : null}
                     </article>
                     {experiencesData.length - 1 !== index ? <Marginer direction="vertical" margin={4} /> : null}

@@ -47,12 +47,12 @@ const Card = (props: { project: Project }) => {
        {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
        {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
        {officialSiteUrl !== undefined ? <p>You can have more precision <a href={officialSiteUrl} rel="noreferrer" target={officialSiteUrl.indexOf("http") !== -1 ? "_blank" : ""}>here</a>.</p> : null}
-        <p className="project__languages">Languages : {languages.map((value, languageIndex) => {
-            return <span style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }} key={languageIndex}>{value.name}</span>
-        })}</p>
-        {keywords ? <p className="project__languages" style={{ fontSize: "0.8em" }}>Keywords : {keywords.map((value, keywordIndex) => {
-            return <span key={keywordIndex} style={{ backgroundColor: "#dddddd", color: "#333333" }}>{value}</span>
-        })}</p> : null}
+        <p className="project__languages">Languages : {languages.map((value, languageIndex) =>
+            <span key={languageIndex} style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}>{value.name}</span>
+        )}</p>
+        {keywords ? <p className="project__languages" style={{ fontSize: "0.8em" }}>Keywords : {keywords.map((value, keywordIndex) =>
+            <span key={keywordIndex} style={{ backgroundColor: "#dddddd", color: "#333333" }}>{value}</span>
+        )}</p> : null}
         {authors ? <p className='project__authors'>Authors : {authors.map((value, authorIndex) => {
             if(value === undefined) return null;
 
