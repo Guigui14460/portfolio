@@ -142,7 +142,7 @@ export const universityProjectsData: Project[] = [
         leader: me,
         authors: [me, authorsList.get("cp")],
         languages: [languageInformations["java"]],
-        officialSiteUrl: "https://www.greyc.fr/en/equipes/mad-2/",
+        officialSiteUrl: "/skills#annual-project-m1",
         keywords: ["artificial intelligence", "interpreter", "knowledge", "logical reasoning", "dynamic epistemic logic", "symbolic AI", "multi-agents system"],
     },
     {
@@ -151,6 +151,7 @@ export const universityProjectsData: Project[] = [
         description: "Creation of a movie recommendation system using several approaches like collaborative-filtering, content-based, categorical or hybrid recommenders",
         authors: [me, authorsList.get("rk"), authorsList.get("mo"), authorsList.get("zu")],
         languages: [languageInformations["python"]],
+        officialSiteUrl: "/skills#annual-project-b3",
         keywords: ["recommender system", "machine learning"],
     },
     {

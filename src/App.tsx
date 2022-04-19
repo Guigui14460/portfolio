@@ -1,14 +1,14 @@
 import './index.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
-import { HomePage } from './containers/HomePage';
-import { ProjectsPage } from './containers/ProjectsPage';
-import { AboutPage } from './containers/AboutPage';
-import { ContactPage } from './containers/ContactPage';
-import { SkillsPage } from './containers/SkillsPage';
-import Header from './components/Header';
-import Footer from './components/footer';
-import ScrollToTop from './ScrollToTop';
+import HomePage from "./pages/home";
+import ProjectsPage from "./pages/projects";
+import AboutPage from "./pages/about";
+import ContactPage from "./pages/contact";
+import SkillsPage from "./pages/skills";
+import Header from "./components/header";
+import Footer from "./components/footer";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (

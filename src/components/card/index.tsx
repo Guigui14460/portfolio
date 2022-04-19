@@ -35,7 +35,7 @@ const CardWrapper = styled.div<{ notFinished?: boolean }>`
     }
 `;
 
-export const Card = (props: { project: Project }) => {
+const Card = (props: { project: Project }) => {
     const { name, repoUrl, description, languages, officialSiteUrl, notFinished, isPrivate, keywords, authors, leader } = props.project;
     const isGithubRepo = repoUrl && repoUrl.includes("github");
     const isGitlabRepo = repoUrl && repoUrl.includes("gitlab");
@@ -46,7 +46,7 @@ export const Card = (props: { project: Project }) => {
     return <CardWrapper notFinished={notFinished}>
        {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
        {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
-       {officialSiteUrl !== undefined ? <p>You can have more precision <a href={officialSiteUrl} rel="noreferrer" target="_blank">here</a>.</p> : null}
+       {officialSiteUrl !== undefined ? <p>You can have more precision <a href={officialSiteUrl} rel="noreferrer" target={officialSiteUrl.indexOf("http") !== -1 ? "_blank" : ""}>here</a>.</p> : null}
         <p className="project__languages">Languages : {languages.map((value, languageIndex) => {
             return <span style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }} key={languageIndex}>{value.name}</span>
         })}</p>
@@ -63,3 +63,5 @@ export const Card = (props: { project: Project }) => {
         })}</p>: null}
     </CardWrapper>
 }
+
+export default Card;

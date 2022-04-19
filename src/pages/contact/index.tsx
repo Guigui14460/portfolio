@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "../components/icons"
+import { FontAwesomeIcon } from "../../components/icons"
 import styled from 'styled-components';
-import { SocialIcon } from '../components/SocialIcon';
-import { address, emailAddress, phoneLongVersion, phoneShortVersion, socialAccounts } from '../model/data';
+import { SocialIcon } from '../../components/icons';
+import { address, emailAddress, phoneLongVersion, phoneShortVersion, socialAccounts } from '../../model/data';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPhone, faHome } from '@fortawesome/free-solid-svg-icons';
 library.add(faPhone, faHome);
@@ -30,7 +30,7 @@ const ListElement = styled.li`
     margin: 12px 0;
 `;
 
-export const ContactPage = () => {
+const ContactPage = () => {
     return <>
         <h1>Contact me</h1>
         <section id="mail">
@@ -61,3 +61,5 @@ export const ContactPage = () => {
         </section>
     </>
 }
+
+export default ContactPage;

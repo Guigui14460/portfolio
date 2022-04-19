@@ -4,7 +4,7 @@ const GreatPeopleLink = styled.a`
     font-weight: bold;
 `;
 
-export const AboutPage = () => {
+const AboutPage = () => {
     return <>
         <h1>About me</h1>
         <section>
@@ -82,3 +82,5 @@ export const AboutPage = () => {
         </section>
     </>
 };
+
+export default AboutPage;

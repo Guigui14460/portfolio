@@ -1,15 +1,15 @@
 import { ReactElement } from 'react';
 import ReactTooltip from 'react-tooltip';
-import { Card } from '../components/card';
-import Grid from '../components/grid';
-import { projectsData, universityProjectsData } from '../model/data';
-import { authorsList } from '../model/authorsData';
+import Card from '../../components/card';
+import Grid from '../../components/grid';
+import { projectsData, universityProjectsData } from '../../model/data';
+import { authorsList } from '../../model/authorsData';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { ProjectAuthorTooltipContent } from '../components/tooltips';
+import { ProjectAuthorTooltipContent } from '../../components/tooltips';
 library.add(faGlobe);
 
-export const ProjectsPage = () => {
+const ProjectsPage = () => {
     const authorsLinksTooltip: ReactElement = <ReactTooltip 
             id='project-author-links' getContent={(dataTip) => authorsList.has(dataTip) ? ProjectAuthorTooltipContent(authorsList.get(dataTip)) : null} 
             effect="solid" delayHide={250} delayShow={250} delayUpdate={250} place={"bottom"} border={false} type={"light"} />;
@@ -47,3 +47,5 @@ export const ProjectsPage = () => {
         {authorsLinksTooltip}
     </>
 };
+
+export default ProjectsPage;
