@@ -1,4 +1,4 @@
-import Select, { MultiValue } from "react-select";
+import Select, { MultiValue, Theme } from "react-select";
 import makeAnimated from 'react-select/animated';
 import { CSSProperties } from "styled-components";
 import { GroupedOption, groupedOptions, KeywordOption, LanguageOption } from "../../model/Options";
@@ -33,12 +33,25 @@ const formatGroupLabel = (data: GroupedOption) => (
 );
 
 const ProjectsSearchBar = ({onChange}: { onChange: (value: MultiValue<LanguageOption | KeywordOption>) => void; }) => {
+    function customTheme(theme: Theme) {
+        return {
+            ...theme,
+            borderRadius: 0,
+            colors: {
+                ...theme.colors,
+                primary50: '#444',
+                primary25: '#333',
+                privary: '#222',
+            },
+        };
+    };
+
     return <Select<LanguageOption | KeywordOption, true, GroupedOption> 
         isDisabled={false} isLoading={false} isClearable isRtl={false} isSearchable
         name="projects-search-bar" className="multi-select" classNamePrefix="select" isMulti
         closeMenuOnSelect={false} closeMenuOnScroll={true} placeholder="Select languages or keywords to filter projects"
         noOptionsMessage={() => "No more languages or keywords to select :("} components={animatedComponents}
-        options={groupedOptions} formatGroupLabel={formatGroupLabel} onChange={onChange}
+        options={groupedOptions} formatGroupLabel={formatGroupLabel} onChange={onChange} theme={customTheme}
     />
 };
 

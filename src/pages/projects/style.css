@@ -1,3 +1,18 @@
-.select__menu {
+.multi-select {
     color: black !important;
+}
+.select__placeholder {
+    color: #999 !important;
+}
+.select__control {
+    background-color: #222 !important;
+    border-color: #222 !important;
+}
+.select__multi-value {
+    background-color: #ccc !important;
+}
+
+.select__menu, .select__menu-list {
+    color: #ccc !important;
+    background-color: #222 !important;
 }
