@@ -104,7 +104,7 @@ export const projectsData: Project[] = [
         leader: me,
         authors: [me],
         languages: [languageInformations["python"], languageInformations["html"], languageInformations["javascript"], languageInformations["sass"]],
-        keywords: ["educational website", "django", "web-development"],
+        keywords: ["educational website", "django", "web development"],
     },
 ];
 
