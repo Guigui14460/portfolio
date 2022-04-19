@@ -1,4 +1,6 @@
+import { MultiValue } from 'react-select';
 import { Language } from './Language';
+import { KeywordOption, LanguageOption } from './Options';
 
 export interface ProjectAuthor {
     id: string;
@@ -27,4 +29,21 @@ export interface Project {
     notFinished?: boolean;
     keywords?: string[];
     isPrivate?: boolean;
+};
+export const hasLanguagesOrKeywords = (project: Project, filters: MultiValue<LanguageOption | KeywordOption>) => {
+    for(let filter of filters){
+        if(filter.type === "language"){
+            let isIn = false;
+            project.languages.forEach(value => {
+                isIn = isIn || value.name === filter.label;
+            });
+            if(!isIn) return false;
+        }
+
+        if(filter.type === "keyword") {
+            if(!project.keywords) return false;
+            if(!project.keywords.includes(filter.label)) return false;
+        }
+    }
+    return true;
 };
