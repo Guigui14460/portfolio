@@ -25,7 +25,7 @@ const HomePage = () => {
             id='project-author-links' getContent={(dataTip) => authorsList.has(dataTip) ? ProjectAuthorTooltipContent(authorsList.get(dataTip)) : null} 
             effect="solid" delayHide={250} delayShow={250} delayUpdate={250} place={"bottom"} border={false} type={"light"} />;
     return <>
-        <h1>Guillaume Letellier's Portfolio</h1>
+        <h1>Guillaume Letellier Portfolio</h1>
         <Marginer direction="vertical" margin={14} />
         <section>
             <h2>Short description of myself</h2>
