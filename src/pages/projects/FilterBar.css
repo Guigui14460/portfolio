@@ -1,9 +1,13 @@
 .multi-select {
     color: black !important;
 }
+.select__input {
+    color: white !important;
+}
 .select__placeholder {
     color: #999 !important;
 }
+
 .select__control {
     background-color: #222 !important;
     border-color: #222 !important;

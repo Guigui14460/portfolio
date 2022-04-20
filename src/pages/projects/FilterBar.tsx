@@ -2,7 +2,7 @@ import Select, { MultiValue, Theme } from "react-select";
 import makeAnimated from 'react-select/animated';
 import { CSSProperties } from "styled-components";
 import { GroupedOption, groupedOptions, KeywordOption, LanguageOption } from "../../model/Options";
-import './style.css';
+import './FilterBar.css';
 
 // animation on select
 const animatedComponents = makeAnimated();
@@ -32,7 +32,7 @@ const formatGroupLabel = (data: GroupedOption) => (
     </div>
 );
 
-const ProjectsSearchBar = ({onChange}: { onChange: (value: MultiValue<LanguageOption | KeywordOption>) => void; }) => {
+const ProjectsFilterBar = ({onChange}: { onChange: (value: MultiValue<LanguageOption | KeywordOption>) => void; }) => {
     function customTheme(theme: Theme) {
         return {
             ...theme,
@@ -55,4 +55,4 @@ const ProjectsSearchBar = ({onChange}: { onChange: (value: MultiValue<LanguageOp
     />
 };
 
-export default ProjectsSearchBar;
+export default ProjectsFilterBar;

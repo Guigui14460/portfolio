@@ -2,7 +2,7 @@ import { ReactElement, useState } from 'react';
 import ReactTooltip from 'react-tooltip';
 import Card from '../../components/card';
 import Grid from '../../components/grid';
-import ProjectsSearchBar from './searchbar';
+import ProjectsFilterBar from './FilterBar';
 import { projectsData, universityProjectsData } from '../../model/data';
 import { authorsList } from '../../model/authorsData';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -30,7 +30,7 @@ const ProjectsPage = () => {
         <h1>Projects</h1>
         <p style={{ color: "#e93737", fontWeight: 700 }}>Only large projects are present. To have more, I advise you to look at my github and gitlab profiles to see a larger panel of projects (small as well as large).</p>
         <p style={{ color: "#cfbd21", fontWeight: 700 }}>Each section are ordered by most recent to more older.</p>
-        <ProjectsSearchBar onChange={setFilters} />
+        <ProjectsFilterBar onChange={setFilters} />
 
         {
             universityProjectsGrid.length !== 0 && 
