@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
@@ -8,11 +7,11 @@ const loaderVariants = {
         y: [0, -30],
         transition: {
             x: {
-                yoyo: Infinity,
+                reverse: Infinity,
                 duration: 0.5,
             },
             y: {
-                yoyo: Infinity,
+                reverse: Infinity,
                 duration: 0.25,
                 ease: 'easeOut',
             },
@@ -50,7 +49,7 @@ const CircleLoader = styled(motion.div)<{ width: number }>`
 const SpinLoader = (props: { width: number; }) => {
     return <>
         <CircleLoader width={props.width} animate={{ rotate: 360 }} 
-            transition={{ loop: Infinity, ease: "linear", duration: 0.75 }} />
+            transition={{ repeat: Infinity, ease: "linear", duration: 0.75 }} />
     </>
 }
 export default SpinLoader;
@@ -79,7 +78,7 @@ const loadingCircleVariants = {
   
 const loadingCircleTransition = {
     duration: 0.4,
-    yoyo: Infinity,
+    reverse: Infinity,
     ease: "easeInOut"
 };
   
