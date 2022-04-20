@@ -9,7 +9,7 @@ import { authorsList, experiencesData, worksInProgressProjectsData } from '../..
 import { isInstanceOfInternship } from '../../model/Experience';
 import { contrast, hexToRgb } from '../../utils';
 import { ProjectAuthorTooltipContent } from '../../components/tooltips';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Keywords = styled.p`
     & > span {
@@ -29,7 +29,7 @@ const HomePage = () => {
         <Marginer direction="vertical" margin={14} />
         <section>
             <h2>Who am I?</h2>
-            <p>Hi! My name is Guillaume Letellier, I'm 21-year-old french student and I develop things on my free time. I am passionate about IT, both in the thoery and development aspects. In particular, I am fascinated by artificial intelligence (including machine learning and deep learning), quantum computing, computational optimization and algorithmics. You can go to <Link to="/projects" className='link'>projects</Link> and <Link to="/about" className='link'>about</Link> pages.</p>
+            <p>Hi! My name is Guillaume Letellier, I'm 21-year-old french student and I develop things on my free time. I am passionate about IT, both in the thoery and development aspects. In particular, I am fascinated by artificial intelligence (including machine learning and deep learning), quantum computing, computational optimization and algorithmics. You can go to <HashLink to="/projects" className='link'>projects</HashLink> and <HashLink to="/about#educational" className='link'>about</HashLink> pages.</p>
             <p>After seeing the different projects implemented, I invite you to contact me if you want to hire me or learn more about my projects/background.</p>
             <div style={{ textAlign: 'center' }}>
                 <ButtonLink title="Contact" targetLink="/contact" className="secondary outlined">Contact me</ButtonLink>

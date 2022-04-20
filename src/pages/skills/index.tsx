@@ -162,7 +162,7 @@ const SkillsPage = () => {
             project management skills, learn new things that we d'ont have time in courses or go deeper in a field. The chosen project made by an algorithm
             developed to associate each student in a group and try to satisfies the projects ordering made by students.</p>
             
-            <h4 id="annual-project-m1">Annual project 3rd year of BSc : <a className='link' href="https://github.com/Guigui14460/recommender-system" target="_blank" rel="noreferrer">Movie recommendation system</a></h4>
+            <h4 id="annual-project-b3">Annual project 3rd year of BSc : <a className='link' href="https://github.com/Guigui14460/recommender-system" target="_blank" rel="noreferrer">Movie recommendation system</a></h4>
             <p>
                 The goal of this project, proposed by <a className='link' href="https://alec.users.greyc.fr/" target="_blank" rel="noreferrer">Céline Alec</a> from 
                 the <a className='link' href="https://www.greyc.fr/en/equipes/codag-2/" target="_blank" rel="noreferrer">CODAG team</a> (Constraints, Ontologies, Data, Annotations, Graphs) 
@@ -176,7 +176,7 @@ const SkillsPage = () => {
                 <li>hybrid: combination of the two above mentioned.</li>
             </ul>
             <p>We also used the categorical approach to select the best movies in a certain category (action, horror, etc.).</p>
-            <h4 id="annual-project-b3">Annual project 1st year of MSc : <a className='link' href="https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter" target="_blank" rel="noreferrer">Multi-agent knowledge-based program interpreter</a></h4>
+            <h4 id="annual-project-m1">Annual project 1st year of MSc : <a className='link' href="https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter" target="_blank" rel="noreferrer">Multi-agent knowledge-based program interpreter</a></h4>
             <p>
                 The goal of this project, proposed by <a className='link' href="https://zanuttini.users.greyc.fr/" target="_blank" rel="noreferrer">Bruno Zanuttini</a> from 
                 the <a className='link' href="https://www.greyc.fr/en/equipes/mad-2/" target="_blank" rel="noreferrer">MAD team</a> (Model, Agents, Decision) of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, 
