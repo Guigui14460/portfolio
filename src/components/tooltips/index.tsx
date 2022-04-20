@@ -2,6 +2,7 @@ import { authorHasNoLinks, ProjectAuthor } from "../../model/Project";
 import { FontAwesomeIcon, ImageIcon } from "../icons";
 import Marginer from "../marginer";
 import { googleScholarIcon, githubIcon, gitlabIcon,linkedinIcon } from "../../images/Icons";
+import { Fragment } from "react";
 
 export const ProjectAuthorTooltipContent = (author: ProjectAuthor | undefined) => {
     if (author === undefined) return null;
@@ -15,7 +16,7 @@ export const ProjectAuthorTooltipContent = (author: ProjectAuthor | undefined) =
 
     return <div style={{ display: "flex" }}>
         {links.map((value, index) => {
-            return <>{index !== 0 ? <Marginer direction='horizontal' margin={"8px"} key={index} /> : null}{value}</>
+            return <Fragment key={index}>{index !== 0 ? <Marginer direction='horizontal' margin={"8px"} /> : null}{value}</Fragment>
         })}
     </div>
 }

@@ -20,10 +20,10 @@ const ProjectsPage = () => {
             id='project-author-links' getContent={(dataTip) => authorsList.has(dataTip) ? ProjectAuthorTooltipContent(authorsList.get(dataTip)) : null} 
             effect="solid" delayHide={250} delayShow={250} delayUpdate={250} place={"bottom"} border={false} type={"light"} />;
     const universityProjectsGrid = universityProjectsData.filter(value => hasLanguagesOrKeywords(value, filters)).map((value, index) =>
-        <Grid key={index} column sm={12} md={6} lg={4}><Card project={value} /></Grid>
+        <Grid key={index} column sm={12} md={6} lg={4}><Card key={index} project={value} /></Grid>
     );
     const personalProjectsGrid = projectsData.filter(value => hasLanguagesOrKeywords(value, filters)).map((value, index) => 
-        <Grid key={index} column sm={12} md={6} lg={4}><Card project={value} /></Grid>
+        <Grid key={index} column sm={12} md={6} lg={4}><Card key={index} project={value} /></Grid>
     );
 
     return <>

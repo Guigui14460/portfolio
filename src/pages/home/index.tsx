@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { Fragment, ReactElement } from 'react';
 import ReactTooltip from 'react-tooltip';
 import styled from 'styled-components';
 import { ButtonExternalLink, ButtonLink } from '../../components/button';
@@ -57,8 +57,8 @@ const HomePage = () => {
             {experiencesData.sort((a, b) => {
                 return b.from.getTime() - a.from.getTime()
             }).map((value, index) => {
-                return <>
-                    <article key={index}>
+                return <Fragment key={index}>
+                    <article>
                         <h3>{value.title}{value.entreprise ? <> at {value.entrepriseUrl ? <a target="_blank" rel="noreferrer" href={value.entrepriseUrl}>{value.entreprise}</a>: value.entreprise}</> : null}{isInstanceOfInternship(value) ? " -- Internship" : null}</h3>
                         <span>From {value.from.toLocaleDateString()} to {value.to == null ? "Today" : value.to.toLocaleDateString()} in {value.location}</span>
                         <p>{isInstanceOfInternship(value) ? <><strong style={{fontSize: "1.1rem"}}>{value.subject}</strong>{value.associatedTo ? <> (associated to {value.associatedToUrl ? <a target="_blank" rel="noreferrer" href={value.associatedToUrl}>{value.associatedTo}</a>: value.associatedTo})</>  : null}<Marginer direction="vertical" margin={8} /></>  : null}Description : {value.description}</p>
@@ -70,7 +70,7 @@ const HomePage = () => {
                         })}</Keywords> : null}
                     </article>
                     {experiencesData.length - 1 !== index ? <Marginer direction="vertical" margin={4} /> : null}
-                </>
+                </Fragment>
             })}
         </section>
         <section>

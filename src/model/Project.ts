@@ -11,11 +11,15 @@ export interface ProjectAuthor {
     linkedInProfile?: string;
     portfolioUrl?: string;
 };
-export const authorHasNoLinks = (author: ProjectAuthor|undefined) => {
+export const authorHasNoLinks = (author: ProjectAuthor | undefined) => {
     if (author === undefined) return false;
     return author.googleScholarProfile === undefined && author.githubProfile === undefined && 
            author.gitlabProfile === undefined && author.linkedInProfile === undefined &&
            author.portfolioUrl === undefined;
+}
+
+export const getOnlyAuthors = (authors: (ProjectAuthor | undefined)[]) => {
+    return authors.filter(item => item) as ProjectAuthor[];
 }
 
 export interface Project {
@@ -23,7 +27,7 @@ export interface Project {
     description: string;
     repoUrl?: string;
     leader?: ProjectAuthor;
-    authors: (ProjectAuthor | undefined)[];
+    authors: ProjectAuthor[];
     languages: Language[];
     officialSiteUrl?: string;
     notFinished?: boolean;

@@ -5,6 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { Project } from '../../model/Project';
+import { Fragment } from 'react';
 library.add(faGithub, faGitlab, faLock);
 
 const CardWrapper = styled.div<{ notFinished?: boolean }>`
@@ -54,12 +55,10 @@ const Card = (props: { project: Project }) => {
             <span key={keywordIndex} style={{ backgroundColor: "#dddddd", color: "#333333" }}>{value}</span>
         )}</p> : null}
         {authors ? <p className='project__authors'>Authors : {authors.map((value, authorIndex) => {
-            if(value === undefined) return null;
-
             let isLeader = false;
             if(value === leader) isLeader = true;
 
-            return <>{(authorIndex !== 0) ? <>, </> : null}<span key={authorIndex} style={{ fontWeight: (isLeader ? "bold" : "normal") }} data-for="project-author-links" data-tip={value.id}>{value.name}</span></>
+            return <Fragment key={authorIndex}>{(authorIndex !== 0) ? <>, </> : null}<span style={{ fontWeight: (isLeader ? "bold" : "normal") }} data-for="project-author-links" data-tip={value.id}>{value.name}</span></Fragment>
         })}</p>: null}
     </CardWrapper>
 }
