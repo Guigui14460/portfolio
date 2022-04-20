@@ -1,15 +1,4 @@
-export enum SkillLevel {
-    Beginner,
-    Intermediate,
-    Expert,
-};
-
-export interface Language {
-    name: string;
-    color: string;
-    percentage: number;
-    level: SkillLevel;
-}
+import { Language, SkillLevel } from "../model/Language";
 
 const languageInformations: {[id: string]: Language} = {
     "python": {

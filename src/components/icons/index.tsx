@@ -32,7 +32,7 @@ export const SocialIconClickable = (props: {
         iconSize: SizeProp; iconColor: string; 
     }) : JSX.Element => {
     const { url, title, iconProps, iconSize, iconColor } = props;
-    return <a href={url} title={title} target="_blank" rel="noreferrer">
+    return <a className="link" href={url} title={title} target="_blank" rel="noreferrer">
         <SocialIcon icon={iconProps} size={iconSize} colorused={iconColor} />
     </a>
 }

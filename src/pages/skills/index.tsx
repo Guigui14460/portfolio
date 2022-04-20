@@ -7,7 +7,7 @@ import { ImageIcon } from '../../components/icons';
 
 import { motivationIcon, curiousIcon, timeIcon, brainstormingIcon } from "../../images/Images";
 import { firebaseIcon, mysqlIcon, postgresqlIcon, mongodbIcon, sqliteIcon, vuejsIcon, djangoIcon, reactjsIcon, jupyterIcon, numpyIcon, pandasIcon, scipyIcon, matplotlibIcon, tensorflowIcon, seabornIcon, scikitLearnIcon } from "../../images/Icons"
-import languageInformations from '../../model/Language';
+import languageInformations from '../../data/languagesData';
 
 const ElementItem = styled.a`
     display: flex;
@@ -36,7 +36,7 @@ const SkillsPage = () => {
                     <ImageIcon width={100} src={motivationIcon} alt="Motivation icon" />
                     <h3>Motivated</h3>
                     <p>I am a person who is always motivated when I undertake any kind of activity. Motivation is one of the most useful skills in our daily life, it allows us to continue and get closer to our goals.<br />
-                        You can see <Link to="/about#sentences">my sentences</Link> to understand how important this skill is to me.</p>
+                        You can see <Link className='link' to="/about#sentences">my sentences</Link> to understand how important this skill is to me.</p>
                 </Grid>
                 <Grid column sm={12} md={6} lg={3}>
                     <ImageIcon width={100} src={curiousIcon} alt="Curious icon" />
@@ -162,11 +162,11 @@ const SkillsPage = () => {
             project management skills, learn new things that we d'ont have time in courses or go deeper in a field. The chosen project made by an algorithm
             developed to associate each student in a group and try to satisfies the projects ordering made by students.</p>
             
-            <h4 id="annual-project-m1">Annual project 3rd year of BSc : <a href="https://github.com/Guigui14460/recommender-system" target="_blank" rel="noreferrer">Movie recommendation system</a></h4>
+            <h4 id="annual-project-m1">Annual project 3rd year of BSc : <a className='link' href="https://github.com/Guigui14460/recommender-system" target="_blank" rel="noreferrer">Movie recommendation system</a></h4>
             <p>
-                The goal of this project, proposed by <a href="https://alec.users.greyc.fr/" target="_blank" rel="noreferrer">Céline Alec</a> from 
-                the <a href="https://www.greyc.fr/en/equipes/codag-2/" target="_blank" rel="noreferrer">CODAG team</a> (Constraints, Ontologies, Data, Annotations, Graphs) 
-                of <a href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, was to realize a recommendation system (on any subject) 
+                The goal of this project, proposed by <a className='link' href="https://alec.users.greyc.fr/" target="_blank" rel="noreferrer">Céline Alec</a> from 
+                the <a className='link' href="https://www.greyc.fr/en/equipes/codag-2/" target="_blank" rel="noreferrer">CODAG team</a> (Constraints, Ontologies, Data, Annotations, Graphs) 
+                of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, was to realize a recommendation system (on any subject) 
                 in one month (due to teachers' organization problems). We had to test and use different approaches in the short time 
                 we had on a dataset of a few thousand movies that we found on Kaggle. We used three main approaches:
             </p>
@@ -176,10 +176,10 @@ const SkillsPage = () => {
                 <li>hybrid: combination of the two above mentioned.</li>
             </ul>
             <p>We also used the categorical approach to select the best movies in a certain category (action, horror, etc.).</p>
-            <h4 id="annual-project-b3">Annual project 1st year of MSc : <a href="https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter" target="_blank" rel="noreferrer">Multi-agent knowledge-based program interpreter</a></h4>
+            <h4 id="annual-project-b3">Annual project 1st year of MSc : <a className='link' href="https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter" target="_blank" rel="noreferrer">Multi-agent knowledge-based program interpreter</a></h4>
             <p>
-                The goal of this project, proposed by <a href="https://zanuttini.users.greyc.fr/" target="_blank" rel="noreferrer">Bruno Zanuttini</a> from 
-                the <a href="https://www.greyc.fr/en/equipes/mad-2/" target="_blank" rel="noreferrer">MAD team</a> (Model, Agents, Decision) of <a href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, 
+                The goal of this project, proposed by <a className='link' href="https://zanuttini.users.greyc.fr/" target="_blank" rel="noreferrer">Bruno Zanuttini</a> from 
+                the <a className='link' href="https://www.greyc.fr/en/equipes/mad-2/" target="_blank" rel="noreferrer">MAD team</a> (Model, Agents, Decision) of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, 
                 was to realize a knowledge-based program interpreter in a multi-agent execution context in order to complete a code base 
                 maintained and used by the team. The interpreter can be used to solve knowledge-based problems such as the "Muddy Children" puzzle.
             </p>

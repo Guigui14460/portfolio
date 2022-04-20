@@ -17,7 +17,6 @@ export const authorHasNoLinks = (author: ProjectAuthor | undefined) => {
            author.gitlabProfile === undefined && author.linkedInProfile === undefined &&
            author.portfolioUrl === undefined;
 }
-
 export const getOnlyAuthors = (authors: (ProjectAuthor | undefined)[]) => {
     return authors.filter(item => item) as ProjectAuthor[];
 }

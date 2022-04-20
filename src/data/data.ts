@@ -3,11 +3,11 @@ import {
     fab, faLinkedin, faTwitter, faFacebookSquare,
     faDiscord, faReddit
 } from "@fortawesome/free-brands-svg-icons"
-import { SocialAccount } from "./SocialAccount";
-import { Project, ProjectAuthor, getOnlyAuthors } from './Project';
-import languageInformations from "./Language";
-import { expType } from "./Experience";
-import { authorsList } from "./authorsData";
+import { SocialAccount } from "../model/SocialAccount";
+import { Project, ProjectAuthor, getOnlyAuthors } from '../model/Project';
+import languageInformations from "./languagesData";
+import { expType } from "../model/Experience";
+import authorsList from "./authorsData";
 library.add(faLinkedin, fab, faTwitter, faFacebookSquare, faDiscord, faReddit);
 
 export const firstName: string = "Guillaume";

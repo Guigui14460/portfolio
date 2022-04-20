@@ -5,11 +5,10 @@ import { ButtonExternalLink, ButtonLink } from '../../components/button';
 import Grid from '../../components/grid';
 import Marginer from '../../components/marginer';
 import Card from '../../components/card';
-import { experiencesData, worksInProgressProjectsData } from '../../model/data';
+import { authorsList, experiencesData, worksInProgressProjectsData } from '../../data';
 import { isInstanceOfInternship } from '../../model/Experience';
 import { contrast, hexToRgb } from '../../utils';
 import { ProjectAuthorTooltipContent } from '../../components/tooltips';
-import { authorsList } from '../../model/authorsData';
 
 const Keywords = styled.p`
     & > span {
@@ -59,11 +58,11 @@ const HomePage = () => {
             }).map((value, index) => {
                 return <Fragment key={index}>
                     <article>
-                        <h3>{value.title}{value.entreprise ? <> at {value.entrepriseUrl ? <a target="_blank" rel="noreferrer" href={value.entrepriseUrl}>{value.entreprise}</a>: value.entreprise}</> : null}{isInstanceOfInternship(value) ? " -- Internship" : null}</h3>
+                        <h3>{value.title}{value.entreprise ? <> at {value.entrepriseUrl ? <a target="_blank" rel="noreferrer" className='link' href={value.entrepriseUrl}>{value.entreprise}</a>: value.entreprise}</> : null}{isInstanceOfInternship(value) ? " -- Internship" : null}</h3>
                         <span>From {value.from.toLocaleDateString()} to {value.to == null ? "Today" : value.to.toLocaleDateString()} in {value.location}</span>
-                        <p>{isInstanceOfInternship(value) ? <><strong style={{fontSize: "1.1rem"}}>{value.subject}</strong>{value.associatedTo ? <> (associated to {value.associatedToUrl ? <a target="_blank" rel="noreferrer" href={value.associatedToUrl}>{value.associatedTo}</a>: value.associatedTo})</>  : null}<Marginer direction="vertical" margin={8} /></>  : null}Description : {value.description}</p>
+                        <p>{isInstanceOfInternship(value) ? <><strong style={{fontSize: "1.1rem"}}>{value.subject}</strong>{value.associatedTo ? <> (associated to {value.associatedToUrl ? <a target="_blank" rel="noreferrer" className='link' href={value.associatedToUrl}>{value.associatedTo}</a>: value.associatedTo})</>  : null}<Marginer direction="vertical" margin={8} /></>  : null}Description : {value.description}</p>
                         {isInstanceOfInternship(value) ? <p>
-                            My referent : <a target="_blank" rel="noreferrer" href={value.referent.url}>{value.referent.firstName} {value.referent.lastName}</a>, {value.referent.jobDescription}
+                            My referent : <a target="_blank" rel="noreferrer" className='link' href={value.referent.url}>{value.referent.firstName} {value.referent.lastName}</a>, {value.referent.jobDescription}
                         </p> : null}
                         {value.keywords != null ? <Keywords>Keywords : {value.keywords.map((value2, index2) => {
                             return <span key={index2} style={{ backgroundColor: "#cf9038", color: (contrast(hexToRgb("#cf9038"), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}>{value2}</span>

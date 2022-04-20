@@ -3,4 +3,4 @@ export interface Referent {
     lastName: string;
     jobDescription: string;
     url: string;
-}
+};

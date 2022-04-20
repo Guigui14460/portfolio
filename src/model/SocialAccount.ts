@@ -6,4 +6,4 @@ export interface SocialAccount {
     url: string;
     iconProperties: IconProp;
     iconColor: string;
-}
+};

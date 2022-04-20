@@ -47,7 +47,7 @@ const Card = (props: { project: Project }) => {
     return <CardWrapper notFinished={notFinished}>
        {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
        {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
-       {officialSiteUrl !== undefined ? <p>You can have more precision <a href={officialSiteUrl} rel="noreferrer" target={officialSiteUrl.indexOf("http") !== -1 ? "_blank" : ""}>here</a>.</p> : null}
+       {officialSiteUrl !== undefined ? <p>You can have more precision <a href={officialSiteUrl} className="link" rel="noreferrer" target={officialSiteUrl.indexOf("http") !== -1 ? "_blank" : ""}>here</a>.</p> : null}
         <p className="project__languages">Languages : {languages.map((value, languageIndex) =>
             <span key={languageIndex} style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}>{value.name}</span>
         )}</p>

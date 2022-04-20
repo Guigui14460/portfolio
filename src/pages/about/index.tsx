@@ -22,10 +22,10 @@ const AboutPage = () => {
                 <h3>People who have influenced me</h3>
                 <p>I have great admiration for these different great men :</p>
                 <ul>
-                    <li><GreatPeopleLink target="_blank" href="https://www.wikiwand.com/en/Elon_Musk">Elon Musk</GreatPeopleLink> : for these ideas of greatness in order to improve humanity, his hard work that allows him to do things and achieve them like no one before.</li>
-                    <li><GreatPeopleLink target="_blank" href="https://www.wikiwand.com/en/David_Goggins">David Goggins</GreatPeopleLink> : for his motivation, its strength and determination when he undertakes something.</li>
-                    <li><GreatPeopleLink target="_blank" href="https://www.wikiwand.com/en/Robert_Kiyosaki">Robert Kiyosaki</GreatPeopleLink> : for his demonstration on how to effectively manage money and the importance of financial literacy for everyone.</li>
-                    <li><GreatPeopleLink target="_blank" href="https://www.wikiwand.com/en/Albert_Einstein">Albert Einstein</GreatPeopleLink> : why not put it on ! His great intelligence put at the service of the understanding of the world around us, which has revolutionized physics and has brought enormous benefits to humanity and science.</li>
+                    <li><GreatPeopleLink target="_blank" className='link' href="https://www.wikiwand.com/en/Elon_Musk">Elon Musk</GreatPeopleLink> : for these ideas of greatness in order to improve humanity, his hard work that allows him to do things and achieve them like no one before.</li>
+                    <li><GreatPeopleLink target="_blank" className='link' href="https://www.wikiwand.com/en/David_Goggins">David Goggins</GreatPeopleLink> : for his motivation, its strength and determination when he undertakes something.</li>
+                    <li><GreatPeopleLink target="_blank" className='link' href="https://www.wikiwand.com/en/Robert_Kiyosaki">Robert Kiyosaki</GreatPeopleLink> : for his demonstration on how to effectively manage money and the importance of financial literacy for everyone.</li>
+                    <li><GreatPeopleLink target="_blank" className='link' href="https://www.wikiwand.com/en/Albert_Einstein">Albert Einstein</GreatPeopleLink> : why not put it on ! His great intelligence put at the service of the understanding of the world around us, which has revolutionized physics and has brought enormous benefits to humanity and science.</li>
                 </ul>
             </article>
         </section>
@@ -43,10 +43,10 @@ const AboutPage = () => {
             <article>
                 <h3>Download my diplomas</h3>
                 <ul>
-                    <li><a target="_blank" href="high_school_diploma.pdf">High School diploma (scientific option)</a></li>
-                    <li><a target="_blank" href="university_first_year.pdf">Marks of 1st year at University of Caen Normandy</a></li>
-                    <li><a target="_blank" href="university_second_year.pdf">Marks of 2nd year at University of Caen Normandy</a></li>
-                    <li><a target="_blank" href="university_third_year.pdf">Marks of 3rd year at University of Caen Normandy</a></li>
+                    <li><a target="_blank" className='link' href="high_school_diploma.pdf">High School diploma (scientific option)</a></li>
+                    <li><a target="_blank" className='link' href="university_first_year.pdf">Marks of 1st year at University of Caen Normandy</a></li>
+                    <li><a target="_blank" className='link' href="university_second_year.pdf">Marks of 2nd year at University of Caen Normandy</a></li>
+                    <li><a target="_blank" className='link' href="university_third_year.pdf">Marks of 3rd year at University of Caen Normandy</a></li>
                 </ul>
             </article>
         </section>
@@ -77,6 +77,13 @@ const AboutPage = () => {
                     <li>Ancient Egypt and Greece</li>
                     <li>Modern age</li>
                     <li>Contemporary age</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Other</h3>
+                <ul>
+                    <li>French Rap</li>
+                    <li>Video Games</li>
                 </ul>
             </article>
         </section>

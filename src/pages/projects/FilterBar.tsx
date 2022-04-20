@@ -1,7 +1,8 @@
 import Select, { MultiValue, Theme } from "react-select";
 import makeAnimated from 'react-select/animated';
 import { CSSProperties } from "styled-components";
-import { GroupedOption, groupedOptions, KeywordOption, LanguageOption } from "../../model/Options";
+import { GroupedOption, KeywordOption, LanguageOption } from "../../model/Options";
+import { groupedOptions } from "../../data";
 import './FilterBar.css';
 
 // animation on select
