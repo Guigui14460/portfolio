@@ -6,6 +6,7 @@ import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { Project } from '../../model/Project';
 import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 library.add(faGithub, faGitlab, faLock);
 
 const CardWrapper = styled.div<{ notFinished?: boolean }>`
@@ -47,7 +48,11 @@ const Card = (props: { project: Project }) => {
     return <CardWrapper notFinished={notFinished}>
        {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
        {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
-       {officialSiteUrl !== undefined ? <p>You can have more precision <a href={officialSiteUrl} className="link" rel="noreferrer" target={officialSiteUrl.indexOf("http") !== -1 ? "_blank" : ""}>here</a>.</p> : null}
+       {officialSiteUrl !== undefined ? <p>You can have more precision {
+                officialSiteUrl.indexOf("http") !== -1 ? 
+                    <a href={officialSiteUrl} className="link" rel="noreferrer" target="_blank">here</a>
+                    : <Link to={officialSiteUrl} className="link">here</Link>
+           }.</p> : null}
         <p className="project__languages">Languages : {languages.map((value, languageIndex) =>
             <span key={languageIndex} style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}>{value.name}</span>
         )}</p>

@@ -29,6 +29,15 @@
   background-color: var(--ternary-color-hover);
 }
 
+.button.ternary-bis:not(.outlined) {
+  color: var(--color);
+  background-color: var(--ternary-bis-color);
+}
+
+.button.ternary-bis:hover:not(.outlined) {
+  background-color: var(--ternary-bis-color-hover);
+}
+
 .button.primary.outlined {
   color: var(--primary-color);
   background-color: transparent;
@@ -60,4 +69,15 @@
 .button.ternary.outlined:hover {
   color: var(--color);
   background-color: var(--ternary-color);
+}
+
+.button.ternary-bis.outlined {
+  color: var(--ternary-bis-color);
+  background-color: transparent;
+  border: 2px solid var(--ternary-bis-color);
+}
+
+.button.ternary-bis.outlined:hover {
+  color: var(--color);
+  background-color: var(--ternary-bis-color);
 }

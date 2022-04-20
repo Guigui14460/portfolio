@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
 :root {
   --primary-color: #3678e0;
   --primary-color-hover: #2657a7;
@@ -5,6 +7,8 @@
   --secondary-color-hover: #d1781d;
   --ternary-color: #de4721;
   --ternary-color-hover: #ba4b2f;
+  --ternary-bis-color: #28ad4b;
+  --ternary-bis-color-hover: #188f37;
   --background-color: #333333;
   --color: #dddddd;
   /* --background-color: #dddddd; */
@@ -19,7 +23,8 @@
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
   font-size: 14px;
 }
 

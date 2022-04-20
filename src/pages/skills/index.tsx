@@ -195,7 +195,7 @@ const SkillsPage = () => {
 
             <h3>Topics and tools seen</h3>
             <Grid row style={{ textAlign: "center" }}>
-                <Grid column sm={12} md={6} lg={3}>
+                <Grid column sm={12} md={6}>
                     <h4>Mathematics, Algorithmics and CS Theory</h4>
                     <ul style={{ textAlign: 'left' }}>
                         <li>Mathematics (probabilities, statistics, linear algebra, logic and reasoning, arrangements, algebric structures)</li>
@@ -205,7 +205,7 @@ const SkillsPage = () => {
                         <li>Calculability &amp; complexity (Turing machines, problems complexity)</li>
                     </ul>
                 </Grid>
-                <Grid column sm={12} md={6} lg={3}>
+                <Grid column sm={12} md={6}>
                     <h4>Data Science &amp; AI</h4>
                     <ul style={{ textAlign: 'left' }}>
                         <li>Scientific computing</li>
@@ -216,7 +216,7 @@ const SkillsPage = () => {
                         <li>Data Analysis (descriptive stats, MCA, ICA, PCA)</li>
                     </ul>
                 </Grid>
-                <Grid column sm={12} md={6} lg={3}>
+                <Grid column sm={12} md={6}>
                     <h4>Development</h4>
                     <ul style={{ textAlign: 'left' }}>
                         <li>Programming paradagims (OOP, imperative, functionnal, procedural)</li>
@@ -227,7 +227,7 @@ const SkillsPage = () => {
                         <li>Image synthesis (OpenGL)</li>
                     </ul>
                 </Grid>
-                <Grid column sm={12} md={6} lg={3}>
+                <Grid column sm={12} md={6}>
                     <h4>Others</h4>
                     <ul style={{ textAlign: 'left' }}>
                         <li>Scientific and IT culture</li>

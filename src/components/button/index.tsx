@@ -24,8 +24,8 @@ export const Button = (props: { className?: string; children: React.Component | 
     </ButtonWrapper>
 };
 
-export const ButtonLink = (props: { targetLink: string; className?: string; children: React.Component | string | number | boolean | JSX.Element; size?: number; style?: React.CSSProperties }) => {
-    return <Link to={props.targetLink} className="button-link">
+export const ButtonLink = (props: { targetLink: string; className?: string; children: React.Component | string | number | boolean | JSX.Element; size?: number; style?: React.CSSProperties, title?: string }) => {
+    return <Link to={props.targetLink} className="button-link" title={props.title}>
         <ButtonWrapper size={props.size} className={"button " + props.className} style={props.style}>
             {props.children}
         </ButtonWrapper>

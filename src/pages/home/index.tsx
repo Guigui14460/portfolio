@@ -9,6 +9,7 @@ import { authorsList, experiencesData, worksInProgressProjectsData } from '../..
 import { isInstanceOfInternship } from '../../model/Experience';
 import { contrast, hexToRgb } from '../../utils';
 import { ProjectAuthorTooltipContent } from '../../components/tooltips';
+import { Link } from 'react-router-dom';
 
 const Keywords = styled.p`
     & > span {
@@ -27,28 +28,28 @@ const HomePage = () => {
         <h1>Guillaume Letellier Portfolio</h1>
         <Marginer direction="vertical" margin={14} />
         <section>
-            <h2>Short description of myself</h2>
-            <p>Hello, I'm a french computer science student, come take a look at my portfolio and contact me if you want to hire me !</p>
-            <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'space-evenly' }}>
-                <ButtonLink targetLink="/projects" className="ternary">See my projects</ButtonLink>
-                <ButtonLink targetLink="/contact" className="primary">Contact me</ButtonLink>
+            <h2>Who am I?</h2>
+            <p>Hi! My name is Guillaume Letellier, I'm 21-year-old french student and I develop things on my free time. I am passionate about IT, both in the thoery and development aspects. In particular, I am fascinated by artificial intelligence (including machine learning and deep learning), quantum computing, computational optimization and algorithmics. You can go to <Link to="/projects" className='link'>projects</Link> and <Link to="/about" className='link'>about</Link> pages.</p>
+            <p>After seeing the different projects implemented, I invite you to contact me if you want to hire me or learn more about my projects/background.</p>
+            <div style={{ textAlign: 'center' }}>
+                <ButtonLink title="Contact" targetLink="/contact" className="secondary outlined">Contact me</ButtonLink>
             </div>
-            <Marginer direction="vertical" margin={14} />
-            <p>I am passionate about IT, both in the design and development aspects. In particular, I am fascinated by artificial intelligence (including machine learning and deep learning), quantum computing, computational optimization and algorithmics.</p>
         </section>
         <section>
             <h2>My goals</h2>
             <p>I would like to obtain a master's degree specialized in artificial intelligence because this domain can help society evolve.</p>
-            <p>I would also like to have a PhD in order to advance research in Machine Learning and more specifically in Deep Learning. Research is something very attractive to me because I have always liked to research anything from the death of stars to DNA to new advances in computer science such as artificial neural networks or quantum computing.</p>
-            <div style={{ textAlign: 'center' }}>
-                <ButtonLink targetLink="/about" className="secondary outlined">About me</ButtonLink>
-            </div>
+            <p>
+                I would also like to have a PhD in order to advance research in Machine Learning and more specifically in Deep Learning.
+                The research seems to me particularly attractive because it allows to invent new techniques or to optimize the existing ones in order to help the society.
+                Moreover, I have always sought to deepen my knowledge in different fields from the death of stars to DNA to new advances in computer science such as artificial intelligence or quantum computing.
+                Participating in global research would allow me to continue the search for knowledge to benefit society.
+            </p>
         </section>
         <section>
             <h2>Resume download section</h2>
             <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'space-evenly' }}>
-                <ButtonExternalLink title="English resume" targetLink="english_cv.pdf" target="_blank" style={{ backgroundColor: "#36b558" }} size={1.2}>English (version)</ButtonExternalLink>
-                <ButtonExternalLink title="French resume" targetLink="french_cv.pdf" target="_blank" style={{ backgroundColor: "#ded11b" }} size={1.2}>French (version)</ButtonExternalLink>
+                <ButtonExternalLink title="English resume" targetLink="english_cv.pdf" target="_blank" className='primary' size={1.2}>English (version)</ButtonExternalLink>
+                <ButtonExternalLink title="French resume" targetLink="french_cv.pdf" target="_blank" className='ternary' size={1.2}>French (version)</ButtonExternalLink>
             </div>
         </section>
         <section>
@@ -82,7 +83,7 @@ const HomePage = () => {
                 })}
             </Grid>
             <div style={{ textAlign: 'center' }}>
-                <ButtonLink className="ternary outlined" targetLink="/projects">More projects here</ButtonLink>
+                <ButtonLink title="Projects" className='ternary-bis' targetLink="/projects">More projects here</ButtonLink>
             </div>
         </section>
         {authorsLinksTooltip}

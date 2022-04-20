@@ -13,6 +13,7 @@ const SocialDiv = styled.a`
     align-items: center;
     margin: 10px 20px;
     font-size: 1.1em;
+    line-height: 1.1em;
 
     & > span {
         display: flex;
@@ -41,7 +42,7 @@ const ContactPage = () => {
             <h2>Via social networks (recommended)</h2>
             <p>You can contact me via different social networks :</p>
             <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-evenly", alignItems: "center"}}>
-                {socialAccounts.map<JSX.Element>((value, index) => {return <SocialDiv key={index} className="link" href={value.url} rel="noreferrer" target="_blank" >
+                {socialAccounts.map<JSX.Element>((value, index) => {return <SocialDiv key={index} href={value.url} rel="noreferrer" target="_blank" >
                     <SocialIcon key={index} size="2x" colorused={value.iconColor} icon={value.iconProperties} />
                     <span>{value.name}<span>({value.username})</span></span>
                 </SocialDiv>})}
