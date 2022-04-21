@@ -39,7 +39,7 @@ const CardWrapper = styled.div<{ notFinished?: boolean }>`
 
     .project__languages > a:hover,
     .project__languages > a:focus {
-        filter: hsl(0, 0, 50%);
+        filter: contrast(0.75);
     }
 `;
 

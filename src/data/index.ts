@@ -4,7 +4,7 @@ import { languageOptions, keywordOptions, groupedOptions } from "./optionsData";
 import {
     firstName, lastName, yearOfBorn, emailAddress, phoneLongVersion, phoneShortVersion,
     address, socialAccounts, me
-} from "./data";
+} from "./generalData";
 import { experiencesData } from "./experiencesData";
 import { projectsData, universityProjectsData, worksInProgressProjectsData } from "./projectsData";
 

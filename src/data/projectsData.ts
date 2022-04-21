@@ -1,7 +1,7 @@
 import { Project } from "../model/Project";
 import { getOnlyAuthors } from "../model/ProjectAuthor";
 import authorsList from "./authorsData";
-import { me } from "./data";
+import { me } from "./generalData";
 import languageInformations from "./languagesData";
 
 export const projectsData: Project[] = [
@@ -42,6 +42,18 @@ export const projectsData: Project[] = [
         languages: [languageInformations["python"]],
         officialSiteUrl: "http://nnfs.io",
         keywords: ["artificial intelligence", "neural networks", "deep learning", "introduction"],
+    },
+    {
+        date: 2021,
+        type: "personal",
+        name: "Portfolio",
+        repoUrl: "https://github.com/Guigui14460/portfolio",
+        description: "Website allowing to present my main projects, my contact information and my skills in a complete way. It is also used to make myself known in order to obtain a place for an internship, a thesis or a job.",
+        leader: me,
+        authors: getOnlyAuthors([me]),
+        languages: [languageInformations["typescript"]],
+        officialSiteUrl: "https://guillaumeletellier-portfolio.netlify.app/",
+        keywords: ["nodejs", "reactjs", "web development"],
     },
     // {
     //     date: 2020,
