@@ -2,10 +2,11 @@ import languageInformations from "./languagesData";
 import authorsList from "./authorsData";
 import { languageOptions, keywordOptions, groupedOptions } from "./optionsData";
 import {
-    projectsData, universityProjectsData, experiencesData, worksInProgressProjectsData,
     firstName, lastName, yearOfBorn, emailAddress, phoneLongVersion, phoneShortVersion,
     address, socialAccounts, me
 } from "./data";
+import { experiencesData } from "./experiencesData";
+import { projectsData, universityProjectsData, worksInProgressProjectsData } from "./projectsData";
 
 export {
     languageInformations, authorsList,

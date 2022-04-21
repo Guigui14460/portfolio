@@ -1,5 +1,5 @@
 import { GroupedOption, KeywordOption, LanguageOption } from "../model/Options";
-import { projectsData, universityProjectsData } from "./data";
+import { projectsData, universityProjectsData } from "./projectsData";
 import languageInformations from "./languagesData";
 
 export const languageOptions: readonly LanguageOption[] = Object.keys(languageInformations).map(val => {

@@ -6,7 +6,8 @@ export interface Experience {
     from: Date;
     location: string;
     to?: Date;
-    entreprise?: string;
+    entreprise: string;
+    entrepriseLogo: string,
     entrepriseUrl?: string;
     keywords?: string[];
 }
@@ -23,4 +24,4 @@ export function isInstanceOfInternship(instance: any) : instance is Internship {
     return "referent" in instance && "subject" in instance;
 }
 
-export type expType = Experience | Internship;
+export type ExpType = Experience | Internship;

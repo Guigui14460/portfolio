@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import Grid from '../../components/grid';
 import { ImageIcon } from '../../components/icons';
 
-import { motivationIcon, curiousIcon, timeIcon, brainstormingIcon } from "../../images/Images";
-import { firebaseIcon, mysqlIcon, postgresqlIcon, mongodbIcon, sqliteIcon, vuejsIcon, djangoIcon, reactjsIcon, jupyterIcon, numpyIcon, pandasIcon, scipyIcon, matplotlibIcon, tensorflowIcon, seabornIcon, scikitLearnIcon } from "../../images/Icons"
+import { motivationIcon, curiousIcon, timeIcon, brainstormingIcon } from "../../images/soft_skills";
+import { firebaseIcon, mysqlIcon, postgresqlIcon, mongodbIcon, sqliteIcon, vuejsIcon, djangoIcon, reactjsIcon, jupyterIcon, numpyIcon, pandasIcon, scipyIcon, matplotlibIcon, tensorflowIcon, seabornIcon, scikitLearnIcon } from "../../images/hard_skills"
 import languageInformations from '../../data/languagesData';
 
 const ElementItem = styled.a`

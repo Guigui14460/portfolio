@@ -14,10 +14,6 @@ import scipyIcon from "./scipy.png";
 import sqliteIcon from "./sqlite.png";
 import tensorflowIcon from "./tensorflow.svg";
 import vuejsIcon from "./vuejs.png";
-import googleScholarIcon from './google-scholar.svg';
-import githubIcon from './github.svg';
-import gitlabIcon from './gitlab.svg';
-import linkedinIcon from './linkedin.svg';
 
 export {
     djangoIcon,
@@ -36,8 +32,4 @@ export {
     sqliteIcon,
     tensorflowIcon,
     vuejsIcon,
-    googleScholarIcon,
-    githubIcon,
-    gitlabIcon,
-    linkedinIcon,
 };

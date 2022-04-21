@@ -47,6 +47,7 @@ const HomePage = () => {
         </section>
         <section>
             <h2>Resume download section</h2>
+            <p>You can download my resume with the two following buttons :</p>
             <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'space-evenly' }}>
                 <ButtonExternalLink title="English resume" targetLink="english_cv.pdf" target="_blank" className='primary' size={1.2}>English (version)</ButtonExternalLink>
                 <ButtonExternalLink title="French resume" targetLink="french_cv.pdf" target="_blank" className='ternary' size={1.2}>French (version)</ButtonExternalLink>

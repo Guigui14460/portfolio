@@ -21,9 +21,13 @@ export const getOnlyAuthors = (authors: (ProjectAuthor | undefined)[]) => {
     return authors.filter(item => item) as ProjectAuthor[];
 }
 
+type ProjectType = "school" | "personal" | "entreprise";
+
 export interface Project {
     name: string;
     description: string;
+    date: number;
+    type: ProjectType,
     repoUrl?: string;
     leader?: ProjectAuthor;
     authors: ProjectAuthor[];

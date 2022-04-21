@@ -1,7 +1,7 @@
 import { authorHasNoLinks, ProjectAuthor } from "../../model/Project";
 import { FontAwesomeIcon, ImageIcon } from "../icons";
 import Marginer from "../marginer";
-import { googleScholarIcon, githubIcon, gitlabIcon,linkedinIcon } from "../../images/Icons";
+import { googleScholarIcon, githubIcon, gitlabIcon, linkedinIcon } from "../../images/socials";
 import { Fragment } from "react";
 
 export const ProjectAuthorTooltipContent = (author: ProjectAuthor | undefined) => {
