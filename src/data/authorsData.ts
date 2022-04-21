@@ -1,4 +1,4 @@
-import { ProjectAuthor } from "../model/Project";
+import { ProjectAuthor } from "../model/ProjectAuthor";
 
 const authorsList: Map<string, ProjectAuthor> = new Map<string, ProjectAuthor>([
     ["ml", {

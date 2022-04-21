@@ -4,7 +4,7 @@ import {
     faDiscord, faReddit
 } from "@fortawesome/free-brands-svg-icons"
 import { SocialAccount } from "../model/SocialAccount";
-import { ProjectAuthor } from '../model/Project';
+import { ProjectAuthor } from '../model/ProjectAuthor';
 import authorsList from "./authorsData";
 library.add(faLinkedin, fab, faTwitter, faFacebookSquare, faDiscord, faReddit);
 

@@ -9,10 +9,11 @@ import { experiencesData } from "./experiencesData";
 import { projectsData, universityProjectsData, worksInProgressProjectsData } from "./projectsData";
 
 export {
-    languageInformations, authorsList,
+    languageInformations,
+    authorsList,
     languageOptions, keywordOptions, groupedOptions,
-    projectsData, universityProjectsData, worksInProgressProjectsData,
-    experiencesData,
     firstName, lastName, yearOfBorn, emailAddress, phoneLongVersion, phoneShortVersion,
-    address, socialAccounts, me
+    address, socialAccounts, me,
+    experiencesData,
+    projectsData, universityProjectsData, worksInProgressProjectsData,
 };

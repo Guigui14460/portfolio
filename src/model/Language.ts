@@ -9,4 +9,6 @@ export interface Language {
     color: string;
     percentage: number;
     level: SkillLevel;
+    link: string;
+    // TODO: add a logo for future upgrade
 }

@@ -1,25 +1,7 @@
 import { MultiValue } from 'react-select';
 import { Language } from './Language';
 import { KeywordOption, LanguageOption } from './Options';
-
-export interface ProjectAuthor {
-    id: string;
-    name: string;
-    googleScholarProfile?: string;
-    githubProfile?: string;
-    gitlabProfile?: string;
-    linkedInProfile?: string;
-    portfolioUrl?: string;
-};
-export const authorHasNoLinks = (author: ProjectAuthor | undefined) => {
-    if (author === undefined) return false;
-    return author.googleScholarProfile === undefined && author.githubProfile === undefined && 
-           author.gitlabProfile === undefined && author.linkedInProfile === undefined &&
-           author.portfolioUrl === undefined;
-}
-export const getOnlyAuthors = (authors: (ProjectAuthor | undefined)[]) => {
-    return authors.filter(item => item) as ProjectAuthor[];
-}
+import { ProjectAuthor } from './ProjectAuthor';
 
 type ProjectType = "school" | "personal" | "entreprise";
 

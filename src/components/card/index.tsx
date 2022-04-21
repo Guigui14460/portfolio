@@ -29,11 +29,17 @@ const CardWrapper = styled.div<{ notFinished?: boolean }>`
         text-align: justify;
     }
 
+    .project__languages > a,
     .project__languages > span {
         display: inline-block;
         border-radius: 5px;
         padding: 3px 8px;
         margin: 2px 5px;
+    }
+
+    .project__languages > a:hover,
+    .project__languages > a:focus {
+        filter: hsl(0, 0, 50%);
     }
 `;
 
@@ -54,7 +60,8 @@ const Card = (props: { project: Project }) => {
                     : <HashLink to={officialSiteUrl} className="link">here</HashLink>
            }.</p> : null}
         <p className="project__languages">Languages : {languages.map((value, languageIndex) =>
-            <span key={languageIndex} style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}>{value.name}</span>
+            <a key={languageIndex} style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}
+                href={value.link} target="_blank" rel="noreferrer">{value.name}</a>
         )}</p>
         {keywords ? <p className="project__languages" style={{ fontSize: "0.8em" }}>Keywords : {keywords.map((value, keywordIndex) =>
             <span key={keywordIndex} style={{ backgroundColor: "#dddddd", color: "#333333" }}>{value}</span>

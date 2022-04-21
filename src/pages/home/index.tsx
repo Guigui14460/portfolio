@@ -60,7 +60,7 @@ const HomePage = () => {
             }).map((value, index) => {
                 return <Fragment key={index}>
                     <article>
-                        <h3>{value.title}{value.entreprise ? <> at {value.entrepriseUrl ? <a target="_blank" rel="noreferrer" className='link' href={value.entrepriseUrl}>{value.entreprise}</a>: value.entreprise}</> : null}{isInstanceOfInternship(value) ? " -- Internship" : null}</h3>
+                        <h3>{value.title}{value.entreprise ? <> at {value.entrepriseUrl ? <a target="_blank" rel="noreferrer" className='link' href={value.entrepriseUrl}>{value.entreprise}</a>: value.entreprise}</> : null}{isInstanceOfInternship(value) ? <span> • Internship</span> : null}</h3>
                         <span>From {value.from.toLocaleDateString()} to {value.to == null ? "Today" : value.to.toLocaleDateString()} in {value.location}</span>
                         <p>{isInstanceOfInternship(value) ? <><strong style={{fontSize: "1.1rem"}}>{value.subject}</strong>{value.associatedTo ? <> (associated to {value.associatedToUrl ? <a target="_blank" rel="noreferrer" className='link' href={value.associatedToUrl}>{value.associatedTo}</a>: value.associatedTo})</>  : null}<Marginer direction="vertical" margin={8} /></>  : null}Description : {value.description}</p>
                         {isInstanceOfInternship(value) ? <p>

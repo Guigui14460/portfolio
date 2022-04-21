@@ -1,4 +1,5 @@
-import { getOnlyAuthors, Project } from "../model/Project";
+import { Project } from "../model/Project";
+import { getOnlyAuthors } from "../model/ProjectAuthor";
 import authorsList from "./authorsData";
 import { me } from "./data";
 import languageInformations from "./languagesData";
