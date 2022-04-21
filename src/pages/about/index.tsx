@@ -12,16 +12,16 @@ const AboutPage = () => {
             <h2>Work philosophy</h2>
             <article id="sentences">
                 <h3>My sentences</h3>
-                <p>These few sentences define my life and work philosophy :</p>
+                <p className='justify'>These few sentences define my life and work philosophy :</p>
                 <ul>
                     <li>"Work hard, train as much as you can, and you won't find any goals that can't be accomplished by your hard work, experience and motivation"</li>
                     <li>"Work, fail, succeed. That's the best way to achieve your dreams."</li>
                 </ul>
-                <p>These different sentences have been a part of my life since I was little. When I lack motivation, I repeat these sentences to myself and it comes back even bigger !</p>
+                <p className='justify'>These different sentences have been a part of my life since I was little. When I lack motivation, I repeat these sentences to myself and it comes back even bigger !</p>
             </article>
             <article id="influential-people">
                 <h3>People who have influenced me</h3>
-                <p>I have great admiration for these different great men :</p>
+                <p className='justify'>I have great admiration for these different great men :</p>
                 <ul>
                     <li><GreatPeopleLink target="_blank" className='link' href="https://www.wikiwand.com/en/Elon_Musk">Elon Musk</GreatPeopleLink> : for these ideas of greatness in order to improve humanity, his hard work that allows him to do things and achieve them like no one before.</li>
                     <li><GreatPeopleLink target="_blank" className='link' href="https://www.wikiwand.com/en/David_Goggins">David Goggins</GreatPeopleLink> : for his motivation, its strength and determination when he undertakes something.</li>
@@ -33,15 +33,15 @@ const AboutPage = () => {
         <section>
             <h2 id="educational">Educational background</h2>
             <ul>
-                <li>From Sep 2011 to July 2015 : Henri Sellier Lower Secondary School, <a href="https://www.colombelles.fr/" target="_blank" rel="noreferrer" className="link">Colombelles</a>, <a href="https://www.wikiwand.com/en/France" target="_blank" rel="noreferrer" className="link">France</a></li>
+                <li>From Sep 2011 to July 2015 : Henri Sellier Lower Secondary School, <a href="https://www.colombelles.fr/" target="_blank" rel="noreferrer" className="link">Colombelles</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a></li>
                 <li>
-                    From Sep 2015 to July 2018 : <a href="https://lycee-salvador-allende.etab.ac-caen.fr/" target="_blank" rel="noreferrer" className="link">Salvador Allende High School</a>, <a href="https://www.herouville.net/"  target="_blank" rel="noreferrer" className="link">Hérouville-Saint-Clair</a>, <a href="https://www.wikiwand.com/en/France" target="_blank" rel="noreferrer" className="link">France</a>
+                    From Sep 2015 to July 2018 : <a href="https://lycee-salvador-allende.etab.ac-caen.fr/" target="_blank" rel="noreferrer" className="link">Salvador Allende High School</a>, <a href="https://www.herouville.net/"  target="_blank" rel="noreferrer" className="link">Hérouville-Saint-Clair</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a>
                     <ul>
                         <li><a target="_blank" className='link' href="high_school_diploma.pdf">High School diploma (scientific option)</a></li>
                     </ul>
                 </li>
                 <li>
-                    From Sep 2018 to June 2021 : <a href="https://www.unicaen.fr/" target="_blank" rel="noreferrer" className="link">University of Caen Normandy</a>, <a href="https://caen.fr/" target="_blank" rel="noreferrer" className="link">Caen</a>, <a href="https://www.wikiwand.com/en/France" target="_blank" rel="noreferrer" className="link">France</a> (BSc in Computer Science)
+                    From Sep 2018 to June 2021 : <a href="https://www.unicaen.fr/" target="_blank" rel="noreferrer" className="link">University of Caen Normandy</a>, <a href="https://caen.fr/" target="_blank" rel="noreferrer" className="link">Caen</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a> (BSc in Computer Science)
                     <ul>
                         <li><a target="_blank" className='link' href="bachelor_diploma.pdf">Bachelor Science diploma</a></li>
                         <li><a target="_blank" className='link' href="university_first_year.pdf">Marks of 1st year</a></li>
@@ -49,7 +49,7 @@ const AboutPage = () => {
                         <li><a target="_blank" className='link' href="university_third_year.pdf">Marks of 3rd year</a></li>
                     </ul>
                 </li>
-                <li>From Sep 2021 to Today : <a href="https://www.unicaen.fr/" target="_blank" rel="noreferrer" className="link">University of Caen Normandy</a>, <a href="https://caen.fr/" target="_blank" rel="noreferrer" className="link">Caen</a>, <a href="https://www.wikiwand.com/en/France" target="_blank" rel="noreferrer" className="link">France</a> (MSc in Computer Science)</li>
+                <li>From Sep 2021 to Today : <a href="https://www.unicaen.fr/" target="_blank" rel="noreferrer" className="link">University of Caen Normandy</a>, <a href="https://caen.fr/" target="_blank" rel="noreferrer" className="link">Caen</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a> (MSc in Computer Science)</li>
             </ul>
         </section>
         <section>

@@ -3,9 +3,21 @@ import { FontAwesomeIcon as FAIcon } from '@fortawesome/react-fontawesome'
 import { IconName, IconPrefix, SizeProp, IconProp } from '@fortawesome/fontawesome-svg-core';
 
 // image icons
-export const ImageIcon = styled.img<{ width: number }>`
-    width: ${({ width }) => width}px;
-    height: auto;
+export const ImageIcon = styled.img<{ width?: number; height?: number }>`
+    width: ${({ width, height }) => {
+        if(width === undefined) {
+            if(height === undefined) return "100%";
+            return "auto";
+        }
+        return width.toString() + "px";
+    }};
+    max-height: ${({ width, height }) => {
+        if(height === undefined) {
+            if(width === undefined) return "100%";
+            return "auto";
+        }
+        return height.toString() + "px";
+    }};
 `;
 
 // font awesome icons

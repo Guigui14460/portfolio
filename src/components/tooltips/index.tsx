@@ -13,7 +13,7 @@ export const ProjectAuthorTooltipContent = (author: ProjectAuthor | undefined) =
     if(author.linkedInProfile) links.push(<a target="_blank" rel="noreferrer" href={author.linkedInProfile} title="LinkedIn profile"><ImageIcon width={26} src="/images/socials/linkedin.svg" alt="LinkedIn icon" /></a>)
     if(author.googleScholarProfile) links.push(<a target="_blank" rel="noreferrer" href={author.googleScholarProfile} title="Google Scholar profile"><ImageIcon width={26} src="/images/socials/googleScholar.svg" alt="Google Scholar icon" /></a>)
 
-    return <div style={{ display: "flex" }}>
+    return <div style={{ display: "flex", margin: 0, padding: 0 }}>
         {links.map((value, index) => {
             return <Fragment key={index}>{index !== 0 ? <Marginer direction='horizontal' margin={"8px"} /> : null}{value}</Fragment>
         })}

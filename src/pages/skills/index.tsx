@@ -32,23 +32,23 @@ const SkillsPage = () => {
                 <Grid column sm={12} md={6} lg={3}>
                     <ImageIcon width={100} src="/images/soft_skills/motivation.webp" alt="Motivation icon" />
                     <h3>Motivated</h3>
-                    <p>I am a person who is always motivated when I undertake any kind of activity. Motivation is one of the most useful skills in our daily life, it allows us to continue and get closer to our goals.<br />
+                    <p className='justify'>I am a person who is always motivated when I undertake any kind of activity. Motivation is one of the most useful skills in our daily life, it allows us to continue and get closer to our goals.<br />
                         You can see <Link className='link' to="/about#sentences">my sentences</Link> to understand how important this skill is to me.</p>
                 </Grid>
                 <Grid column sm={12} md={6} lg={3}>
                     <ImageIcon width={100} src="/images/soft_skills/curious.webp" alt="Curious icon" />
                     <h3>Curious</h3>
-                    <p>Curiosity is very important. It allows us to deepen our knowledge in different fields. In the world of computer development, in particular, it is even more so, in order to know better and more languages, frameworks or libraries for the project we are working on, or for another one in the future.</p>
+                    <p className='justify'>Curiosity is very important. It allows us to deepen our knowledge in different fields. In the world of computer development, in particular, it is even more so, in order to know better and more languages, frameworks or libraries for the project we are working on, or for another one in the future.</p>
                 </Grid>
                 <Grid column sm={12} md={6} lg={3}>
                     <ImageIcon width={100} src="/images/soft_skills/time.webp" alt="Time icon" />
                     <h3>Patient</h3>
-                    <p>Patience, in my opinion, is essential in computer science. Indeed, when we develop any kind of program, we encounter some problems that are more or less difficult to solve. This skill allows us to be able to reflect on it in order to calmly understand what is wrong. As they say, "To those who know how to wait, time opens its doors".</p>
+                    <p className='justify'>Patience, in my opinion, is essential in computer science. Indeed, when we develop any kind of program, we encounter some problems that are more or less difficult to solve. This skill allows us to be able to reflect on it in order to calmly understand what is wrong. As they say, "To those who know how to wait, time opens its doors".</p>
                 </Grid>
                 <Grid column sm={12} md={6} lg={3}>
                     <ImageIcon width={100} src="/images/soft_skills/brainstorming.webp" alt="Brainstorming icon" />
                     <h3>Problem solving</h3>
-                    <p>As said before, we can encounter a lot of problems in all existing areas. In computer science, problems are omnipresent so this quality is fundamental. Indeed, without it, it is impossible to work because during the development of a project, we are constantly confronted with new problems, whether it is writing code, interpretation, compilation, or deployment in production.</p>
+                    <p className='justify'>We can encounter a lot of problems in all existing areas. In computer science, problems are omnipresent so this quality is fundamental. Indeed, without it, it is impossible to work because we are constantly confronted with new problems, whether it is writing code, interpretation, compilation, or deployment in production.</p>
                 </Grid>
             </Grid>
         </section>
@@ -154,13 +154,13 @@ const SkillsPage = () => {
         <section>
             <h2>Worked area in University</h2>
             <h3>Annual projects</h3>
-            <p>In the last year of Bachelor Science and in the two years of Master Science, the Computer Science Department offers the possibility to students
+            <p className='justify'>In the last year of Bachelor Science and in the two years of Master Science, the Computer Science Department offers the possibility to students
             for realizing project during the year (1 ou 2 semesters depending on the year). The main goal is to apply some of our knowledge on a new subject including
             project management skills, learn new things that we d'ont have time in courses or go deeper in a field. The chosen project made by an algorithm
             developed to associate each student in a group and try to satisfies the projects ordering made by students.</p>
             
             <h4 id="annual-project-b3">Annual project 3rd year of BSc : <a className='link' href="https://github.com/Guigui14460/recommender-system" target="_blank" rel="noreferrer">Movie recommendation system</a></h4>
-            <p>
+            <p className='justify'>
                 The goal of this project, proposed by <a className='link' href="https://alec.users.greyc.fr/" target="_blank" rel="noreferrer">Céline Alec</a> from 
                 the <a className='link' href="https://www.greyc.fr/en/equipes/codag-2/" target="_blank" rel="noreferrer">CODAG team</a> (Constraints, Ontologies, Data, Annotations, Graphs) 
                 of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, was to realize a recommendation system (on any subject) 
@@ -172,15 +172,15 @@ const SkillsPage = () => {
                 <li>based on user collaboration: each user rated movies and we use the ratings of the users close to the current one to choose the movies;</li>
                 <li>hybrid: combination of the two above mentioned.</li>
             </ul>
-            <p>We also used the categorical approach to select the best movies in a certain category (action, horror, etc.).</p>
+            <p className='justify'>We also used the categorical approach to select the best movies in a certain category (action, horror, etc.).</p>
             <h4 id="annual-project-m1">Annual project 1st year of MSc : <a className='link' href="https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter" target="_blank" rel="noreferrer">Multi-agent knowledge-based program interpreter</a></h4>
-            <p>
+            <p className='justify'>
                 The goal of this project, proposed by <a className='link' href="https://zanuttini.users.greyc.fr/" target="_blank" rel="noreferrer">Bruno Zanuttini</a> from 
                 the <a className='link' href="https://www.greyc.fr/en/equipes/mad-2/" target="_blank" rel="noreferrer">MAD team</a> (Model, Agents, Decision) of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, 
                 was to realize a knowledge-based program interpreter in a multi-agent execution context in order to complete a code base 
                 maintained and used by the team. The interpreter can be used to solve knowledge-based problems such as the "Muddy Children" puzzle.
             </p>
-            <p>
+            <p className='justify'>
                 In this project, each agent has a program that it executes based on the knowledge it has about the execution environment. 
                 Each condition is a knowledge formula associated with an action to be executed on the environment. A knowledge formula uses 
                 propositional logic and modal logic, and more particularly epistemic logic using knowledge logic (whether it is T, S4 or S5). 
