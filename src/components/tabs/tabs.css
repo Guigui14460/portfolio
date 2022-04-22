@@ -1,0 +1,31 @@
+.tab {
+    width: 100%;
+}
+
+.tab .tab__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.tab .tab__list .tab__list-item {
+    display: inline-block;
+    margin-left: 0;
+    padding: 10px;
+    border-bottom: 2px solid var(--background-color);
+    transition: all 0.3s;
+    font-weight: 300;
+    cursor: pointer;
+    color: var(--color-disabled);
+}
+.tab .tab__list .tab__list-item.selected {
+    border-bottom-color: var(--light_blue);
+    color: var(--color);
+}
+.tab .tab__list .tab__list-item:hover {
+    color: var(--color);
+}
+
+.tab .tab__content {
+    padding: 0 10px;
+}
