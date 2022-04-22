@@ -49,7 +49,12 @@ const AboutPage = () => {
                         <li><a target="_blank" className='link' href="university_third_year.pdf">Marks of 3rd year</a></li>
                     </ul>
                 </li>
-                <li>From Sep 2021 to Today : <a href="https://www.unicaen.fr/" target="_blank" rel="noreferrer" className="link">University of Caen Normandy</a>, <a href="https://caen.fr/" target="_blank" rel="noreferrer" className="link">Caen</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a> (MSc in Computer Science)</li>
+                <li>
+                    From Sep 2021 to Today : <a href="https://www.unicaen.fr/" target="_blank" rel="noreferrer" className="link">University of Caen Normandy</a>, <a href="https://caen.fr/" target="_blank" rel="noreferrer" className="link">Caen</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a> (MSc in Computer Science)
+                    <ul>
+                        <li>Marks of 1st year (available soon)</li>
+                    </ul>
+                </li>
             </ul>
         </section>
         <section>

@@ -24,7 +24,7 @@ const Keywords = styled.p`
 
 const HomePage = () => {
     const authorsLinksTooltip: ReactElement = <ReactTooltip 
-            id='project-author-links' getContent={(dataTip) => authorsList.has(dataTip) ? ProjectAuthorTooltipContent(authorsList.get(dataTip)) : null} 
+            id='project-author-links' getContent={(dataTip) => authorsList.has(dataTip) && ProjectAuthorTooltipContent(authorsList.get(dataTip))} 
             effect="solid" delayHide={250} delayShow={250} delayUpdate={250} place={"bottom"} border={false} type={"light"} />;
     
     const [matchesMobileDevice, setMatchesMobileDevice] = useState(window.matchMedia("(max-width: " + deviceSize.mobile.toString() + "px)").matches)
@@ -80,7 +80,7 @@ const HomePage = () => {
                         </Grid>
                         <Grid column sm={12} md={7} lg={6} style={matchesMobileDevice ? {padding: 0, textAlign: "left"} : {paddingRight: 0, textAlign: "right", alignSelf: "center"}}>
                             <div style={{ backgroundColor: "#292929", borderRadius: "8px", padding: "0.5em 1em" }}>
-                                <h3 style={{ marginTop: 0 }}>{value.title}{value.entreprise ? <> at {value.entrepriseUrl ? <a target="_blank" rel="noreferrer" className='link' href={value.entrepriseUrl}>{value.entreprise}</a>: value.entreprise}</> : null} • {value.employementType}</h3>
+                                <h3 style={{ marginTop: 0 }}>{value.title}{value.entreprise && <> at {value.entrepriseUrl ? <a target="_blank" rel="noreferrer" className='link' href={value.entrepriseUrl}>{value.entreprise}</a>: value.entreprise}</>} • {value.employementType}</h3>
                                 <span>From {value.from} to {value.to === undefined ? "Today" : value.to}</span><br />
                                 <span>in {value.location}</span>
                             </div>
@@ -94,12 +94,12 @@ const HomePage = () => {
                                 <Marginer direction="vertical" margin={8} /></>}
                                 {value.description && <>{value.description}</>}
                             </p> : null}
-                        {isInstanceOfInternship(value) ? <p>
+                        {isInstanceOfInternship(value) && <p>
                             My referent : <a target="_blank" rel="noreferrer" className='link' href={value.referent.url}>{value.referent.firstName} {value.referent.lastName}</a>, {value.referent.jobDescription}
-                        </p> : null}
-                        {value.keywords != null ? <Keywords>Keywords : {value.keywords.map((value2, index2) => {
+                        </p>}
+                        {value.keywords && <Keywords>Keywords : {value.keywords.map((value2, index2) => {
                             return <span key={index2} style={{ backgroundColor: "#cf9038", color: (contrast(hexToRgb("#cf9038"), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}>{value2}</span>
-                        })}</Keywords> : null}
+                        })}</Keywords>}
                     </article>
                     {experiencesData.length - 1 !== index ?? <Marginer direction="vertical" margin={4} />}
                 </Fragment>

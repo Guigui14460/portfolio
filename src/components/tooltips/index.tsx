@@ -15,7 +15,7 @@ export const ProjectAuthorTooltipContent = (author: ProjectAuthor | undefined) =
 
     return <div style={{ display: "flex", margin: 0, padding: 0 }}>
         {links.map((value, index) => {
-            return <Fragment key={index}>{index !== 0 ? <Marginer direction='horizontal' margin={"8px"} /> : null}{value}</Fragment>
+            return <Fragment key={index}>{index !== 0 && <Marginer direction='horizontal' margin={"8px"} />}{value}</Fragment>
         })}
     </div>
 }
