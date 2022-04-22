@@ -6,7 +6,7 @@
 .accordion .accordion__title {
     background-color: var(--color-disabled);
     color: black;
-    padding: 18px;
+    padding: 10px;
     display: flex;
     border: none;
     outline: none;
@@ -47,5 +47,5 @@
 .accordion .accordion__content .accordion__text {
     font-weight: 400;
     font-size: 1em;
-    padding: 18px;
+    padding: 10px;
 }

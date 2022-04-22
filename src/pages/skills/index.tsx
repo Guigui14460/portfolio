@@ -7,6 +7,7 @@ import { ImageIcon } from '../../components/icons';
 import languageInformations from '../../data/languagesData';
 import { Tab, TabPanel } from '../../components/tabs/tabs';
 import Accordion from '../../components/accordion';
+import "./index.css"
 
 const ElementItem = styled.a`
     display: flex;
@@ -35,10 +36,6 @@ const SkillsPage = () => {
                 <p>test 2</p>
             </TabPanel>
         </Tab>
-
-        <Accordion title="Test accordion 1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit repudiandae sequi, dignissimos incidunt cum neque numquam quis nobis, obcaecati ipsam in sed nisi voluptas adipisci alias mollitia consequuntur, temporibus non! Deleniti ea, facere ipsam similique aperiam repudiandae et modi quasi, suscipit, sit aliquam sed ad tempore. Aspernatur esse quidem commodi? Veritatis dolores odio placeat facilis rerum perferendis iusto veniam dicta dolor deserunt sapiente asperiores, neque, totam, ut quo temporibus saepe nobis sed libero voluptate? Reiciendis reprehenderit itaque temporibus odit optio sequi cupiditate, impedit aspernatur dolores sed tenetur ipsum aliquam amet ab vero ratione beatae minima eaque, consectetur praesentium culpa. Quaerat voluptatem accusantium obcaecati repudiandae ea voluptatum iusto praesentium rem, totam aliquid inventore quas officiis ut molestiae eaque nulla dolore quisquam dolorum laborum officia quos molestias iure tempore neque. Nemo iste distinctio quos sed corrupti deserunt fugit minima debitis tenetur, atque obcaecati doloremque autem, alias reprehenderit eum maiores voluptatum provident ut fugiat similique saepe natus tempore aliquam. Aliquid tenetur nulla dolorem tempora quis fugit suscipit quos placeat nesciunt eligendi? Vero tempora cumque corrupti, placeat beatae fuga neque tenetur vitae expedita eos saepe architecto quisquam eveniet aspernatur fugit rem veritatis, magni eligendi deleniti nam officiis! Placeat necessitatibus consequatur obcaecati! Delectus, accusantium.
-        </Accordion>
 
         <section>
             <h2>Soft skills</h2>
@@ -151,7 +148,7 @@ const SkillsPage = () => {
                             Matplotlib
                         </ElementItem>
                         <ElementItem href="https://www.tensorflow.org/" title="TensorFlow" target="_blank" rel="noreferrer">
-                            <ImageIcon width={100} src="/images/hard_skills/tensorflow.webp" title="TensorFlow" alt="TensorFlow icon" />
+                            <ImageIcon width={100} src="/images/hard_skills/tensorflow.svg" title="TensorFlow" alt="TensorFlow icon" />
                             TensorFlow
                         </ElementItem>
                         <ElementItem href="https://seaborn.pydata.org/index.html" title="Seaborn" target="_blank" rel="noreferrer">
@@ -174,35 +171,44 @@ const SkillsPage = () => {
             project management skills, learn new things that we d'ont have time in courses or go deeper in a field. The chosen project made by an algorithm
             developed to associate each student in a group and try to satisfies the projects ordering made by students.</p>
             
-            <h4 id="annual-project-b3">Annual project 3rd year of BSc : <a className='link' href="https://github.com/Guigui14460/recommender-system" target="_blank" rel="noreferrer">Movie recommendation system</a></h4>
-            <p className='justify'>
-                The goal of this project, proposed by <a className='link' href="https://alec.users.greyc.fr/" target="_blank" rel="noreferrer">Céline Alec</a> from 
-                the <a className='link' href="https://www.greyc.fr/en/equipes/codag-2/" target="_blank" rel="noreferrer">CODAG team</a> (Constraints, Ontologies, Data, Annotations, Graphs) 
-                of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, was to realize a recommendation system (on any subject) 
-                in one month (due to teachers' organization problems). We had to test and use different approaches in the short time 
-                we had on a dataset of a few thousand movies that we found on Kaggle. We used three main approaches:
-            </p>
-            <ul>
-                <li>content-based: analysis of movie names, descriptions, and actors especially through TF-IDF;</li>
-                <li>based on user collaboration: each user rated movies and we use the ratings of the users close to the current one to choose the movies;</li>
-                <li>hybrid: combination of the two above mentioned.</li>
-            </ul>
-            <p className='justify'>We also used the categorical approach to select the best movies in a certain category (action, horror, etc.).</p>
-            <h4 id="annual-project-m1">Annual project 1st year of MSc : <a className='link' href="https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter" target="_blank" rel="noreferrer">Multi-agent knowledge-based program interpreter</a></h4>
-            <p className='justify'>
-                The goal of this project, proposed by <a className='link' href="https://zanuttini.users.greyc.fr/" target="_blank" rel="noreferrer">Bruno Zanuttini</a> from 
-                the <a className='link' href="https://www.greyc.fr/en/equipes/mad-2/" target="_blank" rel="noreferrer">MAD team</a> (Models, Agents, Decision) of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, 
-                was to realize a knowledge-based program interpreter in a multi-agent execution context in order to complete a code base 
-                maintained and used by the team. The interpreter can be used to solve knowledge-based problems such as the "Muddy Children" puzzle.
-            </p>
-            <p className='justify'>
-                In this project, each agent has a program that it executes based on the knowledge it has about the execution environment. 
-                Each condition is a knowledge formula associated with an action to be executed on the environment. A knowledge formula uses 
-                propositional logic and modal logic, and more particularly epistemic logic using knowledge logic (whether it is T, S4 or S5). 
-                In order to be able to evaluate them, we have implemented the Kripke structure. Being in a multi-agent environment, each agent 
-                can see the actions performed by the other agents. It is therefore important that each agent can deduce new knowledge from the 
-                actions of the others (if and only if they have knowledge of their program).
-            </p>
+            <Accordion title='Annual project 3rd year of BSc'>
+                <>
+                    <h4><a className='link' href="https://github.com/Guigui14460/recommender-system" target="_blank" rel="noreferrer">Movie recommendation system</a></h4>
+                    <p className='justify'>
+                        The goal of this project, proposed by <a className='link' href="https://alec.users.greyc.fr/" target="_blank" rel="noreferrer">Céline Alec</a> from 
+                        the <a className='link' href="https://www.greyc.fr/en/equipes/codag-2/" target="_blank" rel="noreferrer">CODAG team</a> (Constraints, Ontologies, Data, Annotations, Graphs) 
+                        of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, was to realize a recommendation system (on any subject) 
+                        in one month (due to teachers' organization problems). We had to test and use different approaches in the short time 
+                        we had on a dataset of a few thousand movies that we found on Kaggle. We used three main approaches:
+                    </p>
+                    <ul>
+                        <li>content-based: analysis of movie names, descriptions, and actors especially through TF-IDF;</li>
+                        <li>based on user collaboration: each user rated movies and we use the ratings of the users close to the current one to choose the movies;</li>
+                        <li>hybrid: combination of the two above mentioned.</li>
+                    </ul>
+                    <p className='justify'>We also used the categorical approach to select the best movies in a certain category (action, horror, etc.).</p>
+                </>
+            </Accordion>
+            <Marginer direction='vertical' margin={8} />
+            <Accordion title='Annual project 1st year of MSc'>
+                <>
+                    <h4><a className='link' href="https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter" target="_blank" rel="noreferrer">Multi-agent knowledge-based program interpreter</a></h4>
+                    <p className='justify'>
+                        The goal of this project, proposed by <a className='link' href="https://zanuttini.users.greyc.fr/" target="_blank" rel="noreferrer">Bruno Zanuttini</a> from 
+                        the <a className='link' href="https://www.greyc.fr/en/equipes/mad-2/" target="_blank" rel="noreferrer">MAD team</a> (Models, Agents, Decision) of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, 
+                        was to realize a knowledge-based program interpreter in a multi-agent execution context in order to complete a code base 
+                        maintained and used by the team. The interpreter can be used to solve knowledge-based problems such as the "Muddy Children" puzzle.
+                    </p>
+                    <p className='justify'>
+                        In this project, each agent has a program that it executes based on the knowledge it has about the execution environment. 
+                        Each condition is a knowledge formula associated with an action to be executed on the environment. A knowledge formula uses 
+                        propositional logic and modal logic, and more particularly epistemic logic using knowledge logic (whether it is T, S4 or S5). 
+                        In order to be able to evaluate them, we have implemented the Kripke structure. Being in a multi-agent environment, each agent 
+                        can see the actions performed by the other agents. It is therefore important that each agent can deduce new knowledge from the 
+                        actions of the others (if and only if they have knowledge of their program).
+                    </p>
+                </>
+            </Accordion>
             <br />
 
             <h3>Topics and tools seen</h3>

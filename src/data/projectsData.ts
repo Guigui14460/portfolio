@@ -140,7 +140,7 @@ export const universityProjectsData: Project[] = [
         type: "school",
         name: "Multi-agent knowledge-based program interpreter",
         repoUrl: "https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter",
-        description: "Construction of a program interpreter allowing to execute programs based on multi-agent systems using epistemic logic as reasoning. In fine, the project will be integrated to a project of the MAD group (Models, Agents, Decision) of the GREYC laboratory.",
+        description: "Construction of a program interpreter allowing to execute programs based on multi-agent systems using epistemic logic as reasoning.",
         leader: me,
         authors: getOnlyAuthors([me, authorsList.get("cp")]),
         languages: [languageInformations["java"]],
