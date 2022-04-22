@@ -7,12 +7,14 @@
   --ternary-color-hover: #ba4b2f;
   --ternary-bis-color: #28ad4b;
   --ternary-bis-color-hover: #188f37;
+
   --background-color: #333333;
+  --background-color-darker: #292929;
   --color: #dddddd;
   --color-disabled: #8f8e8e;
+  --light_blue: #4281e7;
   /* --background-color: #dddddd; */
   /* --color: #333333; */
-  --light_blue: #4281e7;
 }
 
 *,

@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import Grid from '../../components/grid';
 import { ImageIcon } from '../../components/icons';
 import languageInformations from '../../data/languagesData';
+import { Tab, TabPanel } from '../../components/tabs/tabs';
+import Accordion from '../../components/accordion';
 
 const ElementItem = styled.a`
     display: flex;
@@ -25,6 +27,19 @@ const ElementContainer = styled.div`
 const SkillsPage = () => {
     return <>
         <h1>Skills</h1>
+        <Tab>
+            <TabPanel title="tab1">
+                <p>test</p>
+            </TabPanel>
+            <TabPanel title="tab2">
+                <p>test 2</p>
+            </TabPanel>
+        </Tab>
+
+        <Accordion title="Test accordion 1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit repudiandae sequi, dignissimos incidunt cum neque numquam quis nobis, obcaecati ipsam in sed nisi voluptas adipisci alias mollitia consequuntur, temporibus non! Deleniti ea, facere ipsam similique aperiam repudiandae et modi quasi, suscipit, sit aliquam sed ad tempore. Aspernatur esse quidem commodi? Veritatis dolores odio placeat facilis rerum perferendis iusto veniam dicta dolor deserunt sapiente asperiores, neque, totam, ut quo temporibus saepe nobis sed libero voluptate? Reiciendis reprehenderit itaque temporibus odit optio sequi cupiditate, impedit aspernatur dolores sed tenetur ipsum aliquam amet ab vero ratione beatae minima eaque, consectetur praesentium culpa. Quaerat voluptatem accusantium obcaecati repudiandae ea voluptatum iusto praesentium rem, totam aliquid inventore quas officiis ut molestiae eaque nulla dolore quisquam dolorum laborum officia quos molestias iure tempore neque. Nemo iste distinctio quos sed corrupti deserunt fugit minima debitis tenetur, atque obcaecati doloremque autem, alias reprehenderit eum maiores voluptatum provident ut fugiat similique saepe natus tempore aliquam. Aliquid tenetur nulla dolorem tempora quis fugit suscipit quos placeat nesciunt eligendi? Vero tempora cumque corrupti, placeat beatae fuga neque tenetur vitae expedita eos saepe architecto quisquam eveniet aspernatur fugit rem veritatis, magni eligendi deleniti nam officiis! Placeat necessitatibus consequatur obcaecati! Delectus, accusantium.
+        </Accordion>
+
         <section>
             <h2>Soft skills</h2>
             <Marginer direction="vertical" margin={20} />
@@ -74,7 +89,7 @@ const SkillsPage = () => {
                     <h3>Some frameworks</h3>
                     <ElementContainer>
                         <ElementItem href="https://www.djangoproject.com/" title="Django" target="_blank" rel="noreferrer">
-                            <ImageIcon width={100} src="/images/hard_skills/django.png" title="Django" alt="Django icon" />
+                            <ImageIcon width={100} src="/images/hard_skills/django.webp" title="Django" alt="Django icon" />
                             Django
                         </ElementItem>
                         <ElementItem href="https://reactjs.org/" title="ReactJS" target="_blank" rel="noreferrer">
@@ -95,19 +110,19 @@ const SkillsPage = () => {
                             SQLite
                         </ElementItem>
                         <ElementItem href="https://www.mysql.com/" title="MySQL" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/mysql.png" title="MySQL" alt="MySQL icon" />
+                            <ImageIcon width={50} src="/images/hard_skills/mysql.webp" title="MySQL" alt="MySQL icon" />
                             MySQL/MariaDB
                         </ElementItem>
                         <ElementItem href="https://www.postgresql.org/" title="PostgreSQL" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/postgresql.png" title="PostgreSQL" alt="PostgreSQL icon" />
+                            <ImageIcon width={50} src="/images/hard_skills/postgresql.webp" title="PostgreSQL" alt="PostgreSQL icon" />
                             PostgreSQL
                         </ElementItem>
                         <ElementItem href="https://www.mongodb.com/" title="MongoDB" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/mongodb.png" title="MongoDB" alt="MongoDB icon" />
+                            <ImageIcon width={50} src="/images/hard_skills/mongodb.webp" title="MongoDB" alt="MongoDB icon" />
                             MongoDB
                         </ElementItem>
                         <ElementItem href="https://firebase.google.com/" title="Firebase" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/firebase.png" title="Firebase" alt="Firebase icon" />
+                            <ImageIcon width={50} src="/images/hard_skills/firebase.webp" title="Firebase" alt="Firebase icon" />
                             Firebase
                         </ElementItem>
                     </ElementContainer>
@@ -128,7 +143,7 @@ const SkillsPage = () => {
                             Pandas
                         </ElementItem>
                         <ElementItem href="https://www.scipy.org/" title="SciPy" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/scipy.png" title="SciPy" alt="SciPy icon" />
+                            <ImageIcon width={50} src="/images/hard_skills/scipy.webp" title="SciPy" alt="SciPy icon" />
                             SciPy
                         </ElementItem>
                         <ElementItem href="https://matplotlib.org/" title="Matplotlib" target="_blank" rel="noreferrer">
@@ -136,7 +151,7 @@ const SkillsPage = () => {
                             Matplotlib
                         </ElementItem>
                         <ElementItem href="https://www.tensorflow.org/" title="TensorFlow" target="_blank" rel="noreferrer">
-                            <ImageIcon width={100} src="/images/hard_skills/tensorflow.png" title="TensorFlow" alt="TensorFlow icon" />
+                            <ImageIcon width={100} src="/images/hard_skills/tensorflow.webp" title="TensorFlow" alt="TensorFlow icon" />
                             TensorFlow
                         </ElementItem>
                         <ElementItem href="https://seaborn.pydata.org/index.html" title="Seaborn" target="_blank" rel="noreferrer">
@@ -144,7 +159,7 @@ const SkillsPage = () => {
                             Seaborn
                         </ElementItem>
                         <ElementItem href='https://scikit-learn.org/' title='Scikit-Learn' target="_blank" rel="noreferrer">
-                            <ImageIcon width={100} src="/images/hard_skills/scikit-learn.png" title="Scikit-Learn" alt="Scikit-Learn icon" />
+                            <ImageIcon width={100} src="/images/hard_skills/scikit-learn.webp" title="Scikit-Learn" alt="Scikit-Learn icon" />
                             Scikit-Learn
                         </ElementItem>
                     </ElementContainer>
@@ -176,7 +191,7 @@ const SkillsPage = () => {
             <h4 id="annual-project-m1">Annual project 1st year of MSc : <a className='link' href="https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter" target="_blank" rel="noreferrer">Multi-agent knowledge-based program interpreter</a></h4>
             <p className='justify'>
                 The goal of this project, proposed by <a className='link' href="https://zanuttini.users.greyc.fr/" target="_blank" rel="noreferrer">Bruno Zanuttini</a> from 
-                the <a className='link' href="https://www.greyc.fr/en/equipes/mad-2/" target="_blank" rel="noreferrer">MAD team</a> (Model, Agents, Decision) of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, 
+                the <a className='link' href="https://www.greyc.fr/en/equipes/mad-2/" target="_blank" rel="noreferrer">MAD team</a> (Models, Agents, Decision) of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>, 
                 was to realize a knowledge-based program interpreter in a multi-agent execution context in order to complete a code base 
                 maintained and used by the team. The interpreter can be used to solve knowledge-based problems such as the "Muddy Children" puzzle.
             </p>

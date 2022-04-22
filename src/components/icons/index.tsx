@@ -23,10 +23,10 @@ export const ImageIcon = styled.img<{ width?: number; height?: number }>`
 // font awesome icons
 type FontAwesomeIconType = 'brand' | 'solid' | 'regular';
 
-export const FontAwesomeIcon = (props: {type: FontAwesomeIconType, iconName: IconName, size: SizeProp }) => {
+export const FontAwesomeIcon = (props: {type: FontAwesomeIconType, iconName: IconName, size: SizeProp, className?: string }) => {
     const prefix: IconPrefix = (props.type === "brand" ? "fab" : (props.type === "solid" ? "fas" : "far"));
     const icon: [IconPrefix, IconName] = [prefix, props.iconName];
-    return <FAIcon icon={icon} size={props.size} />
+    return <FAIcon icon={icon} size={props.size} className={props.className} />
 };
 
 // social icons

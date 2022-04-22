@@ -27,7 +27,7 @@ export const Tab = (props: { active?: number; children: React.ReactNode | React.
             {tabsData.map((value, index) => {
                 const style = index === activeTab ? "selected" : "";
                 return <li key={index} className={`tab__list-item ${style}`} onClick={() => setActiveTab(index)}>
-                    {value.title}
+                    <button>{value.title}</button>
                 </li>
             })}
         </ul>

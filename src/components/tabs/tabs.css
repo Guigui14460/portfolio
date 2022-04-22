@@ -12,18 +12,31 @@
     display: inline-block;
     margin-left: 0;
     padding: 10px;
-    border-bottom: 2px solid var(--background-color);
     transition: all 0.3s;
     font-weight: 300;
     cursor: pointer;
-    color: var(--color-disabled);
+    border-bottom: 2px solid var(--background-color);
+}
+.tab .tab__list .tab__list-item > * {
+    color: var(--color-disabled) !important;
+    transition: all 0.3s;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 0;
+    transition: all 0.3s;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 1em;
 }
 .tab .tab__list .tab__list-item.selected {
     border-bottom-color: var(--light_blue);
-    color: var(--color);
 }
-.tab .tab__list .tab__list-item:hover {
-    color: var(--color);
+.tab .tab__list .tab__list-item:hover > *,
+.tab .tab__list .tab__list-item:focus > *,
+.tab .tab__list .tab__list-item.selected > *,
+.tab .tab__list .tab__list-item > *:focus {
+    color: var(--color) !important;
 }
 
 .tab .tab__content {
