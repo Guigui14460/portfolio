@@ -13,8 +13,6 @@
   --color: #dddddd;
   --color-disabled: #8f8e8e;
   --light_blue: #4281e7;
-  /* --background-color: #dddddd; */
-  /* --color: #333333; */
 }
 
 *,
@@ -25,7 +23,6 @@
 
 html {
   font-family: "Poppins", sans-serif;
-  /* font-family: "Roboto", sans-serif; */
   font-size: 14px;
 }
 

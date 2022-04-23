@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Marginer from "../marginer";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { deviceSize } from "../Responsive";
 import { useMediaQuery } from "react-responsive";
 
@@ -22,19 +22,32 @@ const AccessibilityContainer = styled.div<{ verySmallMobile: boolean }>`
     margin-top: ${({ verySmallMobile }) => (!verySmallMobile ? "initial" : "1em")};
 `;
 
-const AnchorLink = styled(Link)<{ fontSize: number | undefined }>`
+const AnchorLink = styled(NavLink)<{ fontSize: number | undefined }>`
     font-size: ${({ fontSize }) => (fontSize !== undefined ? fontSize + "px" : "15px")};
     color: var(--color);
     cursor: pointer;
     outline: none;
 
-    &:hover, &:focus {
+    &:not(.button-link).active {
+        filter: contrast(0.6);
+    }
+
+    &:not(.button-link):hover, &:not(.button-link):focus {
         color: var(--color);
+        filter: contrast(0.4);
     }
 `
 
-const BrandLogo = styled(AnchorLink)`
+const BrandLogo = styled(Link)<{ fontSize: number | undefined }>`
     font-size: ${({ fontSize }) => (fontSize !== undefined ? fontSize + "px" : "20px")};
+    color: var(--color);
+    cursor: pointer;
+    outline: none;
+
+    &:not(.button-link):hover, &:not(.button-link):focus {
+        color: var(--color);
+        filter: contrast(0.4);
+    }
 `;
 
 const Navbar = (props: { useTransparent: boolean; }) => {
@@ -44,13 +57,13 @@ const Navbar = (props: { useTransparent: boolean; }) => {
     return <NavbarContainer verySmallMobile={verySmallMobile} className="container" useTransparent={useTransparent}>
         <BrandLogo fontSize={!isMobile ? 22 : undefined} to="/">Guillaume Letellier</BrandLogo>
         <AccessibilityContainer verySmallMobile={verySmallMobile}>
-            <AnchorLink fontSize={!isMobile ? 16 : undefined} to="/projects">Projects</AnchorLink>
+            <AnchorLink fontSize={!isMobile ? 16 : undefined} activeClassName="active" to="/projects">Projects</AnchorLink>
             <Marginer direction="horizontal" margin={10} />
-            <AnchorLink fontSize={!isMobile ? 16 : undefined} to="/skills">Skills</AnchorLink>
+            <AnchorLink fontSize={!isMobile ? 16 : undefined} activeClassName="active" to="/skills">Skills</AnchorLink>
             <Marginer direction="horizontal" margin={10} />
-            <AnchorLink fontSize={!isMobile ? 16 : undefined} to="/about">About</AnchorLink>
+            <AnchorLink fontSize={!isMobile ? 16 : undefined} activeClassName="active" to="/about">About</AnchorLink>
             <Marginer direction="horizontal" margin={10} />
-            <AnchorLink fontSize={!isMobile ? 16 : undefined} to="/contact">Contact</AnchorLink>
+            <AnchorLink fontSize={!isMobile ? 16 : undefined} activeClassName="active" to="/contact">Contact</AnchorLink>
         </AccessibilityContainer>
     </NavbarContainer>
 }
