@@ -4,8 +4,8 @@
 }
 
 .accordion .accordion__title {
-    background-color: var(--color-disabled);
-    color: black;
+    background-color: #5a5a5a;
+    color: var(--color);
     padding: 10px;
     display: flex;
     border: none;
@@ -14,14 +14,16 @@
     font-weight: 600;
     font-size: 1.15em;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .accordion .accordion__title:hover,
-.accordion .accordion__title:focus,
-.accordion .accordion__title.active {
-    background-color: var(--color);
+.accordion .accordion__title:focus {
+    background-color: #494949;
 }
 .accordion .accordion__title.active {
+    background-color: var(--color);
+    color: black;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }

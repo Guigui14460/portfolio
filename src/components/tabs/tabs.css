@@ -30,7 +30,7 @@
     font-size: 1em;
 }
 .tab .tab__list .tab__list-item.selected {
-    border-bottom-color: var(--light_blue);
+    border-bottom-color: var(--light-blue);
 }
 .tab .tab__list .tab__list-item:hover > *,
 .tab .tab__list .tab__list-item:focus > *,
