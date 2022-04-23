@@ -6,6 +6,7 @@ import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { Project } from '../../model/Project';
 import { Fragment } from 'react';
+import { HashLink } from 'react-router-hash-link';
 library.add(faGithub, faGitlab, faLock);
 
 const CardWrapper = styled.div<{ notFinished?: boolean }>`
@@ -20,7 +21,7 @@ const CardWrapper = styled.div<{ notFinished?: boolean }>`
         justify-content: space-between;
         vertical-align: center;
         ${({ notFinished }) => {
-            return (notFinished ? "font-style: italic;" : null);
+            return (notFinished && "font-style: italic;");
         }};
     }
 
@@ -28,11 +29,17 @@ const CardWrapper = styled.div<{ notFinished?: boolean }>`
         text-align: justify;
     }
 
+    .project__languages > a,
     .project__languages > span {
         display: inline-block;
         border-radius: 5px;
         padding: 3px 8px;
         margin: 2px 5px;
+    }
+
+    .project__languages > a:hover,
+    .project__languages > a:focus {
+        filter: contrast(0.75);
     }
 `;
 
@@ -41,25 +48,30 @@ const Card = (props: { project: Project }) => {
     const isGithubRepo = repoUrl && repoUrl.includes("github");
     const isGitlabRepo = repoUrl && repoUrl.includes("gitlab");
     const icon = (isGithubRepo ? "github" : (isGitlabRepo ? "gitlab" : "reddit")); // reddit icon because we can't have a null icon
-    const iconsElement = <span style={{ width: "40px", textAlign: "right" }}>{(icon !== "reddit" ? <span><FontAwesomeIcon size="1x" iconName="github" type="brand" /> {(isPrivate ? <FontAwesomeIcon size="1x" iconName="lock" type="solid" /> : null)}</span> : (isPrivate ? <FontAwesomeIcon size="1x" iconName="lock" type="solid" /> : null))}</span>;
+    const iconsElement = <span style={{ width: "40px", textAlign: "right" }}>{(icon !== "reddit" ? <span><FontAwesomeIcon size="1x" iconName="github" type="brand" /> {(isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />)}</span> : (isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />))}</span>;
     const titleElement = <h3 className="project__name">{name} {iconsElement}</h3>;
     const descriptionElement = <p className="project__description">{description}</p>;
     return <CardWrapper notFinished={notFinished}>
        {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
        {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
-       {officialSiteUrl !== undefined ? <p>You can have more precision <a href={officialSiteUrl} rel="noreferrer" target={officialSiteUrl.indexOf("http") !== -1 ? "_blank" : ""}>here</a>.</p> : null}
+       {officialSiteUrl && <p>You can have more precision {
+                officialSiteUrl.indexOf("http") !== -1 ? 
+                    <a href={officialSiteUrl} className="link" rel="noreferrer" target="_blank">here</a>
+                    : <HashLink to={officialSiteUrl} className="link">here</HashLink>
+           }.</p>}
         <p className="project__languages">Languages : {languages.map((value, languageIndex) =>
-            <span key={languageIndex} style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}>{value.name}</span>
+            <a key={languageIndex} style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}
+                href={value.link} target="_blank" rel="noreferrer">{value.name}</a>
         )}</p>
-        {keywords ? <p className="project__languages" style={{ fontSize: "0.8em" }}>Keywords : {keywords.map((value, keywordIndex) =>
+        {keywords && <p className="project__languages" style={{ fontSize: "0.8em" }}>Keywords : {keywords.map((value, keywordIndex) =>
             <span key={keywordIndex} style={{ backgroundColor: "#dddddd", color: "#333333" }}>{value}</span>
-        )}</p> : null}
-        {authors ? <p className='project__authors'>Authors : {authors.map((value, authorIndex) => {
+        )}</p>}
+        {authors && <p className='project__authors'>Authors : {authors.map((value, authorIndex) => {
             let isLeader = false;
             if(value === leader) isLeader = true;
 
-            return <Fragment key={authorIndex}>{(authorIndex !== 0) ? <>, </> : null}<span style={{ fontWeight: (isLeader ? "bold" : "normal") }} data-for="project-author-links" data-tip={value.id}>{value.name}</span></Fragment>
-        })}</p>: null}
+            return <Fragment key={authorIndex}>{(authorIndex !== 0) && <>, </>}<span style={{ fontWeight: (isLeader ? "bold" : "normal") }} data-for="project-author-links" data-tip={value.id}>{value.name}</span></Fragment>
+        })}</p>}
     </CardWrapper>
 }
 

@@ -1,0 +1,56 @@
+.tab {
+    width: 100%;
+}
+
+.tab .tab__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.tab .tab__list .tab__list-item {
+    display: inline-block;
+    margin-left: 0;
+    padding: 10px;
+    transition: all 0.3s;
+    font-weight: 300;
+    cursor: pointer;
+    border-bottom: 2px solid var(--background-color);
+}
+.tab .tab__list .tab__list-item > * {
+    color: var(--color-disabled) !important;
+    transition: all 0.3s;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 0;
+    transition: all 0.3s;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 1em;
+}
+.tab .tab__list .tab__list-item.selected {
+    border-bottom-color: var(--light-blue);
+}
+.tab .tab__list .tab__list-item:hover > *,
+.tab .tab__list .tab__list-item:focus > *,
+.tab .tab__list .tab__list-item.selected > *,
+.tab .tab__list .tab__list-item > *:focus {
+    color: var(--color) !important;
+}
+
+.tab .tab__content {
+    padding: 10px;
+    background-color: var(--background-color-darker);
+    color: var(--color);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.tab .tab__content > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+.tab .tab__content > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}

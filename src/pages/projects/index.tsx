@@ -3,8 +3,7 @@ import ReactTooltip from 'react-tooltip';
 import Card from '../../components/card';
 import Grid from '../../components/grid';
 import ProjectsFilterBar from './FilterBar';
-import { projectsData, universityProjectsData } from '../../model/data';
-import { authorsList } from '../../model/authorsData';
+import { authorsList, projectsData, universityProjectsData } from '../../data';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { ProjectAuthorTooltipContent } from '../../components/tooltips';
@@ -17,7 +16,7 @@ const ProjectsPage = () => {
     const [filters, setFilters] = useState<MultiValue<LanguageOption | KeywordOption>>([]);
 
     const authorsLinksTooltip: ReactElement = <ReactTooltip 
-            id='project-author-links' getContent={(dataTip) => authorsList.has(dataTip) ? ProjectAuthorTooltipContent(authorsList.get(dataTip)) : null} 
+            id='project-author-links' getContent={(dataTip) => authorsList.has(dataTip) && ProjectAuthorTooltipContent(authorsList.get(dataTip))} 
             effect="solid" delayHide={250} delayShow={250} delayUpdate={250} place={"bottom"} border={false} type={"light"} />;
     const universityProjectsGrid = universityProjectsData.filter(value => hasLanguagesOrKeywords(value, filters)).map((value, index) =>
         <Grid key={index} column sm={12} md={6} lg={4}><Card key={index} project={value} /></Grid>

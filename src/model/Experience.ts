@@ -1,15 +1,22 @@
-import { Referent } from "./Referent";
-
 export interface Experience {
     title: string;
-    description: string;
-    from: Date;
+    employementType: string;
+    from: string;
+    to?: string;
     location: string;
-    to?: Date;
-    entreprise?: string;
+    entreprise: string;
+    description?: string;
+    entrepriseLogo: string,
     entrepriseUrl?: string;
     keywords?: string[];
-}
+};
+
+export interface Referent {
+    firstName: string;
+    lastName: string;
+    jobDescription: string;
+    url: string;
+};
 
 export interface Internship extends Experience {
     subject: string;
@@ -17,10 +24,10 @@ export interface Internship extends Experience {
     projectUrl?: string;
     associatedTo?: string;
     associatedToUrl?: string;
-}
+};
 
 export function isInstanceOfInternship(instance: any) : instance is Internship {
     return "referent" in instance && "subject" in instance;
-}
+};
 
-export type expType = Experience | Internship;
+export type ExpType = Experience | Internship;

@@ -3,30 +3,43 @@
 }
 
 .button.primary:not(.outlined) {
-  color: var(--color);
+  color: #000000;
   background-color: var(--primary-color);
 }
 
-.button.primary:hover:not(.outlined) {
+.button.primary:hover:not(.outlined),
+.button.primary:focus:not(.outlined) {
   background-color: var(--primary-color-hover);
 }
 
 .button.secondary:not(.outlined) {
-  color: var(--color);
+  color: #000000;
   background-color: var(--secondary-color);
 }
 
-.button.secondary:hover:not(.outlined) {
+.button.secondary:hover:not(.outlined),
+.button.secondary:focus:not(.outlined) {
   background-color: var(--secondary-color-hover);
 }
 
 .button.ternary:not(.outlined) {
-  color: var(--color);
+  color: #000000;
   background-color: var(--ternary-color);
 }
 
-.button.ternary:hover:not(.outlined) {
+.button.ternary:hover:not(.outlined),
+.button.ternary:focus:not(.outlined) {
   background-color: var(--ternary-color-hover);
+}
+
+.button.ternary-bis:not(.outlined) {
+  color: #000000;
+  background-color: var(--ternary-bis-color);
+}
+
+.button.ternary-bis:hover:not(.outlined),
+.ternary-bis:focus:not(.outlined) {
+  background-color: var(--ternary-bis-color-hover);
 }
 
 .button.primary.outlined {
@@ -36,7 +49,7 @@
 }
 
 .button.primary.outlined:hover {
-  color: var(--color);
+  color: #000000;
   background-color: var(--primary-color);
 }
 
@@ -47,7 +60,7 @@
 }
 
 .button.secondary.outlined:hover {
-  color: var(--color);
+  color: #000000;
   background-color: var(--secondary-color);
 }
 
@@ -58,6 +71,17 @@
 }
 
 .button.ternary.outlined:hover {
-  color: var(--color);
+  color: #000000;
   background-color: var(--ternary-color);
+}
+
+.button.ternary-bis.outlined {
+  color: var(--ternary-bis-color);
+  background-color: transparent;
+  border: 2px solid var(--ternary-bis-color);
+}
+
+.button.ternary-bis.outlined:hover {
+  color: #000000;
+  background-color: var(--ternary-bis-color);
 }

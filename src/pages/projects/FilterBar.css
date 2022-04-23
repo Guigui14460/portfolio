@@ -1,22 +1,29 @@
 .multi-select {
-    color: black !important;
+    color: #000000 !important;
 }
 .select__input {
-    color: white !important;
+    color: #ffffff !important;
 }
 .select__placeholder {
-    color: #999 !important;
+    color: #999999 !important;
 }
 
 .select__control {
-    background-color: #222 !important;
-    border-color: #222 !important;
+    background-color: #222222 !important;
+    border-color: #222222 !important;
 }
 .select__multi-value {
-    background-color: #ccc !important;
+    background-color: #cccccc !important;
+}
+.select__indicator {
+    color: #cccccc;
+}
+.select__indicator:hover,
+.select__control--is-focused .select__indicator:hover {
+    color: #bbbbbb;
 }
 
 .select__menu, .select__menu-list {
-    color: #ccc !important;
-    background-color: #222 !important;
+    color: #cccccc !important;
+    background-color: #222222 !important;
 }
