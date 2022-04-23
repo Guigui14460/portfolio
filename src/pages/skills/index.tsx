@@ -85,7 +85,7 @@ const SkillsPage = () => {
             project management skills, learn new things that we d'ont have time in courses or go deeper in a field. The chosen project made by an algorithm
             developed to associate each student in a group and try to satisfies the projects ordering made by students.</p>
             
-            <Accordion title='Annual project 3rd year of BSc'>
+            <Accordion title='Annual project 3rd year of BSc' id="annual-project-b3">
                 <>
                     <h4><a className='link' href="https://github.com/Guigui14460/recommender-system" target="_blank" rel="noreferrer">Movie recommendation system</a></h4>
                     <p className='justify'>
@@ -104,7 +104,7 @@ const SkillsPage = () => {
                 </>
             </Accordion>
             <Marginer direction='vertical' margin={8} />
-            <Accordion title='Annual project 1st year of MSc'>
+            <Accordion title='Annual project 1st year of MSc' id="annual-project-m1">
                 <>
                     <h4><a className='link' href="https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter" target="_blank" rel="noreferrer">Multi-agent knowledge-based program interpreter</a></h4>
                     <p className='justify'>

@@ -44,7 +44,7 @@ const CardWrapper = styled.div<{ notFinished?: boolean }>`
 `;
 
 const Card = (props: { project: Project }) => {
-    const { name, repoUrl, description, languages, officialSiteUrl, notFinished, isPrivate, keywords, authors, leader } = props.project;
+    const { name, repoUrl, description, languages, officialSiteUrl, officialSiteUrlTitle, notFinished, isPrivate, keywords, authors, leader } = props.project;
     const isGithubRepo = repoUrl && repoUrl.includes("github");
     const isGitlabRepo = repoUrl && repoUrl.includes("gitlab");
     const icon = (isGithubRepo ? "github" : (isGitlabRepo ? "gitlab" : "reddit")); // reddit icon because we can't have a null icon
@@ -52,12 +52,12 @@ const Card = (props: { project: Project }) => {
     const titleElement = <h3 className="project__name">{name} {iconsElement}</h3>;
     const descriptionElement = <p className="project__description">{description}</p>;
     return <CardWrapper notFinished={notFinished}>
-       {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
-       {repoUrl ? <a className="project__repo-url" href={repoUrl} target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
+       {repoUrl ? <a className="project__repo-url" href={repoUrl} title="Repository link" target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
+       {repoUrl ? <a className="project__repo-url" href={repoUrl} title="Repository link" target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
        {officialSiteUrl && <p>You can have more precision {
                 officialSiteUrl.indexOf("http") !== -1 ? 
-                    <a href={officialSiteUrl} className="link" rel="noreferrer" target="_blank">here</a>
-                    : <HashLink to={officialSiteUrl} className="link">here</HashLink>
+                    <a href={officialSiteUrl} title={officialSiteUrlTitle} className="link" rel="noreferrer" target="_blank">here</a>
+                    : <HashLink to={officialSiteUrl} title={officialSiteUrlTitle} className="link">here</HashLink>
            }.</p>}
         <p className="project__languages">Languages : {languages.map((value, languageIndex) =>
             <a key={languageIndex} style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}

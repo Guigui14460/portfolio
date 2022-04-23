@@ -41,6 +41,7 @@ export const projectsData: Project[] = [
         authors: getOnlyAuthors([me]),
         languages: [languageInformations["python"]],
         officialSiteUrl: "http://nnfs.io",
+        officialSiteUrlTitle: "Neural Networks From Scratch website",
         keywords: ["artificial intelligence", "neural networks", "deep learning", "introduction"],
     },
     {
@@ -53,6 +54,7 @@ export const projectsData: Project[] = [
         authors: getOnlyAuthors([me]),
         languages: [languageInformations["typescript"], languageInformations["css"]],
         officialSiteUrl: "https://guillaumeletellier-portfolio.netlify.app/",
+        officialSiteUrlTitle: "Portfolio website",
         keywords: ["nodejs", "reactjs", "web development"],
     },
     // {
@@ -145,6 +147,7 @@ export const universityProjectsData: Project[] = [
         authors: getOnlyAuthors([me, authorsList.get("cp")]),
         languages: [languageInformations["java"]],
         officialSiteUrl: "/skills#annual-project-m1",
+        officialSiteUrlTitle: "Annual project 1st year MSc anchor",
         keywords: ["artificial intelligence", "interpreter", "knowledge", "logical reasoning", "dynamic epistemic logic", "symbolic AI", "multi-agents system"],
     },
     {
@@ -156,6 +159,7 @@ export const universityProjectsData: Project[] = [
         authors: getOnlyAuthors([me, authorsList.get("rk"), authorsList.get("mo"), authorsList.get("zu")]),
         languages: [languageInformations["python"]],
         officialSiteUrl: "/skills#annual-project-b3",
+        officialSiteUrlTitle: "Annual project 3rd year BSc anchor",
         keywords: ["recommender system", "machine learning"],
     },
     {
@@ -168,6 +172,7 @@ export const universityProjectsData: Project[] = [
         authors: getOnlyAuthors([me, authorsList.get("ab"), authorsList.get("ap"), authorsList.get("cp"), authorsList.get("kb"), authorsList.get("sl")]),
         languages: [languageInformations["dart"]],
         officialSiteUrl: "https://www.hellocaen.com/",
+        officialSiteUrlTitle: "Hello Caen website",
         keywords: ["mobile application", "geolocalization", "merchants", "discount plans"],
     },
     {

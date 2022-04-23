@@ -15,6 +15,7 @@ export interface Project {
     authors: ProjectAuthor[];
     languages: Language[];
     officialSiteUrl?: string;
+    officialSiteUrlTitle?: string;
     notFinished?: boolean;
     keywords?: string[];
     isPrivate?: boolean;
