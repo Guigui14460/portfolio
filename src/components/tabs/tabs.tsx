@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, CSSProperties } from "react";
 import "./tabs.css"
 
 export const TabPanel = (props: { title: string; children: React.ReactNode }) => {
     return <div>{props.children}</div>
 };
 
-export const Tab = (props: { active?: number; children: React.ReactNode | React.ReactNode[] }) => {
+export const Tab = (props: { active?: number; children: React.ReactNode | React.ReactNode[]; tabStyle?: CSSProperties; contentTabStyle?: CSSProperties; tabListStyle?: CSSProperties }) => {
     const [activeTab, setActiveTab] = useState(props.active || 0);
     const [tabsData, setTabsData] = useState<{title: string; children: JSX.Element}[]>([]);
 
@@ -22,8 +22,8 @@ export const Tab = (props: { active?: number; children: React.ReactNode | React.
         setTabsData(data);
     }, [props.children]);
 
-    return <div className="tab">
-        <ul className="tab__list">
+    return <div className="tab" style={props.tabStyle}>
+        <ul className="tab__list" style={props.tabListStyle}>
             {tabsData.map((value, index) => {
                 const style = index === activeTab ? "selected" : "";
                 return <li key={index} className={`tab__list-item ${style}`} onClick={() => setActiveTab(index)}>
@@ -31,6 +31,6 @@ export const Tab = (props: { active?: number; children: React.ReactNode | React.
                 </li>
             })}
         </ul>
-        <div className="tab__content">{tabsData[activeTab] && tabsData[activeTab].children}</div>
+        <div className="tab__content" style={props.contentTabStyle}>{tabsData[activeTab] && tabsData[activeTab].children}</div>
     </div>
 };

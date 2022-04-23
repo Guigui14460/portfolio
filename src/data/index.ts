@@ -1,4 +1,5 @@
 import languageInformations from "./languagesData";
+import hardSkillData from "./skillsData";
 import authorsList from "./authorsData";
 import { languageOptions, keywordOptions, groupedOptions } from "./optionsData";
 import {
@@ -10,6 +11,7 @@ import { projectsData, universityProjectsData, worksInProgressProjectsData } fro
 
 export {
     languageInformations,
+    hardSkillData,
     authorsList,
     languageOptions, keywordOptions, groupedOptions,
     firstName, lastName, yearOfBorn, emailAddress, phoneLongVersion, phoneShortVersion,

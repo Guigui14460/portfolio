@@ -114,6 +114,7 @@ const HomePage = () => {
                     </Grid>
                 })}
             </Grid>
+            <Marginer direction='vertical' margin={8} />
             <div style={{ textAlign: 'center' }}>
                 <ButtonLink title="Projects" className='ternary-bis' targetLink="/projects">More projects here</ButtonLink>
             </div>

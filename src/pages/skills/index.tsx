@@ -1,42 +1,38 @@
+import "./index.css"
 import styled from 'styled-components';
 import Marginer from '../../components/marginer';
-import ProgressBarSkill from '../../components/ProgressBarSkill';
 import { Link } from 'react-router-dom';
 import Grid from '../../components/grid';
 import { ImageIcon } from '../../components/icons';
-import languageInformations from '../../data/languagesData';
 import { Tab, TabPanel } from '../../components/tabs/tabs';
 import Accordion from '../../components/accordion';
-import "./index.css"
+import { skillsTabData } from '../../model/Skill';
+import { hardSkillData } from "../../data";
 
-const ElementItem = styled.a`
+const SkillItem = styled.a`
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 10px 20px;
+    color: var(--color);
+    gap: 10px;
+
     & > img {
-        margin-right: 10px;
+        transform: scale(0.9);
+        transition: all 250ms ease;
     }
-`;
 
-const ElementContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    &:hover {
+        filter: none !important;
+
+        & > img {
+            transform: scale(1);
+        }
+    }
 `;
 
 const SkillsPage = () => {
     return <>
         <h1>Skills</h1>
-        <Tab>
-            <TabPanel title="tab1">
-                <p>test</p>
-            </TabPanel>
-            <TabPanel title="tab2">
-                <p>test 2</p>
-            </TabPanel>
-        </Tab>
-
         <section>
             <h2>Soft skills</h2>
             <Marginer direction="vertical" margin={20} />
@@ -66,102 +62,20 @@ const SkillsPage = () => {
         </section>
         <section>
             <h2>Hard skills</h2>
-            <Grid row style={{ textAlign: "center" }}>
-                <Grid column sm={12} md={7}>
-                    <h3>Programming languages</h3>
-                    <Grid row style={{ alignItems: 'flex-end' }}>
-                        {Object.entries(languageInformations).map(([key, val], index) => {
-                            let sm: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined = 12;
-                            let md: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | undefined = 4;
-                            if (index % 5 === 3 || index % 5 === 4) {
-                                md = 6;
-                            }
-                            return <Grid key={index} column sm={sm} md={md}>
-                                <ProgressBarSkill name={val.name} percentage={val.percentage} level={val.level} color={val.color} />
-                            </Grid>;
+            <Tab contentTabStyle={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, 100px)", justifyContent: "center", padding: "2em", gridGap: "2em" }}>
+                {skillsTabData.map((tabTitle, tabIndex) => {
+                    return <TabPanel title={tabTitle} key={tabIndex}>
+                        {hardSkillData.filter(value => {
+                            return value.tabs.includes(tabTitle)
+                        }).map((skill, skillIndex) => {
+                            return <SkillItem key={skillIndex} href={skill.link} target="_blank" rel="noreferrer" title={skill.name}>
+                                <ImageIcon height={50} src={skill.logoUrl} alt={`${skill.name} icon`} />
+                                <span>{skill.name}</span>
+                            </SkillItem>
                         })}
-                    </Grid>
-                </Grid>
-                <Grid column sm={12} md={5}>
-                    <h3>Some frameworks</h3>
-                    <ElementContainer>
-                        <ElementItem href="https://www.djangoproject.com/" title="Django" target="_blank" rel="noreferrer">
-                            <ImageIcon width={100} src="/images/hard_skills/django.webp" title="Django" alt="Django icon" />
-                            Django
-                        </ElementItem>
-                        <ElementItem href="https://reactjs.org/" title="ReactJS" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/reactjs.svg" title="ReactJS" alt="ReactJS icon" />
-                            ReactJS
-                        </ElementItem>
-                        <ElementItem href="https://vuejs.org/" title="VueJS" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/vuejs.webp" title="VueJS" alt="VueJS icon" />
-                            VueJS
-                        </ElementItem>
-                    </ElementContainer>
-                </Grid>
-                <Grid column sm={12} md={6}>
-                    <h3>Databases</h3>
-                    <ElementContainer>
-                        <ElementItem href="https://sqlite.org/index.html" title="SQLite" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/sqlite.webp" title="SQLite" alt="SQLite icon" />
-                            SQLite
-                        </ElementItem>
-                        <ElementItem href="https://www.mysql.com/" title="MySQL" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/mysql.webp" title="MySQL" alt="MySQL icon" />
-                            MySQL/MariaDB
-                        </ElementItem>
-                        <ElementItem href="https://www.postgresql.org/" title="PostgreSQL" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/postgresql.webp" title="PostgreSQL" alt="PostgreSQL icon" />
-                            PostgreSQL
-                        </ElementItem>
-                        <ElementItem href="https://www.mongodb.com/" title="MongoDB" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/mongodb.webp" title="MongoDB" alt="MongoDB icon" />
-                            MongoDB
-                        </ElementItem>
-                        <ElementItem href="https://firebase.google.com/" title="Firebase" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/firebase.webp" title="Firebase" alt="Firebase icon" />
-                            Firebase
-                        </ElementItem>
-                    </ElementContainer>
-                </Grid>
-                <Grid column sm={12} md={6}>
-                    <h3>Scientific libraries/environment</h3>
-                    <ElementContainer>
-                        <ElementItem href="https://jupyter.org/" title="Jupyter" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/jupyter.svg" title="Jupyter" alt="Jupyter icon" />
-                            Jupyter Notebook
-                        </ElementItem>
-                        <ElementItem href="https://numpy.org/" title="NumPy" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/numpy.svg" title="NumPy" alt="NumPy icon" />
-                            NumPy
-                        </ElementItem>
-                        <ElementItem href="https://pandas.pydata.org/" title="Pandas" target="_blank" rel="noreferrer">
-                            <ImageIcon width={100} src="/images/hard_skills/pandas.svg" title="Pandas" alt="Pandas icon" />
-                            Pandas
-                        </ElementItem>
-                        <ElementItem href="https://www.scipy.org/" title="SciPy" target="_blank" rel="noreferrer">
-                            <ImageIcon width={50} src="/images/hard_skills/scipy.webp" title="SciPy" alt="SciPy icon" />
-                            SciPy
-                        </ElementItem>
-                        <ElementItem href="https://matplotlib.org/" title="Matplotlib" target="_blank" rel="noreferrer">
-                            <ImageIcon width={100} src="/images/hard_skills/matplotlib.svg" title="Matplotlib" alt="Matplotlib icon" />
-                            Matplotlib
-                        </ElementItem>
-                        <ElementItem href="https://www.tensorflow.org/" title="TensorFlow" target="_blank" rel="noreferrer">
-                            <ImageIcon width={100} src="/images/hard_skills/tensorflow.svg" title="TensorFlow" alt="TensorFlow icon" />
-                            TensorFlow
-                        </ElementItem>
-                        <ElementItem href="https://seaborn.pydata.org/index.html" title="Seaborn" target="_blank" rel="noreferrer">
-                            <ImageIcon width={100} src="/images/hard_skills/seaborn.svg" title="Seaborn" alt="Seaborn icon" />
-                            Seaborn
-                        </ElementItem>
-                        <ElementItem href='https://scikit-learn.org/' title='Scikit-Learn' target="_blank" rel="noreferrer">
-                            <ImageIcon width={100} src="/images/hard_skills/scikit-learn.webp" title="Scikit-Learn" alt="Scikit-Learn icon" />
-                            Scikit-Learn
-                        </ElementItem>
-                    </ElementContainer>
-                </Grid>
-            </Grid>
+                    </TabPanel>
+                })}
+            </Tab>
         </section>
         <section>
             <h2>Worked area in University</h2>

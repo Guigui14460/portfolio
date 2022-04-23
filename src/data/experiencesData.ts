@@ -9,7 +9,6 @@ export const experiencesData: ExpType[] = [
         location: "Caen, France",
         entreprise: "Orange Labs",
         entrepriseLogo: "/orange.png",
-        // entrepriseLogo: "https://www.angeluriot.com/portfolio/resources/images/experience/Cea.png",
         entrepriseUrl: "https://www.orange.com",
         keywords: ["machine learning", "deep learning", "simulation", "finance", "data science"],
         

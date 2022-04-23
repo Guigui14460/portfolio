@@ -51,7 +51,7 @@ export const projectsData: Project[] = [
         description: "Website allowing to present my main projects, my contact information and my skills in a complete way. It is also used to make myself known in order to obtain a place for an internship, a thesis or a job.",
         leader: me,
         authors: getOnlyAuthors([me]),
-        languages: [languageInformations["typescript"]],
+        languages: [languageInformations["typescript"], languageInformations["css"]],
         officialSiteUrl: "https://guillaumeletellier-portfolio.netlify.app/",
         keywords: ["nodejs", "reactjs", "web development"],
     },
@@ -97,7 +97,7 @@ export const projectsData: Project[] = [
         description: "Site offering training on computer science and the world of development. The trainings make it possible to learn a programming language or a framework by working on various projects of different scales.",
         leader: me,
         authors: getOnlyAuthors([me]),
-        languages: [languageInformations["python"], languageInformations["html"], languageInformations["javascript"], languageInformations["sass"]],
+        languages: [languageInformations["python"], languageInformations["html"], languageInformations["css"], languageInformations["javascript"], languageInformations["sass"]],
         keywords: ["educational website", "django", "web development"],
     },
 ];
@@ -121,7 +121,7 @@ export const universityProjectsData: Project[] = [
         description: "Visualization site about the delays of the TGV (High Speed Trains) managed by the SNCF with MongoDB",
         leader: me,
         authors: getOnlyAuthors([me, authorsList.get("cp")]),
-        languages: [languageInformations["javascript"], languageInformations["python"]],
+        languages: [languageInformations["javascript"], languageInformations["html"], languageInformations["css"], languageInformations["python"]],
         keywords: ["data visualization", "nosql database", "mongodb", "d3js", "nodejs", "graphql"],
     },
     {
@@ -189,7 +189,7 @@ export const universityProjectsData: Project[] = [
         description: "Site allowing to put into practice our knowledge in PHP.",
         leader: me,
         authors: getOnlyAuthors([me, authorsList.get("ab"), authorsList.get("ap"), authorsList.get("cp")]),
-        languages: [languageInformations["php"], languageInformations["html"]],
+        languages: [languageInformations["php"], languageInformations["html"], languageInformations["css"]],
         keywords: ["web development", "sql database"],
     },
     {

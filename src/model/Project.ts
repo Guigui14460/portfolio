@@ -1,5 +1,5 @@
 import { MultiValue } from 'react-select';
-import { Language } from './Language';
+import Language from "./Language";
 import { KeywordOption, LanguageOption } from './Options';
 import { ProjectAuthor } from './ProjectAuthor';
 

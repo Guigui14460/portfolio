@@ -1,14 +1,21 @@
-export enum SkillLevel {
-    Beginner,
-    Intermediate,
-    Expert,
+import { SkillTab } from "./Skill";
+
+export default interface Language {
+    name: string;
+    link: string;
+    color: string;
+    logoUrl: string;
+    tabs: SkillTab[];
+}
+
+export const getOnlyLanguages = (languages: (Language | undefined)[]) => {
+    return languages.filter(item => item) as Language[];
 };
 
-export interface Language {
-    name: string;
-    color: string;
-    percentage: number;
-    level: SkillLevel;
-    link: string;
-    // TODO: add a logo for future upgrade
-}
+export const getOnlyLanguagesByKey = (keys: string[], map: {[id: string]: Language}) => {
+    const languages: (Language | undefined)[] = [];
+    keys.forEach(key => {
+        languages.push(map[key]);
+    })
+    return languages.filter(item => item) as Language[];
+};
