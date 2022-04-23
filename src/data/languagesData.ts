@@ -103,7 +103,7 @@ const languageInformations: {[id: string]: Language} = {
         name: "LaTeX",
         color: "#3d6117",
         link: "https://en.wikipedia.org/wiki/LaTeX",
-        logoUrl: "/images/hard_skills/languages/latex.jpg",
+        logoUrl: "/images/hard_skills/languages/latex.webp",
         tabs: ["Software Development"],
     },
     "sql": {

@@ -69,7 +69,7 @@ const SkillsPage = () => {
                             return value.tabs.includes(tabTitle)
                         }).map((skill, skillIndex) => {
                             return <SkillItem key={skillIndex} href={skill.link} target="_blank" rel="noreferrer" title={skill.name}>
-                                <ImageIcon height={50} src={skill.logoUrl} alt={`${skill.name} icon`} />
+                                <ImageIcon height={60} src={skill.logoUrl} alt={`${skill.name} icon`} />
                                 <span>{skill.name}</span>
                             </SkillItem>
                         })}
