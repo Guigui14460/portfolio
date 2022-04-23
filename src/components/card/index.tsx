@@ -54,10 +54,10 @@ const Card = (props: { project: Project }) => {
     return <CardWrapper notFinished={notFinished}>
        {repoUrl ? <a className="project__repo-url" href={repoUrl} title="Repository link" target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
        {repoUrl ? <a className="project__repo-url" href={repoUrl} title="Repository link" target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
-       {officialSiteUrl && <p>You can have more precision {
+       {officialSiteUrl && <p>You can have more precision on the {
                 officialSiteUrl.indexOf("http") !== -1 ? 
-                    <a href={officialSiteUrl} title={officialSiteUrlTitle} className="link" rel="noreferrer" target="_blank">here</a>
-                    : <HashLink to={officialSiteUrl} title={officialSiteUrlTitle} className="link">here</HashLink>
+                    <a href={officialSiteUrl} className="link" rel="noreferrer" target="_blank">{officialSiteUrlTitle}</a>
+                    : <HashLink to={officialSiteUrl} className="link">{officialSiteUrlTitle}</HashLink>
            }.</p>}
         <p className="project__languages">Languages : {languages.map((value, languageIndex) =>
             <a key={languageIndex} style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}

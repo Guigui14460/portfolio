@@ -147,7 +147,7 @@ export const universityProjectsData: Project[] = [
         authors: getOnlyAuthors([me, authorsList.get("cp")]),
         languages: [languageInformations["java"]],
         officialSiteUrl: "/skills#annual-project-m1",
-        officialSiteUrlTitle: "Annual project 1st year MSc anchor",
+        officialSiteUrlTitle: "skills page",
         keywords: ["artificial intelligence", "interpreter", "knowledge", "logical reasoning", "dynamic epistemic logic", "symbolic AI", "multi-agents system"],
     },
     {
@@ -159,7 +159,7 @@ export const universityProjectsData: Project[] = [
         authors: getOnlyAuthors([me, authorsList.get("rk"), authorsList.get("mo"), authorsList.get("zu")]),
         languages: [languageInformations["python"]],
         officialSiteUrl: "/skills#annual-project-b3",
-        officialSiteUrlTitle: "Annual project 3rd year BSc anchor",
+        officialSiteUrlTitle: "skills page",
         keywords: ["recommender system", "machine learning"],
     },
     {
