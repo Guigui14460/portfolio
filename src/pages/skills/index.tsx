@@ -125,52 +125,103 @@ const SkillsPage = () => {
             </Accordion>
             <br />
 
-            <h3>Topics and tools seen</h3>
-            <Grid row style={{ textAlign: "center" }}>
-                <Grid column sm={12} md={6}>
-                    <h4>Mathematics, Algorithmics and CS Theory</h4>
-                    <ul style={{ textAlign: 'left' }}>
-                        <li>Mathematics (probabilities, statistics, linear algebra, logic and reasoning, arrangements, algebric structures)</li>
-                        <li>Algorithmic, graphs and tree-based search (Flow networks, dynamic programming, divide-and-conquer algorithms, greedy algorithms, Branch &amp; bound algorithm)</li>
-                        <li>Language theory and compilation</li>
-                        <li>Numerical &amp; Functionnal Analysis</li>
-                        <li>Calculability &amp; complexity (Turing machines, problems complexity)</li>
-                    </ul>
-                </Grid>
-                <Grid column sm={12} md={6}>
-                    <h4>Data Science &amp; AI</h4>
-                    <ul style={{ textAlign: 'left' }}>
-                        <li>Scientific computing</li>
-                        <li>Databases (SQL and NoSQL DBs)</li>
-                        <li>Decision support and artificial intelligence</li>
-                        <li>Language engineering (base of Natural Language Processing)</li>
-                        <li>Machine Learning (KNN, Bayesian networks, Linear Regression (and projection on other spaces), Logistic Classification, SVM (and kernel functions), Neural Networks)</li>
-                        <li>Data Analysis (descriptive stats, MCA, ICA, PCA)</li>
-                    </ul>
-                </Grid>
-                <Grid column sm={12} md={6}>
-                    <h4>Development</h4>
-                    <ul style={{ textAlign: 'left' }}>
-                        <li>Programming paradagims (OOP, imperative, functionnal, procedural)</li>
-                        <li>Software design</li>
-                        <li>Web technologies (HTML/CSS, JavaScript, PHP)</li>
-                        <li>Parallel and distributed programming (C/C++ : vectorization, OpenMP, TBB, MPI)</li>
-                        <li>Mobile applications</li>
-                        <li>Image synthesis (OpenGL)</li>
-                    </ul>
-                </Grid>
-                <Grid column sm={12} md={6}>
-                    <h4>Others</h4>
-                    <ul style={{ textAlign: 'left' }}>
-                        <li>Scientific and IT culture</li>
-                        <li>Communication &amp; English</li>
-                        <li>Project Management</li>
-                        <li>Software Creativity</li>
-                        <li>System architecture and microcontrollers</li>
-                        <li>System &amp; Networks (OSPF, BGP, MPLS, VPLS, virtualized datacenter)</li>
-                    </ul>
-                </Grid>
-            </Grid>
+            <h3>Topics covered</h3>
+            <Tab>
+                <TabPanel title="Short version">
+                    <Grid row style={{ textAlign: "center" }}>
+                        <Grid column sm={12} md={6}>
+                            <h4>Mathematics, Algorithmics and CS Theory</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Mathematics</li>
+                                <li>Algorithmic, graphs and tree-based search</li>
+                                <li>Language theory and compilation</li>
+                                <li>Numerical &amp; Functionnal Analysis</li>
+                                <li>Calculability &amp; complexity</li>
+                            </ul>
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <h4>Data Science &amp; AI</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Scientific computing</li>
+                                <li>Databases</li>
+                                <li>Decision support and artificial intelligence</li>
+                                <li>Language engineering</li>
+                                <li>Machine Learning</li>
+                                <li>Data Analysis</li>
+                            </ul>
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <h4>Development</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Programming paradagims</li>
+                                <li>Software design</li>
+                                <li>Web technologies</li>
+                                <li>Parallel and distributed programming</li>
+                                <li>Mobile applications</li>
+                                <li>Image synthesis</li>
+                            </ul>
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <h4>Others</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Scientific and IT culture</li>
+                                <li>Communication &amp; English</li>
+                                <li>Project Management</li>
+                                <li>Software Creativity</li>
+                                <li>System architecture and microcontrollers</li>
+                                <li>System &amp; Networks</li>
+                            </ul>
+                        </Grid>
+                    </Grid>
+                </TabPanel>
+                <TabPanel title="Detailed version">
+                    <Grid row style={{ textAlign: "center" }}>
+                        <Grid column sm={12} md={6}>
+                            <h4>Mathematics, Algorithmics and CS Theory</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Mathematics (probabilities, statistics, linear algebra, logic and reasoning, arrangements, algebric structures)</li>
+                                <li>Algorithmic, graphs and tree-based search (Flow networks, dynamic programming, divide-and-conquer algorithms, greedy algorithms, Branch &amp; bound algorithm)</li>
+                                <li>Language theory and compilation</li>
+                                <li>Numerical &amp; Functionnal Analysis (signal processing)</li>
+                                <li>Calculability &amp; complexity (Turing machines, problems complexity)</li>
+                            </ul>
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <h4>Data Science &amp; AI</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Scientific computing</li>
+                                <li>Databases (SQL and NoSQL DBs)</li>
+                                <li>Decision support and artificial intelligence</li>
+                                <li>Language engineering (base of Natural Language Processing)</li>
+                                <li>Machine Learning (KNN, Bayesian networks, Linear Regression (and projection on other spaces), Logistic Classification, SVM (and kernel functions), Neural Networks)</li>
+                                <li>Data Analysis (descriptive stats, MCA, ICA, PCA)</li>
+                            </ul>
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <h4>Development</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Programming paradagims (OOP, imperative, functionnal, procedural)</li>
+                                <li>Software design</li>
+                                <li>Web technologies (HTML/CSS, JavaScript, PHP)</li>
+                                <li>Parallel and distributed programming (C/C++ : vectorization, OpenMP, TBB, MPI)</li>
+                                <li>Mobile applications</li>
+                                <li>Image synthesis (OpenGL)</li>
+                            </ul>
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <h4>Others</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Scientific and IT culture</li>
+                                <li>Communication &amp; English</li>
+                                <li>Project Management</li>
+                                <li>Software Creativity</li>
+                                <li>System architecture and microcontrollers</li>
+                                <li>System &amp; Networks (OSPF, BGP, MPLS, VPLS, virtualized datacenter)</li>
+                            </ul>
+                        </Grid>
+                    </Grid>
+                </TabPanel>
+            </Tab>
         </section>
     </>
 };
