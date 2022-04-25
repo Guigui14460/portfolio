@@ -7,6 +7,7 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { Project } from '../../model/Project';
 import { Fragment } from 'react';
 import { HashLink } from 'react-router-hash-link';
+import { authorHasNoLinks } from '../../model/ProjectAuthor';
 library.add(faGithub, faGitlab, faLock);
 
 const CardWrapper = styled.div<{ notFinished?: boolean, padding?: string }>`
@@ -49,6 +50,10 @@ const CardWrapper = styled.div<{ notFinished?: boolean, padding?: string }>`
     .project__languages > a:focus {
         filter: contrast(0.75);
     }
+
+    .project__authors__link {
+        cursor: pointer;
+    }
 `;
 
 const Card = (props: { project: Project, padding?: string }) => {
@@ -75,10 +80,17 @@ const Card = (props: { project: Project, padding?: string }) => {
             <span key={keywordIndex} style={{ backgroundColor: "#dddddd", color: "#333333" }}>{value}</span>
         )}</p>}
         {authors && <p className='project__authors'>Authors : {authors.map((value, authorIndex) => {
+            const hasLinks = !authorHasNoLinks(value);
             let isLeader = false;
             if(value === leader) isLeader = true;
 
-            return <Fragment key={authorIndex}>{(authorIndex !== 0) && <>, </>}<span style={{ fontWeight: (isLeader ? "bold" : "normal") }} data-for="project-author-links" data-tip={value.id}>{value.name}</span></Fragment>
+            return <Fragment key={authorIndex}>
+                {(authorIndex !== 0) && <>, </>}
+                <span className={hasLinks ? "project__authors__link" : undefined} style={{ fontWeight: (isLeader ? "bold" : "normal") }} 
+                      data-for="project-author-links" data-tip={value.id} tabIndex={0}>
+                    {value.name}
+                </span>
+            </Fragment>
         })}</p>}
     </CardWrapper>
 }
