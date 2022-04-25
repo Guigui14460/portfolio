@@ -9,8 +9,16 @@ import { Fragment } from 'react';
 import { HashLink } from 'react-router-hash-link';
 library.add(faGithub, faGitlab, faLock);
 
-const CardWrapper = styled.div<{ notFinished?: boolean }>`
+const CardWrapper = styled.div<{ notFinished?: boolean, padding?: string }>`
     color: #ffffff;
+    padding: ${({ padding }) => { if(padding) return padding; return "0" }};
+    transition: all 250ms ease;
+    height: 100%;
+
+    &:hover {
+        background-color: var(--background-color-darker);
+        border-radius: 8px;
+    }
 
     .project__repo-url {
         color: #ffffff;
@@ -43,7 +51,7 @@ const CardWrapper = styled.div<{ notFinished?: boolean }>`
     }
 `;
 
-const Card = (props: { project: Project }) => {
+const Card = (props: { project: Project, padding?: string }) => {
     const { name, repoUrl, description, languages, officialSiteUrl, officialSiteUrlTitle, notFinished, isPrivate, keywords, authors, leader } = props.project;
     const isGithubRepo = repoUrl && repoUrl.includes("github");
     const isGitlabRepo = repoUrl && repoUrl.includes("gitlab");
@@ -51,7 +59,7 @@ const Card = (props: { project: Project }) => {
     const iconsElement = <span style={{ width: "40px", textAlign: "right" }}>{(icon !== "reddit" ? <span><FontAwesomeIcon size="1x" iconName="github" type="brand" /> {(isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />)}</span> : (isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />))}</span>;
     const titleElement = <h3 className="project__name">{name} {iconsElement}</h3>;
     const descriptionElement = <p className="project__description">{description}</p>;
-    return <CardWrapper notFinished={notFinished}>
+    return <CardWrapper notFinished={notFinished} padding={props.padding} className="project">
        {repoUrl ? <a className="project__repo-url" href={repoUrl} title="Repository link" target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
        {repoUrl ? <a className="project__repo-url" href={repoUrl} title="Repository link" target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
        {officialSiteUrl && <p>You can have more precision on the {

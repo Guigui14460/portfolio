@@ -109,8 +109,8 @@ const HomePage = () => {
             <h2>Works in progress</h2>
             <Grid row>
                 {worksInProgressProjectsData.map((value, index) => {
-                    return <Grid key={index} column sm={12} md={6} lg={4}>
-                        <Card project={value} />
+                    return <Grid key={index} column sm={12} md={6} lg={4} padding="0">
+                        <Card project={value} padding="0.75rem" />
                     </Grid>
                 })}
             </Grid>

@@ -40,14 +40,7 @@
 
 .column {
   flex: 1 1 0px;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
   box-sizing: border-box;
-}
-
-.column > .row {
-  margin-left: -0.9375rem;
-  margin-right: -0.9375rem;
 }
 
 .sm-1 {
