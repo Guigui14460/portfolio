@@ -25,7 +25,7 @@ const Keywords = styled.p`
 const HomePage = () => {
     const authorsLinksTooltip: ReactElement = <ReactTooltip 
             id='project-author-links' getContent={(dataTip) => authorsList.has(dataTip) && ProjectAuthorTooltipContent(authorsList.get(dataTip))} 
-            effect="solid" delayHide={250} delayShow={250} delayUpdate={250} place={"bottom"} border={false} type={"light"} />;
+            effect="solid" delayHide={250} delayShow={200} delayUpdate={100} place={"bottom"} border={false} type={"light"} />;
     
     const [matchesMobileDevice, setMatchesMobileDevice] = useState(window.matchMedia("(max-width: " + deviceSize.mobile.toString() + "px)").matches)
     
@@ -114,7 +114,7 @@ const HomePage = () => {
                     </Grid>
                 })}
             </Grid>
-            <Marginer direction='vertical' margin={8} />
+            <Marginer direction='vertical' margin={16} />
             <div style={{ textAlign: 'center' }}>
                 <ButtonLink title="Projects" className='ternary-bis' targetLink="/projects">More projects here</ButtonLink>
             </div>
