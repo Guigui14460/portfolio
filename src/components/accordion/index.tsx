@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
 import "./accordion.css";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import Chevron from "./Chevron";
 
-const Accordion = (props: { title: string; children: React.ReactNode; id?: string }) => {
+const Accordion = (props: { title: string; children: ReactNode; id?: string }) => {
     const [active, setActive] = useState(false);
     const [height, setHeight] = useState(0);
     const [rotate, setRotate] = useState("");

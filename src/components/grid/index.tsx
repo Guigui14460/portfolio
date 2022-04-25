@@ -1,5 +1,6 @@
-import * as React from "react";
 import "./grid.css";
+import { CSSProperties, FunctionComponent } from "react";
+import styled from "styled-components";
 
 type GridItemsAlignment =
   | "flex-start"
@@ -17,6 +18,8 @@ type GridJustify =
   | "space-evenly";
 
 type GridSizes = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+  
+type GridGap = string;
 
 interface GridProps {
   alignItems?: GridItemsAlignment;
@@ -27,10 +30,23 @@ interface GridProps {
   md?: GridSizes;
   row?: boolean;
   sm?: GridSizes;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
+  padding?: GridGap;
 }
 
-const Grid: React.FunctionComponent<GridProps> = props => {
+const GridWrapper = styled.div<{ padding: GridGap }>`
+    &.column {
+        padding-left: ${({ padding }) => padding};
+        padding-right: ${({ padding }) => padding};
+    }
+
+    &.column > .row {
+        margin-left: -${({ padding }) => padding};
+        margin-right: -${({ padding }) => padding};
+    }
+`;
+
+const Grid: FunctionComponent<GridProps> = props => {
   const {
     alignItems,
     children,
@@ -45,6 +61,7 @@ const Grid: React.FunctionComponent<GridProps> = props => {
   } = props;
 
   const isRow: boolean = row || !column;
+  const padding: GridGap = props.padding || "0.9375rem";
 
   const classes: string =
     (!isRow ? "column" : "row") +
@@ -57,7 +74,7 @@ const Grid: React.FunctionComponent<GridProps> = props => {
     (!isRow && md ? ` ${"md-" + md}` : "") +
     (!isRow && lg ? ` ${"lg-" + lg}` : "");
 
-  return <div style={style} className={classes}>{children}</div>;
+  return <GridWrapper padding={padding} style={style} className={classes}>{children}</GridWrapper>;
 };
 
 export default Grid;

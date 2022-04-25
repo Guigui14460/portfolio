@@ -1,6 +1,5 @@
-import { FontAwesomeIcon } from "../../components/icons"
+import { FontAwesomeIcon, SocialIcon } from "../../components/icons"
 import styled from 'styled-components';
-import { SocialIcon } from '../../components/icons';
 import { address, emailAddress, phoneLongVersion, phoneShortVersion, socialAccounts } from '../../data';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPhone, faHome } from '@fortawesome/free-solid-svg-icons';

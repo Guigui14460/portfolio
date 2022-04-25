@@ -1,16 +1,25 @@
+import { Fragment } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
-import { hexToRgb, contrast } from '../../utils';
-import { FontAwesomeIcon } from '../../components/icons'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '../../components/icons'
+import { hexToRgb, contrast } from '../../utils';
 import { Project } from '../../model/Project';
-import { Fragment } from 'react';
-import { HashLink } from 'react-router-hash-link';
+import { authorHasNoLinks } from '../../model/ProjectAuthor';
 library.add(faGithub, faGitlab, faLock);
 
-const CardWrapper = styled.div<{ notFinished?: boolean }>`
+const CardWrapper = styled.div<{ notFinished?: boolean, padding?: string }>`
     color: #ffffff;
+    padding: ${({ padding }) => { if(padding) return padding; return "0" }};
+    transition: all 250ms ease;
+    height: 100%;
+
+    &:hover {
+        background-color: var(--background-color-darker);
+        border-radius: 8px;
+    }
 
     .project__repo-url {
         color: #ffffff;
@@ -41,9 +50,13 @@ const CardWrapper = styled.div<{ notFinished?: boolean }>`
     .project__languages > a:focus {
         filter: contrast(0.75);
     }
+
+    .project__authors__link {
+        cursor: pointer;
+    }
 `;
 
-const Card = (props: { project: Project }) => {
+const Card = (props: { project: Project, padding?: string }) => {
     const { name, repoUrl, description, languages, officialSiteUrl, officialSiteUrlTitle, notFinished, isPrivate, keywords, authors, leader } = props.project;
     const isGithubRepo = repoUrl && repoUrl.includes("github");
     const isGitlabRepo = repoUrl && repoUrl.includes("gitlab");
@@ -51,7 +64,7 @@ const Card = (props: { project: Project }) => {
     const iconsElement = <span style={{ width: "40px", textAlign: "right" }}>{(icon !== "reddit" ? <span><FontAwesomeIcon size="1x" iconName="github" type="brand" /> {(isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />)}</span> : (isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />))}</span>;
     const titleElement = <h3 className="project__name">{name} {iconsElement}</h3>;
     const descriptionElement = <p className="project__description">{description}</p>;
-    return <CardWrapper notFinished={notFinished}>
+    return <CardWrapper notFinished={notFinished} padding={props.padding} className="project">
        {repoUrl ? <a className="project__repo-url" href={repoUrl} title="Repository link" target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
        {repoUrl ? <a className="project__repo-url" href={repoUrl} title="Repository link" target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
        {officialSiteUrl && <p>You can have more precision on the {
@@ -67,10 +80,17 @@ const Card = (props: { project: Project }) => {
             <span key={keywordIndex} style={{ backgroundColor: "#dddddd", color: "#333333" }}>{value}</span>
         )}</p>}
         {authors && <p className='project__authors'>Authors : {authors.map((value, authorIndex) => {
+            const hasLinks = !authorHasNoLinks(value);
             let isLeader = false;
             if(value === leader) isLeader = true;
 
-            return <Fragment key={authorIndex}>{(authorIndex !== 0) && <>, </>}<span style={{ fontWeight: (isLeader ? "bold" : "normal") }} data-for="project-author-links" data-tip={value.id}>{value.name}</span></Fragment>
+            return <Fragment key={authorIndex}>
+                {(authorIndex !== 0) && <>, </>}
+                <span className={hasLinks ? "project__authors__link" : undefined} style={{ fontWeight: (isLeader ? "bold" : "normal") }} 
+                      data-for="project-author-links" data-tip={value.id} tabIndex={0}>
+                    {value.name}
+                </span>
+            </Fragment>
         })}</p>}
     </CardWrapper>
 }

@@ -1,10 +1,10 @@
 import "./index.css"
 import styled from 'styled-components';
-import Marginer from '../../components/marginer';
 import { Link } from 'react-router-dom';
+import Marginer from '../../components/marginer';
 import Grid from '../../components/grid';
 import { ImageIcon } from '../../components/icons';
-import { Tab, TabPanel } from '../../components/tabs/tabs';
+import { Tab, TabPanel } from '../../components/tabs';
 import Accordion from '../../components/accordion';
 import { skillsTabData } from '../../model/Skill';
 import { hardSkillData } from "../../data";

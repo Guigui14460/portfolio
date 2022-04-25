@@ -1,9 +1,8 @@
+import { Link, NavLink } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import Marginer from "../marginer";
-
-import { Link, NavLink } from "react-router-dom";
 import { deviceSize } from "../Responsive";
-import { useMediaQuery } from "react-responsive";
 
 const NavbarContainer = styled.nav<{ useTransparent: boolean, verySmallMobile: boolean }>`
     height: ${({ verySmallMobile }) => (!verySmallMobile ? "65px" : "65px")};

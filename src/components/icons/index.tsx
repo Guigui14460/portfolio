@@ -33,6 +33,7 @@ export const FontAwesomeIcon = (props: {type: FontAwesomeIconType, iconName: Ico
 export const SocialIcon = styled(FAIcon)<{ colorused: string }>`
     color: ${({ colorused }) => colorused};
 `;
+
 export const SocialIconContainer = styled.div`
     display: flex;
     text-align: center;
@@ -47,4 +48,4 @@ export const SocialIconClickable = (props: {
     return <a className="link" href={url} title={title} target="_blank" rel="noreferrer">
         <SocialIcon icon={iconProps} size={iconSize} colorused={iconColor} />
     </a>
-}
+};

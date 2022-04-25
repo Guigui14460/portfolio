@@ -1,15 +1,15 @@
 import { ReactElement, useState } from 'react';
 import ReactTooltip from 'react-tooltip';
-import Card from '../../components/card';
-import Grid from '../../components/grid';
-import ProjectsFilterBar from './FilterBar';
-import { authorsList, projectsData, universityProjectsData } from '../../data';
+import { MultiValue } from 'react-select';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import Card from '../../components/card';
+import Grid from '../../components/grid';
 import { ProjectAuthorTooltipContent } from '../../components/tooltips';
-import { KeywordOption, LanguageOption } from '../../model/Options';
-import { MultiValue } from 'react-select';
+import ProjectsFilterBar from './FilterBar';
 import { hasLanguagesOrKeywords } from '../../model/Project';
+import { KeywordOption, LanguageOption } from '../../model/Options';
+import { authorsList, projectsData, universityProjectsData } from '../../data';
 library.add(faGlobe);
 
 const ProjectsPage = () => {
@@ -17,12 +17,12 @@ const ProjectsPage = () => {
 
     const authorsLinksTooltip: ReactElement = <ReactTooltip 
             id='project-author-links' getContent={(dataTip) => authorsList.has(dataTip) && ProjectAuthorTooltipContent(authorsList.get(dataTip))} 
-            effect="solid" delayHide={250} delayShow={250} delayUpdate={250} place={"bottom"} border={false} type={"light"} />;
+            effect="solid" delayHide={250} delayShow={200} delayUpdate={100} place={"bottom"} border={false} type={"light"} />;
     const universityProjectsGrid = universityProjectsData.filter(value => hasLanguagesOrKeywords(value, filters)).map((value, index) =>
-        <Grid key={index} column sm={12} md={6} lg={4}><Card key={index} project={value} /></Grid>
+        <Grid key={index} column sm={12} md={6} lg={4} padding="0"><Card key={index} project={value} padding="0.75rem" /></Grid>
     );
     const personalProjectsGrid = projectsData.filter(value => hasLanguagesOrKeywords(value, filters)).map((value, index) => 
-        <Grid key={index} column sm={12} md={6} lg={4}><Card key={index} project={value} /></Grid>
+        <Grid key={index} column sm={12} md={6} lg={4} padding="0"><Card key={index} project={value} padding="0.75rem" /></Grid>
     );
 
     return <>

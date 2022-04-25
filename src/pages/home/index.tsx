@@ -1,17 +1,17 @@
 import { Fragment, ReactElement, useEffect, useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import ReactTooltip from 'react-tooltip';
 import styled, { CSSProperties } from 'styled-components';
-import { ButtonExternalLink, ButtonLink } from '../../components/button';
-import Grid from '../../components/grid';
 import Marginer from '../../components/marginer';
+import Grid from '../../components/grid';
 import Card from '../../components/card';
-import { authorsList, experiencesData, worksInProgressProjectsData } from '../../data';
-import { isInstanceOfInternship } from '../../model/Experience';
-import { contrast, hexToRgb } from '../../utils';
-import { ProjectAuthorTooltipContent } from '../../components/tooltips';
-import { HashLink } from 'react-router-hash-link';
 import { ImageIcon } from '../../components/icons';
+import { ProjectAuthorTooltipContent } from '../../components/tooltips';
+import { ButtonExternalLink, ButtonLink } from '../../components/button';
 import { deviceSize } from '../../components/Responsive';
+import { contrast, hexToRgb } from '../../utils';
+import { isInstanceOfInternship } from '../../model/Experience';
+import { authorsList, experiencesData, worksInProgressProjectsData } from '../../data';
 
 const Keywords = styled.p`
     & > span {
@@ -25,7 +25,7 @@ const Keywords = styled.p`
 const HomePage = () => {
     const authorsLinksTooltip: ReactElement = <ReactTooltip 
             id='project-author-links' getContent={(dataTip) => authorsList.has(dataTip) && ProjectAuthorTooltipContent(authorsList.get(dataTip))} 
-            effect="solid" delayHide={250} delayShow={250} delayUpdate={250} place={"bottom"} border={false} type={"light"} />;
+            effect="solid" delayHide={250} delayShow={200} delayUpdate={100} place={"bottom"} border={false} type={"light"} />;
     
     const [matchesMobileDevice, setMatchesMobileDevice] = useState(window.matchMedia("(max-width: " + deviceSize.mobile.toString() + "px)").matches)
     
@@ -109,12 +109,12 @@ const HomePage = () => {
             <h2>Works in progress</h2>
             <Grid row>
                 {worksInProgressProjectsData.map((value, index) => {
-                    return <Grid key={index} column sm={12} md={6} lg={4}>
-                        <Card project={value} />
+                    return <Grid key={index} column sm={12} md={6} lg={4} padding="0">
+                        <Card project={value} padding="0.75rem" />
                     </Grid>
                 })}
             </Grid>
-            <Marginer direction='vertical' margin={8} />
+            <Marginer direction='vertical' margin={16} />
             <div style={{ textAlign: 'center' }}>
                 <ButtonLink title="Projects" className='ternary-bis' targetLink="/projects">More projects here</ButtonLink>
             </div>

@@ -1,7 +1,14 @@
-import { authorHasNoLinks, ProjectAuthor } from "../../model/ProjectAuthor";
-import { FontAwesomeIcon, ImageIcon } from "../icons";
-import Marginer from "../marginer";
 import { Fragment } from "react";
+import Marginer from "../marginer";
+import { FontAwesomeIcon, ImageIcon } from "../icons";
+import { authorHasNoLinks, ProjectAuthor } from "../../model/ProjectAuthor";
+import styled from "styled-components";
+
+const ProjectAuthorWrapper = styled.div`
+    & > a {
+        transition: opacity 0s ease;
+    }
+`;
 
 export const ProjectAuthorTooltipContent = (author: ProjectAuthor | undefined) => {
     if (author === undefined) return null;
@@ -13,9 +20,9 @@ export const ProjectAuthorTooltipContent = (author: ProjectAuthor | undefined) =
     if(author.linkedInProfile) links.push(<a target="_blank" rel="noreferrer" href={author.linkedInProfile} title="LinkedIn profile"><ImageIcon width={26} src="/images/socials/linkedin.svg" alt="LinkedIn icon" /></a>)
     if(author.googleScholarProfile) links.push(<a target="_blank" rel="noreferrer" href={author.googleScholarProfile} title="Google Scholar profile"><ImageIcon width={26} src="/images/socials/googleScholar.svg" alt="Google Scholar icon" /></a>)
 
-    return <div style={{ display: "flex", margin: 0, padding: 0 }}>
+    return <ProjectAuthorWrapper style={{ display: "flex", margin: 0, padding: 0 }}>
         {links.map((value, index) => {
             return <Fragment key={index}>{index !== 0 && <Marginer direction='horizontal' margin={"8px"} />}{value}</Fragment>
         })}
-    </div>
-}
+    </ProjectAuthorWrapper>
+};
