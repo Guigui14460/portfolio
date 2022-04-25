@@ -1,6 +1,6 @@
-import * as React from "react";
-import styled from "styled-components";
 import "./grid.css";
+import { CSSProperties, FunctionComponent } from "react";
+import styled from "styled-components";
 
 type GridItemsAlignment =
   | "flex-start"
@@ -30,7 +30,7 @@ interface GridProps {
   md?: GridSizes;
   row?: boolean;
   sm?: GridSizes;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
   padding?: GridGap;
 }
 
@@ -46,7 +46,7 @@ const GridWrapper = styled.div<{ padding: GridGap }>`
     }
 `;
 
-const Grid: React.FunctionComponent<GridProps> = props => {
+const Grid: FunctionComponent<GridProps> = props => {
   const {
     alignItems,
     children,

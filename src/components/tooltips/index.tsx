@@ -1,7 +1,7 @@
-import { authorHasNoLinks, ProjectAuthor } from "../../model/ProjectAuthor";
-import { FontAwesomeIcon, ImageIcon } from "../icons";
-import Marginer from "../marginer";
 import { Fragment } from "react";
+import Marginer from "../marginer";
+import { FontAwesomeIcon, ImageIcon } from "../icons";
+import { authorHasNoLinks, ProjectAuthor } from "../../model/ProjectAuthor";
 
 export const ProjectAuthorTooltipContent = (author: ProjectAuthor | undefined) => {
     if (author === undefined) return null;
@@ -18,4 +18,4 @@ export const ProjectAuthorTooltipContent = (author: ProjectAuthor | undefined) =
             return <Fragment key={index}>{index !== 0 && <Marginer direction='horizontal' margin={"8px"} />}{value}</Fragment>
         })}
     </div>
-}
+};

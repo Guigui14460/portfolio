@@ -6,7 +6,7 @@ export const luminanace = (r: number, g: number, b: number) => {
             : Math.pow( (v + 0.055) / 1.055, 2.4 );
     });
     return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
-}
+};
 
 export const contrast = (rgb1: number[], rgb2: number[]) => {
     var lum1 = luminanace(rgb1[0], rgb1[1], rgb1[2]);
@@ -15,7 +15,7 @@ export const contrast = (rgb1: number[], rgb2: number[]) => {
     var darkest = Math.min(lum1, lum2);
     return (brightest + 0.05)
          / (darkest + 0.05);
-}
+};
 
 export const hexToRgb = (hex: string) => {
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
@@ -28,4 +28,4 @@ export const hexToRgb = (hex: string) => {
         throw new Error("Not converted");
     }
     return [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)];
-}
+};

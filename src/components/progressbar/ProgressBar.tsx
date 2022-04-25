@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import Marginer from '../marginer';
 import { hexToRgb, contrast } from '../../utils';
 
@@ -39,6 +39,6 @@ const ProgressBarSkill = (props: { name: string; percentage: number, color: stri
             <ProgressBarInsider variants={variants} initial="enter" animate="animate" exit="enter" width={percentage} color={color} />
         </ProgressBarWrapper>
     </div>
-}
+};
 
 export default ProgressBarSkill;

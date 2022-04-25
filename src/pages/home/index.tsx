@@ -1,17 +1,17 @@
 import { Fragment, ReactElement, useEffect, useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import ReactTooltip from 'react-tooltip';
 import styled, { CSSProperties } from 'styled-components';
-import { ButtonExternalLink, ButtonLink } from '../../components/button';
-import Grid from '../../components/grid';
 import Marginer from '../../components/marginer';
+import Grid from '../../components/grid';
 import Card from '../../components/card';
-import { authorsList, experiencesData, worksInProgressProjectsData } from '../../data';
-import { isInstanceOfInternship } from '../../model/Experience';
-import { contrast, hexToRgb } from '../../utils';
-import { ProjectAuthorTooltipContent } from '../../components/tooltips';
-import { HashLink } from 'react-router-hash-link';
 import { ImageIcon } from '../../components/icons';
+import { ProjectAuthorTooltipContent } from '../../components/tooltips';
+import { ButtonExternalLink, ButtonLink } from '../../components/button';
 import { deviceSize } from '../../components/Responsive';
+import { contrast, hexToRgb } from '../../utils';
+import { isInstanceOfInternship } from '../../model/Experience';
+import { authorsList, experiencesData, worksInProgressProjectsData } from '../../data';
 
 const Keywords = styled.p`
     & > span {

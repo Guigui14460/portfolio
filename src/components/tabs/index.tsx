@@ -1,5 +1,5 @@
-import React, { useEffect, useState, CSSProperties } from "react";
 import "./tabs.css"
+import React, { useEffect, useState, CSSProperties } from "react";
 
 export const TabPanel = (props: { title: string; children: React.ReactNode }) => {
     return <div>{props.children}</div>

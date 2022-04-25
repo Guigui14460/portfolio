@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from '../navbar';
 
 const Header: Function = () : JSX.Element => {

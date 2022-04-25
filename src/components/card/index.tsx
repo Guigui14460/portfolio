@@ -1,12 +1,12 @@
+import { Fragment } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
-import { hexToRgb, contrast } from '../../utils';
-import { FontAwesomeIcon } from '../../components/icons'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '../../components/icons'
+import { hexToRgb, contrast } from '../../utils';
 import { Project } from '../../model/Project';
-import { Fragment } from 'react';
-import { HashLink } from 'react-router-hash-link';
 import { authorHasNoLinks } from '../../model/ProjectAuthor';
 library.add(faGithub, faGitlab, faLock);
 

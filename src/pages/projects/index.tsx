@@ -1,15 +1,15 @@
 import { ReactElement, useState } from 'react';
 import ReactTooltip from 'react-tooltip';
-import Card from '../../components/card';
-import Grid from '../../components/grid';
-import ProjectsFilterBar from './FilterBar';
-import { authorsList, projectsData, universityProjectsData } from '../../data';
+import { MultiValue } from 'react-select';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import Card from '../../components/card';
+import Grid from '../../components/grid';
 import { ProjectAuthorTooltipContent } from '../../components/tooltips';
-import { KeywordOption, LanguageOption } from '../../model/Options';
-import { MultiValue } from 'react-select';
+import ProjectsFilterBar from './FilterBar';
 import { hasLanguagesOrKeywords } from '../../model/Project';
+import { KeywordOption, LanguageOption } from '../../model/Options';
+import { authorsList, projectsData, universityProjectsData } from '../../data';
 library.add(faGlobe);
 
 const ProjectsPage = () => {

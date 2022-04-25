@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const loaderVariants = {
     animationOne: {
@@ -46,13 +46,12 @@ const CircleLoader = styled(motion.div)<{ width: number }>`
     left: 0;
 `;
 
-const SpinLoader = (props: { width: number; }) => {
+export const SpinLoader = (props: { width: number; }) => {
     return <>
         <CircleLoader width={props.width} animate={{ rotate: 360 }} 
             transition={{ repeat: Infinity, ease: "linear", duration: 0.75 }} />
     </>
 }
-export default SpinLoader;
   
 const loadingContainerVariants = {
     start: {

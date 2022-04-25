@@ -1,7 +1,6 @@
-import React from 'react';
+import './buttons.css';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import './buttons.css';
 
 const ButtonWrapper = styled.button<{ size?: number }>`
     border: none;
