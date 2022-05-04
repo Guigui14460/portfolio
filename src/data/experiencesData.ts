@@ -8,7 +8,7 @@ export const experiencesData: ExpType[] = [
         to: "June 2021",
         location: "Caen, France",
         entreprise: "Orange Labs",
-        entrepriseLogo: "/orange.png",
+        entrepriseLogo: "/images/enterprises/orange.webp",
         entrepriseUrl: "https://www.orange.com",
         keywords: ["machine learning", "deep learning", "simulation", "finance", "data science"],
         
