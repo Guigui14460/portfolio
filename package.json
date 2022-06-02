@@ -1,5 +1,5 @@
 {
-  "name": "react-portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -14,7 +14,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "@types/jest": "^26.0.24",
-    "@types/node": "^12.20.47",
+    "@types/node": "12.20.48",
     "@types/react": "^16.14.25",
     "@types/react-dom": "^16.9.14",
     "@types/styled-components": "^5.1.25",
@@ -57,6 +57,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-syntax-flow": "7.14.5",
+    "@babel/plugin-transform-react-jsx": "7.14.9",
     "@types/react-responsive": "^8.0.4",
     "@types/react-router-dom": "^5.3.1",
     "@types/react-router-hash-link": "^2.4.5"
