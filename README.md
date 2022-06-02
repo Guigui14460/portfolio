@@ -29,15 +29,15 @@ $ pnpm install
 To open the developer server and the application on the browser :
 ```shell
 $ npm start
-$ pnpm start # if using pnpm
+$ pnpm run start # if using pnpm
 ```
 To launch tests :
 ```shell
 $ npm test
-$ pnpm test # if using pnpm
+$ pnpm run test # if using pnpm
 ```
 To generate the app for production :
 ```shell
 $ npm run build
-$ pnpm build # if using pnpm
+$ pnpm run build # if using pnpm
 ```
