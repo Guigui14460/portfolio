@@ -41,8 +41,8 @@ const authorsList: Map<string, ProjectAuthor> = new Map<string, ProjectAuthor>([
         githubProfile: "https://github.com/Akbeeh",
         linkedInProfile: "https://www.linkedin.com/in/mokwilliam/",
     }],
-    ["em", {
-        id: "em",
+    ["eg", {
+        id: "eg",
         name: "Emmanuel Garreau",
         githubProfile: "https://github.com/Bigmax81",
         gitlabProfile: "https://gitlab.com/Bigouu",

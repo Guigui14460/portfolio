@@ -19,6 +19,18 @@ export const projectsData: Project[] = [
     },
     {
         date: 2022,
+        type: "professional",
+        name: "Khôllector",
+        description: "Application to connect buyers and sellers of school books for students in French universities.",
+        leader: authorsList.get("eg"),
+        authors: getOnlyAuthors([authorsList.get("eg"), me]),
+        languages: [languageInformations["typescript"], languageInformations["sass"]],
+        isPrivate: true,
+        notFinished: true,
+        keywords: ["nodejs", "nextjs", "web development", "e-commerce"],
+    },
+    {
+        date: 2022,
         type: "personal",
         name: "Nebulae Generator",
         repoUrl: "https://github.com/Guigui14460/nebulae-generator",

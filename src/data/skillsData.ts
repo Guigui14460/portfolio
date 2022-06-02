@@ -140,6 +140,12 @@ const hardSkillData: SkillOrLanguage[] = [
         tabs: ["Web"],
     },
     {
+        name: "NextJS",
+        link: "https://nextjs.org/",
+        logoUrl: "/images/hard_skills/web_frameworks_libraries/nextjs.svg",
+        tabs: ["Web"],
+    },
+    {
         name: "VueJS",
         link: "https://vuejs.org/",
         logoUrl: "/images/hard_skills/web_frameworks_libraries/vuejs.webp",

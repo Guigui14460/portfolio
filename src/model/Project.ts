@@ -3,7 +3,7 @@ import Language from "./Language";
 import { KeywordOption, LanguageOption } from './Options';
 import { ProjectAuthor } from './ProjectAuthor';
 
-type ProjectType = "school" | "personal" | "entreprise";
+type ProjectType = "school" | "personal" | "professional" | "entreprise";
 
 export interface Project {
     name: string;

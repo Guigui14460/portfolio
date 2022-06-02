@@ -51,7 +51,7 @@ const languageInformations: {[id: string]: Language} = {
         tabs: ["Software Development"],
     },
     "html": {
-        name: "HTML/CSS",
+        name: "HTML",
         color: "#e34c26",
         link: "https://en.wikipedia.org/wiki/HTML",
         logoUrl: "/images/hard_skills/languages/html.webp",
