@@ -21,7 +21,7 @@ export const socialAccounts: SocialAccount[] = [
     { name: "Twitter", username: "@HadesGuigui", url: "https://twitter.com/HadesGuigui", iconProperties: ["fab", "twitter"], iconColor: "#1DA1F2", },
     { name: "LinkedIn", username: "Guillaume Letellier", url: linkedInUrl, iconProperties: ["fab", "linkedin"], iconColor: "#2867B2", },
     { name: "Reddit", username: "Guigui14460", url: "https://www.reddit.com/user/Guigui14460", iconProperties: ["fab", "reddit"], iconColor: "#FF4500", },
-    { name: "Discord", username: "HadesGuigui#7684", url: "https://discordapp.com/users/339384664118657034/", iconProperties: ["fab", "discord"], iconColor: "#7289DA", },
+    { name: "Discord", username: "HadesGuigui#4622", url: "https://discordapp.com/users/962737139894845460/", iconProperties: ["fab", "discord"], iconColor: "#7289DA", },
     { name: "Facebook", username: "Guigui Letellier", url: "https://www.facebook.com/guiguiletellier.14/", iconProperties: ["fab", "facebook-square"], iconColor: "#4267B2", },
 ];
 
