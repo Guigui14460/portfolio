@@ -57,6 +57,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },"browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   },
   "devDependencies": {
     "@babel/plugin-syntax-flow": "7.14.5",

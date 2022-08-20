@@ -78,7 +78,7 @@ const SkillsPage = () => {
             </Tab>
         </section>
         <section>
-            <h2>Worked area in University</h2>
+            <h2>Area of work at the university</h2>
             <h3>Annual projects</h3>
             <p className='justify'>In the last year of Bachelor Science and in the two years of Master Science, the Computer Science Department offers the possibility to students
             for realizing project during the year (1 ou 2 semesters depending on the year). The main goal is to apply some of our knowledge on a new subject including
@@ -125,7 +125,7 @@ const SkillsPage = () => {
             </Accordion>
             <br />
 
-            <h3>Topics covered</h3>
+            <h3>Covered topics</h3>
             <Tab>
                 <TabPanel title="Short version">
                     <Grid row style={{ textAlign: "center" }}>
@@ -194,7 +194,7 @@ const SkillsPage = () => {
                                 <li>Decision support and artificial intelligence</li>
                                 <li>Language engineering (base of Natural Language Processing)</li>
                                 <li>Machine Learning (KNN, Bayesian networks, Linear Regression (and projection on other spaces), Logistic Classification, SVM (and kernel functions), Neural Networks)</li>
-                                <li>Data Analysis (descriptive stats, MCA, ICA, PCA)</li>
+                                <li>Data Analysis (descriptive stats, MCA, ICA, PCA, Chi-square test)</li>
                             </ul>
                         </Grid>
                         <Grid column sm={12} md={6}>
@@ -203,7 +203,7 @@ const SkillsPage = () => {
                                 <li>Programming paradagims (OOP, imperative, functionnal, procedural)</li>
                                 <li>Software design</li>
                                 <li>Web technologies (HTML/CSS, JavaScript, PHP)</li>
-                                <li>Parallel and distributed programming (C/C++ : vectorization, OpenMP, TBB, MPI)</li>
+                                <li>Parallel and distributed programming (C/C++: vectorization, OpenMP, TBB, MPI)</li>
                                 <li>Mobile applications</li>
                                 <li>Image synthesis (OpenGL)</li>
                             </ul>
@@ -217,6 +217,75 @@ const SkillsPage = () => {
                                 <li>Software Creativity</li>
                                 <li>System architecture and microcontrollers</li>
                                 <li>System &amp; Networks (OSPF, BGP, MPLS, VPLS, virtualized datacenter)</li>
+                            </ul>
+                        </Grid>
+                    </Grid>
+                </TabPanel>
+            </Tab>
+        </section>
+        <section>
+            <h2>Covered topics in personal projects</h2>
+            <Tab>
+                <TabPanel title="Short version">
+                    <Grid row style={{ textAlign: "center" }}>
+                        <Grid column sm={12} md={6}>
+                            <h4>Data Science &amp; AI</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Decision support and artificial intelligence</li>
+                                <li>Deep Learning</li>
+                                <li>Data extraction</li>
+                                <li>Data Analysis</li>
+                            </ul>
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <h4>Development</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Web technologies</li>
+                                <li>Image synthesis</li>
+                            </ul>
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <h4>Mathematics, Algorithmics and CS Theory</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Mathematics</li>
+                            </ul>
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <h4>Others</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Quantum computing</li>
+                            </ul>
+                        </Grid>
+                    </Grid>
+                </TabPanel>
+                <TabPanel title="Detailed version">
+                    <Grid row style={{ textAlign: "center" }}>
+                        <Grid column sm={12} md={6}>
+                            <h4>Data Science &amp; AI</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Decision support and artificial intelligence</li>
+                                <li>Deep Learning (Neural networks, CNN, RNN, Transformers)</li>
+                                <li>Data extraction (API scraping, parsing)</li>
+                                <li>Data Analysis (kernel PCA, t-SNE, Pearson test, data wrangling)</li>
+                            </ul>
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <h4>Development</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Web technologies (ReactJS, NextJS)</li>
+                                <li>Image synthesis (Ray Tracing implementation)</li>
+                            </ul>
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <h4>Mathematics, Algorithmics and CS Theory</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Mathematics (statistics, linear algebra, geometry)</li>
+                            </ul>
+                        </Grid>
+                        <Grid column sm={12} md={6}>
+                            <h4>Others</h4>
+                            <ul style={{ textAlign: 'left' }}>
+                                <li>Quantum computing (theory, use of Qiskit, QAI/QML understanding)</li>
                             </ul>
                         </Grid>
                     </Grid>

@@ -24,7 +24,7 @@ const LoaderDot = styled(motion.div)`
     height: 10px;
     margin: 40px auto;
     border-radius: 50%;
-    background: #ffffff;
+    background: var(--color);
     display: "block";
 `;
 
@@ -39,7 +39,7 @@ const CircleLoader = styled(motion.div)<{ width: number }>`
     width: ${({ width }) => width + "px"};
     height: ${({ width }) => width + "px"};
     display: block;
-    border: ${({ width }) => (width/7) + "px"} solid #E9E9E9;
+    border: ${({ width }) => (width/7) + "px"} solid var(--background-color);
     border-top: ${({ width }) => (width/7) + "px"} solid #3195ad;
     border-radius: 50%;
     top: 0;

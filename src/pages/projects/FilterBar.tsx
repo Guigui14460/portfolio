@@ -51,7 +51,7 @@ const ProjectsFilterBar = ({onChange}: { onChange: (value: MultiValue<LanguageOp
         isDisabled={false} isLoading={false} isClearable isRtl={false} isSearchable
         name="projects-search-bar" className="multi-select" classNamePrefix="select" isMulti
         closeMenuOnSelect={false} closeMenuOnScroll={true} placeholder="Select options to filter projects"
-        noOptionsMessage={() => "No more languages or keywords to select :("} components={animatedComponents}
+        noOptionsMessage={() => "No more languages or keywords to select 😢"} components={animatedComponents}
         options={groupedOptions} formatGroupLabel={formatGroupLabel} onChange={onChange} theme={customTheme}
         aria-label="Searchable select"
     />

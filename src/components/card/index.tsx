@@ -11,7 +11,7 @@ import { authorHasNoLinks } from '../../model/ProjectAuthor';
 library.add(faGithub, faGitlab, faLock);
 
 const CardWrapper = styled.div<{ notFinished?: boolean, padding?: string }>`
-    color: #ffffff;
+    color: var(--color);
     padding: ${({ padding }) => { if(padding) return padding; return "0" }};
     transition: all 250ms ease;
     height: 100%;
@@ -22,7 +22,7 @@ const CardWrapper = styled.div<{ notFinished?: boolean, padding?: string }>`
     }
 
     .project__repo-url {
-        color: #ffffff;
+        color: var(--color);
     }
 
     .project__name {
@@ -61,25 +61,25 @@ const Card = (props: { project: Project, padding?: string }) => {
     const isGithubRepo = repoUrl && repoUrl.includes("github");
     const isGitlabRepo = repoUrl && repoUrl.includes("gitlab");
     const icon = (isGithubRepo ? "github" : (isGitlabRepo ? "gitlab" : "reddit")); // reddit icon because we can't have a null icon
-    const iconsElement = <span style={{ width: "40px", textAlign: "right" }}>{(icon !== "reddit" ? <span><FontAwesomeIcon size="1x" iconName="github" type="brand" /> {(isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />)}</span> : (isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />))}</span>;
+    const iconsElement = <span style={{ width: "40px", textAlign: "right" }}>{(icon !== "reddit" ? <span><FontAwesomeIcon size="1x" iconName="github" type="brand" /> {(isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />)}</span>: (isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />))}</span>;
     const titleElement = <h3 className="project__name">{name} {iconsElement}</h3>;
     const descriptionElement = <p className="project__description">{description}</p>;
     return <CardWrapper notFinished={notFinished} padding={props.padding} className="project">
-       {repoUrl ? <a className="project__repo-url" href={repoUrl} title="Repository link" target="_blank" rel="noreferrer">{titleElement}</a> : titleElement}
-       {repoUrl ? <a className="project__repo-url" href={repoUrl} title="Repository link" target="_blank" rel="noreferrer">{descriptionElement}</a> : descriptionElement}
+       {repoUrl ? <a className="project__repo-url" href={repoUrl} title="Repository link" target="_blank" rel="noreferrer">{titleElement}</a>: titleElement}
+       {repoUrl ? <a className="project__repo-url" href={repoUrl} title="Repository link" target="_blank" rel="noreferrer">{descriptionElement}</a>: descriptionElement}
        {officialSiteUrl && <p>You can have more precision on the {
                 officialSiteUrl.indexOf("http") !== -1 ? 
                     <a href={officialSiteUrl} className="link" rel="noreferrer" target="_blank">{officialSiteUrlTitle}</a>
                     : <HashLink to={officialSiteUrl} className="link">{officialSiteUrlTitle}</HashLink>
            }.</p>}
-        <p className="project__languages">Languages : {languages.map((value, languageIndex) =>
+        <p className="project__languages">Languages: {languages.map((value, languageIndex) =>
             <a key={languageIndex} style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}
                 href={value.link} target="_blank" rel="noreferrer">{value.name}</a>
         )}</p>
-        {keywords && <p className="project__languages" style={{ fontSize: "0.8em" }}>Keywords : {keywords.map((value, keywordIndex) =>
-            <span key={keywordIndex} style={{ backgroundColor: "#dddddd", color: "#333333" }}>{value}</span>
+        {keywords && <p className="project__languages" style={{ fontSize: "0.8em" }}>Keywords: {keywords.map((value, keywordIndex) =>
+            <span key={keywordIndex} style={{ backgroundColor: "#cccccc", color: "#333333" }}>{value}</span>
         )}</p>}
-        {authors && <p className='project__authors'>Authors : {authors.map((value, authorIndex) => {
+        {authors && <p className='project__authors'>Authors: {authors.map((value, authorIndex) => {
             const hasLinks = !authorHasNoLinks(value);
             let isLeader = false;
             if(value === leader) isLeader = true;

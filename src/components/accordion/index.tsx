@@ -30,8 +30,8 @@ const Accordion = (props: { title: string; children: ReactNode; id?: string }) =
     }
 
     return <div className="accordion" id={props.id}>
-        <button className={`accordion__title ${active ? "active" : ""}`} onClick={toggleAccordion}>{props.title}<Chevron className={`accordion__icon ${rotate}`} /></button>
-        <div className="accordion__content" ref={content} style={{ maxHeight: (active ? `${height}px` : "0px") }}>
+        <button className={`accordion__title ${active && "active"}`} onClick={toggleAccordion}>{props.title}<Chevron className={`accordion__icon ${rotate}`} /></button>
+        <div className="accordion__content" ref={content} style={{ maxHeight: (active ? height : 0) }}>
             <div className="accordion__text">{props.children}</div>
         </div>
     </div>

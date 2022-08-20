@@ -26,7 +26,7 @@ export interface Internship extends Experience {
     associatedToUrl?: string;
 };
 
-export function isInstanceOfInternship(instance: any) : instance is Internship {
+export function isInstanceOfInternship(instance: any): instance is Internship {
     return "referent" in instance && "subject" in instance;
 };
 

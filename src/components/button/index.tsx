@@ -6,7 +6,7 @@ const ButtonWrapper = styled.button<{ size?: number }>`
     border: none;
     outline: none;
     padding: 6px 1.8em;
-    font-size: ${({ size }) => (size ? size + "em" : "1em")};
+    font-size: ${({ size }) => `${size || 1}em`};
     font-weight: 600;
     border-radius: 4px;
     cursor: pointer;

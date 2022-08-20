@@ -7,14 +7,14 @@ You can see my portfolio in [production](https://guillaumeletellier-portfolio.ne
 Made with ReactJS and Typescript
 
 ## Setup
-For Windows user :
+For Windows user:
 - install NodeJS [here](https://nodejs.org/en/)
 
-For Unix user :
+For Unix user:
 - run `sudo apt-get install nodejs npm`
 
 ### With `npm`
-For both OS, run at the root of the project :
+For both OS, run at the root of the project:
 ```shell
 $ npm install
 ```
@@ -26,17 +26,17 @@ $ pnpm install
 ```
 
 ## Commands
-To open the developer server and the application on the browser :
+To open the developer server and the application on the browser:
 ```shell
 $ npm start
 $ pnpm run start # if using pnpm
 ```
-To launch tests :
+To launch tests:
 ```shell
 $ npm test
 $ pnpm run test # if using pnpm
 ```
-To generate the app for production :
+To generate the app for production:
 ```shell
 $ npm run build
 $ pnpm run build # if using pnpm

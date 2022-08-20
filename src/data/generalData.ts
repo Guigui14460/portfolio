@@ -13,7 +13,7 @@ export const lastName: string = "Letellier";
 export const yearOfBorn: string = "07-26-2000";
 export const emailAddress: string = "letgui2@gmail.com";
 export const phoneShortVersion: string = "+33699120722";
-export const phoneLongVersion: string = "(+33) 6 99 12 07 22";
+export const phoneLongVersion: string = "+33 (0)6 99 12 07 22";
 export const address: string = "12 Rue de Suresnes, Colombelles, Normandy, France";
 const linkedInUrl: string = "https://www.linkedin.com/in/guillaume-letellier/";
 
