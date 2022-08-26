@@ -1,9 +1,9 @@
 import { FontAwesomeIcon, SocialIcon } from "../../components/icons"
 import styled from 'styled-components';
-import { address, emailAddress, phoneLongVersion, phoneShortVersion, socialAccounts } from '../../data';
+import { emailAddress, phoneLongVersion, phoneShortVersion, socialAccounts } from '../../data';
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faPhone, faHome } from '@fortawesome/free-solid-svg-icons';
-library.add(faPhone, faHome);
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+library.add(faPhone);
 
 const SocialDiv = styled.a`
     display: flex;
@@ -54,9 +54,6 @@ const ContactPage = () => {
             <ul style={{ listStyle: "none", fontSize: 17 }}>
                 <ListElement>
                     <FontAwesomeIcon iconName="phone" type="solid" size="1x" /> <a className="link" href={`tel:${phoneShortVersion}`}>{phoneLongVersion}</a>
-                </ListElement>
-                <ListElement>
-                    <FontAwesomeIcon iconName="home" type="solid" size="1x" /> {address}
                 </ListElement>
             </ul>
         </section>
