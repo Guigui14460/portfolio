@@ -8,14 +8,14 @@ export const projectsData: Project[] = [
     {
         date: 2022,
         type: "personal",
-        name: "Predictor of the effects of molecules on the human body",
-        description: "Application to predict the effects of a molecule on a human organism. Data taken from different databases belonging to the NCBI (National Center for Biotechnology Information).",
+        name: "Predictor of compounds effects on the human body",
+        description: "Application to predict the effects of a compound on a human organism. Data taken from different databases belonging to the NCBI (National Center for Biotechnology Information).",
         leader: me,
         authors: getOnlyAuthors([me]),
-        languages: [languageInformations["python"]],
+        languages: [languageInformations["python"], languageInformations["go"]],
         isPrivate: true,
         notFinished: true,
-        keywords: ["artificial intelligence", "molecule effects", "command-line interface", "natural language processing", "machine learning", "graph neural networks"],
+        keywords: ["artificial intelligence", "compound effects", "command-line interface", "natural language processing", "machine learning", "graph neural networks"],
     },
     {
         date: 2022,
