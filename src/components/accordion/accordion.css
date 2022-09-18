@@ -10,7 +10,9 @@
     display: flex;
     border: none;
     outline: none;
-    transition: background-color 300ms ease;
+    transition: background-color 300ms ease,
+                border-bottom-left-radius 300ms ease,
+                border-bottom-right-radius 300ms ease;
     font-weight: 600;
     font-size: 1.15em;
     border-radius: 8px;

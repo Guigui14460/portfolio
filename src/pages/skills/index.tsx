@@ -82,7 +82,7 @@ const SkillsPage = () => {
         <h3>Annual projects</h3>
         <p className='justify'>In the last year of Bachelor Science and in the two years of Master Science, the Computer Science Department offers the possibility to students
         for realizing project during the year (1 ou 2 semesters depending on the year). The main goal is to apply some of our knowledge on a new subject including
-        project management skills, learn new things that we d'ont have time in courses or go deeper in a field. The chosen project made by an algorithm
+        project management skills, learn new things that we don't have time in courses or to go deeper in a specific field. The chosen project made by an algorithm
         developed to associate each student in a group and try to satisfies the projects ordering made by students.</p>
         
         <Accordion title='Annual project 3rd year of BSc' id="annual-project-b3">
@@ -120,6 +120,15 @@ const SkillsPage = () => {
               In order to be able to evaluate them, we have implemented the Kripke structure. Being in a multi-agent environment, each agent 
               can see the actions performed by the other agents. It is therefore important that each agent can deduce new knowledge from the 
               actions of the others (if and only if they have knowledge of their program).
+            </p>
+          </>
+        </Accordion>
+        <Marginer direction='vertical' margin={8} />
+        <Accordion title='Annual project 2nd year of MSc' id="annual-project-m2">
+          <>
+            <h4>Link and subject available soon...</h4>
+            <p className="justify">
+              Information will be provided in this section once projects have been assigned.
             </p>
           </>
         </Accordion>
@@ -225,7 +234,7 @@ const SkillsPage = () => {
                   <li>Pattern Recognition (objects similarity measurements for chains or graphs, regression/indexing/classification tasks, moments method, Hungarian algorithm, Levenshtein distance, graph kernels)</li>
                   <li>Image and signal processing (inverse problems, PDE for image processing and graphs, harmonic analysis and variational methods for inverse image problems)</li>
                   <li>Language engineering (base of Natural Language Processing)</li>
-                  <li>Decision support and artificial intelligence</li>
+                  <li>Decision support and artificial intelligence (logic, planning, constraint satisfaction, data mining, evolutionary algorithms)</li>
                 </ul>
               </Grid>
               <Grid column sm={12} md={6}>
@@ -236,7 +245,7 @@ const SkillsPage = () => {
                   <li>Web technologies (HTML/CSS, JavaScript, PHP)</li>
                   <li>Databases (SQL and NoSQL DBs)</li>
                   <li>Parallel and distributed programming (C/C++: vectorization, OpenMP, TBB, MPI)</li>
-                  <li>Mobile applications</li>
+                  <li>Mobile applications (VueJS with Ionic, Flutter)</li>
                   <li>Image synthesis / Game engine (OpenGL)</li>
                 </ul>
               </Grid>

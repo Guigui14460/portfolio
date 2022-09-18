@@ -48,8 +48,18 @@ const HomePage = () => {
         <Marginer direction="vertical" margin={14} />
         <section>
             <h2>Who am I?</h2>
-            <p className='justify'>Hi! My name is Guillaume Letellier, I'm {age}-year-old french student and I develop things on my free time. I am passionate about IT, both in the thoery and development aspects. In particular, I am fascinated by artificial intelligence (including machine learning and deep learning), quantum computing, computational optimization and algorithmics. You can go to <HashLink to="/projects" className='link'>projects</HashLink> and <HashLink to="/about#educational" className='link'>about</HashLink> pages.</p>
-            <p className='justify'>After seeing the different projects implemented, I invite you to contact me if you want to hire me, learn more about my projects/background or even just discuss about anything!</p>
+            <p className='justify'>
+                Hi! My name is Guillaume Letellier, I'm {age}-year-old french student and I develop things on my free time.
+                I am passionate about computer science, focusing on <strong>Signal Processing</strong> (sounds, images), <strong>Data Science</strong> and <strong>Artificial Intelligence</strong> (Machine Learning, Deep Learning, Reinforcement Learning). Furthermore, I am very interested in <strong>Quantum Computing</strong> and AI applied with this technology.
+                You can go to <HashLink to="/projects" className='link'>projects</HashLink> and <HashLink to="/about#educational" className='link'>about</HashLink> pages.
+            </p>
+            <p className='justify'>
+                I am currently looking for a <strong>6-month internship</strong> in order to validate my master's degree in the areas highlighted above (<span style={{ textDecoration: "underline" }}>from February to August 2023</span>).
+                Furthermore, I would like to continue my studies as a PhD student to help research (especially in the fields of Deep Learning, Reinforcement Learning and Quantum AI).
+            </p>
+            <p className='justify'>
+                After seeing my different projects, I invite you to contact me if you want to hire me, learn more about my projects/background or even just talk about anything!
+            </p>
             <div style={{ textAlign: 'center' }}>
                 <ButtonLink title="Contact" targetLink="/contact" className="secondary outlined">Contact me</ButtonLink>
             </div>
@@ -57,14 +67,14 @@ const HomePage = () => {
         <section>
             <h2>My goals</h2>
             <p className='justify'>
-                I will to obtain a master's degree specialized in artificial intelligence and, image & signal processing in 2023.
-                I think these fields can really help society evolve, whether it's in medicine, chemistry, physics or transportation.
+                I'm going to get a master's degree in artificial intelligence and signal processing in September 2023.
+                I think that these fields can really help society to evolve, whether in medicine or in science (chemistry, physics, biology).
             </p>
             <p className='justify'>
-                I would also like to have a PhD in order to advance research in Machine Learning and more specifically in Deep Learning.
-                The research seems to me particularly attractive because it allows to invent new techniques or to optimize the existing ones in order to help the society.
-                Moreover, I have always sought to deepen my knowledge in different fields from the death of stars to DNA to new advances in computer science such as artificial intelligence or quantum computing.
-                Participating in global research would allow me to continue the search for knowledge to benefit society.
+                I would also like to do a PhD in order to advance research in Data Science and more particularly in deep learning and reinforcement learning.
+                Research attracts me because it allows me to invent new techniques or optimise existing ones to help society.
+                Moreover, I have always sought to deepen my knowledge in different fields ranging from the death of stars to DNA and new advances in computer science such as artificial intelligence or quantum computing.
+                Participating in global research would allow me to continue this quest for knowledge for the benefit of society.
             </p>
         </section>
         <section>

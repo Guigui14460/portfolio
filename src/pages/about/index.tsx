@@ -72,12 +72,23 @@ const AboutPage = () => {
                     </ul>
                 </Grid>
                 <Grid column sm={12} md={6}>
-                    <h3>Physics</h3>
+                    <h3>Sciences</h3>
                     <ul style={{ textAlign: 'left' }}>
-                        <li>Astrophysics / astronomy / cosmology</li>
-                        <li>Quantum physics</li>
-                        <li>Particle theory</li>
-                        <li>General relativity theory</li>
+                        <li>
+                            Physics
+                            <ul>
+                                <li>Astrophysics / astronomy / cosmology</li>
+                                <li>Quantum physics</li>
+                                <li>Particle theory</li>
+                                <li>General relativity theory</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Mathematics
+                        </li>
+                        <li>
+                            Biology
+                        </li>
                     </ul>
                 </Grid>
                 <Grid column sm={12} md={6}>
@@ -92,7 +103,9 @@ const AboutPage = () => {
                     <h3>Others</h3>
                     <ul style={{ textAlign: 'left' }}>
                         <li>French Rap</li>
+                        <li>Watching movies / series</li>
                         <li>Video Games</li>
+                        <li>Reading books</li>
                     </ul>
                 </Grid>
             </Grid>
