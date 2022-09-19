@@ -227,7 +227,7 @@ const SkillsPage = () => {
                   <li>
                     Deep Learning
                     <ul>
-                      <li>Basics (universal approximation theorem, SGD, auto-differenciation, CNN, network visualization)</li>
+                      <li>Basics (universal approximation theorem, SGD, auto-differentiation, CNN, network visualization)</li>
                       <li>Image generation (VAE, GAN)</li>
                     </ul>
                   </li>
