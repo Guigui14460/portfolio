@@ -126,9 +126,24 @@ const SkillsPage = () => {
         <Marginer direction='vertical' margin={8} />
         <Accordion title='Annual project 2nd year of MSc' id="annual-project-m2">
           <>
-            <h4>Link and subject available soon...</h4>
+            <h4>Automatic segmentation of soft tissue flaps by artificial intelligence for postoperative radiotherapy of head and neck cancer patients</h4>
             <p className="justify">
-              Information will be provided in this section once projects have been assigned.
+              The main goal of this project, proposed by <a className='link' href="https://chahir.users.greyc.fr/" target="_blank" rel="noreferrer">Youssef Chahir</a>&nbsp;
+              from  the <a className='link' href="https://www.greyc.fr/en/equipes/image/" target="_blank" rel="noreferrer">IMAGE team</a> of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>,
+              and Prof. Juliette Thariat of the <a className="link" target="_blank" rel="noreferrer" href="https://www.baclesse.fr/en/">François Baclesse Centre</a> in Caen, 
+              is to be able to automatically perform semantic volume segmentation from 3D MRI and CT images, is to automatically perform 
+              semantic volume segmentation from 3D MRI and CT images. The <a className="link" target="_blank" rel="noreferrer" href="https://www.baclesse.fr/en/">François Baclesse Centre</a>
+              &nbsp;is a regional centre specialising in the fight against cancer, particularly through radiotherapy.
+            </p>
+            <p className="justify">
+              In this project, we have data which are 3D CT images on which we have the MRI image, patient metadata, 
+              injected doses for the radiotherapy and images with pre-segmented regions of interest. 
+              These data come from patients who have undergone surgery to replace a cancerous part of the head and neck with a flap. 
+              These images were taken after their operation in order to monitor the evolution of the flap.
+              The first objective is to teach a Deep Learning model to correctly segment the regions of interest 
+              (which are mainly the flaps) in order to allow doctors not to waste too much time on this task. 
+              The second is to use the same model, adapted for different modalities, to quantify the porportion of each substance in the flaps 
+              using the <a className="link" href="https://en.wikipedia.org/wiki/Hounsfield_scale" target="_blank" rel="noreferrer">Hounsfield scale</a>.
             </p>
           </>
         </Accordion>
