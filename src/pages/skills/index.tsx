@@ -163,7 +163,7 @@ const SkillsPage = () => {
                   <li>Algorithmic, graphs and tree-based search</li>
                   <li>Language theory and compilation</li>
                   <li>Numerical &amp; Functionnal Analysis</li>
-                  <li>Calculability &amp; complexity</li>
+                  <li>Computability &amp; complexity</li>
                   <li>Data transmission (data compression and information coding)</li>
                 </ul>
               </Grid>
@@ -215,7 +215,7 @@ const SkillsPage = () => {
                   <li>Algorithmic, graphs and tree-based search (Flow networks, dynamic programming, divide-and-conquer algorithms, greedy algorithms, Branch &amp; bound algorithm)</li>
                   <li>Language theory and compilation</li>
                   <li>Numerical &amp; Functionnal Analysis (signal processing)</li>
-                  <li>Calculability &amp; complexity (Turing machines, problems complexity)</li>
+                  <li>Computability &amp; complexity (Turing machines, problems complexity)</li>
                   <li>
                     Data transmission
                     <ul>
@@ -242,7 +242,7 @@ const SkillsPage = () => {
                   <li>
                     Deep Learning
                     <ul>
-                      <li>Basics (universal approximation theorem, SGD, auto-differenciation, CNN, network visualization)</li>
+                      <li>Basics (universal approximation theorem, SGD, auto-differentiation, CNN, network visualization)</li>
                       <li>Image generation (VAE, GAN)</li>
                     </ul>
                   </li>
