@@ -113,6 +113,13 @@ const languageInformations: {[id: string]: Language} = {
         logoUrl: "/images/hard_skills/languages/sql.webp",
         tabs: ["Software Development", "Databases"],
     },
+    "matlab": {
+        name: "MATLAB",
+        color: "#e16737",
+        link: "https://en.wikipedia.org/wiki/MATLAB",
+        logoUrl: "/images/hard_skills/languages/matlab.webp",
+        tabs: ["Software Development", "Data Science"],
+    },
 };
 
 export default languageInformations;

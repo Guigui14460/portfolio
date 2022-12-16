@@ -7,7 +7,7 @@ const hardSkillData: SkillOrLanguage[] = [
     ...getOnlyLanguagesByKey([
         "python", "java", "c", "cpp", "r", "latex",
         "html", "css", "sass", "javascript", "typescript",
-        "php", "sql", "dart", "haskell", "go",
+        "php", "sql", "dart", "haskell", "go", "matlab",
     ], languageInformations),
 
     // quantum libraries
