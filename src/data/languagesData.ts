@@ -7,6 +7,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/Python_(programming_language)",
         logoUrl: "/images/hard_skills/languages/python.webp",
         tabs: ["Software Development", "Data Science"],
+        level: 2,
     },
     "java": {
         name: "Java",
@@ -14,6 +15,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/Java_(programming_language)",
         logoUrl: "/images/hard_skills/languages/java.webp",
         tabs: ["Software Development"],
+        level: 2,
     },
     "c": {
         name: "C",
@@ -21,6 +23,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/C_(programming_language)",
         logoUrl: "/images/hard_skills/languages/c.webp",
         tabs: ["Software Development"],
+        level: 2,
     },
     "javascript": {
         name: "Javascript",
@@ -28,6 +31,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/JavaScript",
         logoUrl: "/images/hard_skills/languages/javascript.webp",
         tabs: ["Software Development", "Web"],
+        level: 2,
     },
     "typescript": {
         name: "Typescript",
@@ -35,6 +39,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/TypeScript",
         logoUrl: "/images/hard_skills/languages/typescript.webp",
         tabs: ["Software Development", "Web"],
+        level: 2,
     },
     "php": {
         name: "PHP",
@@ -42,6 +47,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/PHP",
         logoUrl: "/images/hard_skills/languages/php.svg",
         tabs: ["Software Development", "Web"],
+        level: 2,
     },
     "dart": {
         name: "Dart",
@@ -49,6 +55,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/Dart_(programming_language)",
         logoUrl: "/images/hard_skills/languages/dart.webp",
         tabs: ["Software Development"],
+        level: 1,
     },
     "html": {
         name: "HTML",
@@ -56,6 +63,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/HTML",
         logoUrl: "/images/hard_skills/languages/html.webp",
         tabs: ["Software Development", "Web"],
+        level: 2,
     },
     "css": {
         name: "CSS",
@@ -63,6 +71,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/CSS",
         logoUrl: "/images/hard_skills/languages/css.webp",
         tabs: ["Software Development", "Web"],
+        level: 2,
     },
     "haskell": {
         name: "Haskell",
@@ -70,13 +79,15 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/Haskell_(programming_language)",
         logoUrl: "/images/hard_skills/languages/haskell.webp",
         tabs: ["Software Development"],
+        level: 1,
     },
     "sass": {
-        name: "Sass/Scss",
+        name: "Sass / Scss",
         color: "#cf5c92",
         link: "https://en.wikipedia.org/wiki/Sass_(stylesheet_language)",
         logoUrl: "/images/hard_skills/languages/sass.webp",
         tabs: ["Software Development", "Web"],
+        level: 2,
     },
     "go": {
         name: "Golang",
@@ -84,6 +95,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/Go_(programming_language)",
         logoUrl: "/images/hard_skills/languages/golang.webp",
         tabs: ["Software Development"],
+        level: 1,
     },
     "r": {
         name: "R",
@@ -91,6 +103,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/R_(programming_language)",
         logoUrl: "/images/hard_skills/languages/r.webp",
         tabs: ["Software Development", "Data Science"],
+        level: 2,
     },
     "cpp": {
         name: "C++",
@@ -98,6 +111,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/C%2B%2B",
         logoUrl: "/images/hard_skills/languages/cpp.webp",
         tabs: ["Software Development"],
+        level: 2,
     },
     "latex": {
         name: "LaTeX",
@@ -105,6 +119,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/LaTeX",
         logoUrl: "/images/hard_skills/languages/latex.webp",
         tabs: ["Software Development"],
+        level: 2,
     },
     "sql": {
         name: "SQL",
@@ -112,6 +127,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/SQL",
         logoUrl: "/images/hard_skills/languages/sql.webp",
         tabs: ["Software Development", "Databases"],
+        level: 2,
     },
     "matlab": {
         name: "MATLAB",
@@ -119,6 +135,7 @@ const languageInformations: {[id: string]: Language} = {
         link: "https://en.wikipedia.org/wiki/MATLAB",
         logoUrl: "/images/hard_skills/languages/matlab.webp",
         tabs: ["Software Development", "Data Science"],
+        level: 1,
     },
 };
 

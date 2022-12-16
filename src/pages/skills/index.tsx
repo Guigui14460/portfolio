@@ -15,6 +15,7 @@ const SkillItem = styled.a`
   align-items: center;
   color: var(--color);
   gap: 10px;
+  text-align: center;
 
   & > img {
     transform: scale(0.9);
@@ -62,7 +63,7 @@ const SkillsPage = () => {
       </section>
       <section>
         <h2>Hard skills</h2>
-        <Tab contentTabStyle={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, 100px)", justifyContent: "center", padding: "2em", gridGap: "2em" }}>
+        <Tab contentTabStyle={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, 100px)", justifyContent: "center", padding: "2em", gridGap: "3.3em" }}>
           {skillsTabData.map((tabTitle, tabIndex) => {
             return <TabPanel title={tabTitle} key={tabIndex}>
               {hardSkillData.filter(value => {
@@ -70,12 +71,20 @@ const SkillsPage = () => {
               }).map((skill, skillIndex) => {
                 return <SkillItem key={skillIndex} href={skill.link} target="_blank" rel="noreferrer" title={skill.name}>
                   <ImageIcon height={60} src={skill.logoUrl} alt={`${skill.name} icon`} />
-                  <span>{skill.name}</span>
+                  <span>{skill.name}&nbsp;<sup>{skill.level}</sup></span>
                 </SkillItem>
               })}
             </TabPanel>
           })}
         </Tab>
+        <h3>Levels</h3>
+        <p style={{ color: "#c51010", fontWeight: 700 }}>Please note: the attributed levels are totally subjective to my self-assessment on the mastery of the considered language/framework/library.</p>
+        <ul>
+          <li><sup>1</sup>: "initiated" (basics of the language/framework/library, at least 1 project or practical work with it);</li>
+          <li><sup>2</sup>: "intermediate" (good knowledge of the language/framework/library, multiple projects with it);</li>
+          <li><sup>3</sup>: "expert" (very good/excellent knowledge of the language/framework/library, multiple projects with it);</li>
+          <li>No value: no allocation of levels (in particular because the scoring does not really take this technology into account).</li>
+        </ul>
       </section>
       <section>
         <h2>Area of work at the university</h2>

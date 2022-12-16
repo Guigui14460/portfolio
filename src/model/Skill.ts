@@ -1,4 +1,4 @@
-import Language from "./Language";
+import Language, {Level} from "./Language";
 
 export const skillsTabData = [
     "Software Development",
@@ -16,6 +16,7 @@ interface Skill {
     link: string;
     logoUrl: string;
     tabs: SkillTab[];
+    level?: Level;
 };
 
 export type SkillOrLanguage = Skill | Language;
