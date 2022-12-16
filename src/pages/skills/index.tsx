@@ -242,12 +242,14 @@ const SkillsPage = () => {
                   <li>
                     Deep Learning
                     <ul>
-                      <li>Basics (universal approximation theorem, SGD, auto-differentiation, CNN, network visualization)</li>
-                      <li>Image generation (VAE, GAN)</li>
+                      <li>Basics (universal approximation theorem, auto-differentiation, optimization, CNN, network architectures, RNN, Transformers, GNN)</li>
+                      <li>Problems (regression, classification, segmentation, object detection, generative models, eXplainable AI)</li>
+                      <li>Image specific problems resolution with DL (filtering, super-resolution, inpainting, texture synthesis (2D/3D), style transfer, image generation)</li>
                     </ul>
                   </li>
                   <li>Pattern Recognition (objects similarity measurements for chains or graphs, regression/indexing/classification tasks, moments method, Hungarian algorithm, Levenshtein distance, graph kernels)</li>
                   <li>Image and signal processing (inverse problems, PDE for image processing and graphs, harmonic analysis and variational methods for inverse image problems)</li>
+                  <li>Image generation (default methods, patch-based methods, Deep Learning based methods)</li>
                   <li>Language engineering (base of Natural Language Processing)</li>
                   <li>Decision support and artificial intelligence (logic, planning, constraint satisfaction, data mining, evolutionary algorithms)</li>
                 </ul>

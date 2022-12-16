@@ -54,8 +54,7 @@ const HomePage = () => {
                 You can go to <HashLink to="/projects" className='link'>projects</HashLink> and <HashLink to="/about#educational" className='link'>about</HashLink> pages.
             </p>
             <p className='justify'>
-                I am currently looking for a <strong>6-month internship</strong> in order to validate my master's degree in the areas highlighted above (<span style={{ textDecoration: "underline" }}>from February to August 2023</span>).
-                Furthermore, I would like to continue my studies as a PhD student to help research (especially in the fields of Deep Learning, Reinforcement Learning and Quantum AI).
+                In the future, I would like to continue my studies as a PhD student to help research (especially in the fields of Deep Learning, Reinforcement Learning or Quantum AI).
             </p>
             <p className='justify'>
                 After seeing my different projects, I invite you to contact me if you want to hire me, learn more about my projects/background or even just talk about anything!
