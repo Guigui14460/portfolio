@@ -1,6 +1,6 @@
 import "./index.css"
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Marginer from '../../components/marginer';
 import Grid from '../../components/grid';
 import { ImageIcon } from '../../components/icons';
@@ -8,6 +8,7 @@ import { Tab, TabPanel } from '../../components/tabs';
 import Accordion from '../../components/accordion';
 import { skillsTabData } from '../../model/Skill';
 import { hardSkillData } from "../../data";
+import { useState } from "react";
 
 const SkillItem = styled.a`
   display: flex;
@@ -31,7 +32,17 @@ const SkillItem = styled.a`
   }
 `;
 
+const annualProjectIds: string[] = [
+  "annual-project-b3",
+  "annual-project-m1",
+  "annual-project-m2",
+]
+
 const SkillsPage = () => {
+    const { hash } = useLocation()
+
+    const [selectedAnnualProject, setSelectedAnnualProject] = useState(annualProjectIds.indexOf(hash.slice(1)))
+
     return <>
       <h1>Skills</h1>
       <section>
@@ -94,7 +105,7 @@ const SkillsPage = () => {
         project management skills, learn new things that we don't have time in courses or to go deeper in a specific field. The chosen project made by an algorithm
         developed to associate each student in a group and try to satisfies the projects ordering made by students.</p>
         
-        <Accordion title='Annual project 3rd year of BSc' id="annual-project-b3">
+        <Accordion title='Annual project 3rd year of BSc' id="annual-project-b3" isOpen={selectedAnnualProject === annualProjectIds.indexOf("annual-project-b3")}>
           <>
             <h4><a className='link' href="https://github.com/Guigui14460/recommender-system" target="_blank" rel="noreferrer">Movie recommendation system</a></h4>
             <p className='justify'>
@@ -113,7 +124,7 @@ const SkillsPage = () => {
           </>
         </Accordion>
         <Marginer direction='vertical' margin={8} />
-        <Accordion title='Annual project 1st year of MSc' id="annual-project-m1">
+        <Accordion title='Annual project 1st year of MSc' id="annual-project-m1" isOpen={selectedAnnualProject === annualProjectIds.indexOf("annual-project-m1")}>
           <>
             <h4><a className='link' href="https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter" target="_blank" rel="noreferrer">Multi-agent knowledge-based program interpreter</a></h4>
             <p className='justify'>
@@ -133,12 +144,13 @@ const SkillsPage = () => {
           </>
         </Accordion>
         <Marginer direction='vertical' margin={8} />
-        <Accordion title='Annual project 2nd year of MSc' id="annual-project-m2">
+        <Accordion title='Annual project 2nd year of MSc' id="annual-project-m2" isOpen={selectedAnnualProject === annualProjectIds.indexOf("annual-project-m2")}>
           <>
-            <h4>Automatic segmentation of soft tissue flaps by artificial intelligence for postoperative radiotherapy of head and neck cancer patients</h4>
+            <h4><Link to="/documents/annual_project_report_5th_year.pdf" className="link">Automatic segmentation of soft tissue flaps by artificial intelligence for postoperative radiotherapy of head and neck cancer patients</Link></h4>
             <p className="justify">
               The main goal of this project, proposed by <a className='link' href="https://chahir.users.greyc.fr/" target="_blank" rel="noreferrer">Youssef Chahir</a>&nbsp;
-              from  the <a className='link' href="https://www.greyc.fr/en/equipes/image/" target="_blank" rel="noreferrer">IMAGE team</a> of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>,
+              and <a className='link' href="https://lechervy.users.greyc.fr/" target="_blank" rel="noreferrer">Alexis Lechervy</a> from  the <a className='link' href="https://www.greyc.fr/en/equipes/image/" target="_blank" rel="noreferrer">IMAGE team</a>&nbsp;
+              of <a className='link' href="https://www.greyc.fr/en/home/" target="_blank" rel="noreferrer">GREYC</a>,
               and Prof. Juliette Thariat of the <a className="link" target="_blank" rel="noreferrer" href="https://www.baclesse.fr/en/">François Baclesse Centre</a> in Caen, 
               is to be able to automatically perform semantic volume segmentation from 3D MRI and CT images, is to automatically perform 
               semantic volume segmentation from 3D MRI and CT images. The <a className="link" target="_blank" rel="noreferrer" href="https://www.baclesse.fr/en/">François Baclesse Centre</a>

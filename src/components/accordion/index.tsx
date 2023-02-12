@@ -2,8 +2,8 @@ import "./accordion.css";
 import { ReactNode, useEffect, useRef, useState } from "react";
 import Chevron from "./Chevron";
 
-const Accordion = (props: { title: string; children: ReactNode; id?: string }) => {
-    const [active, setActive] = useState(false);
+const Accordion = (props: { title: string; children: ReactNode; id?: string, isOpen?: boolean }) => {
+    const [active, setActive] = useState(!props.isOpen);
     const [height, setHeight] = useState(0);
     const [rotate, setRotate] = useState("");
 
@@ -21,6 +21,10 @@ const Accordion = (props: { title: string; children: ReactNode; id?: string }) =
             window.removeEventListener('resize', handleResize);
         }
     }, []);
+
+    useEffect(() => {
+        toggleAccordion()
+    }, [props.isOpen])
 
     function toggleAccordion() {
         setActive(!active);
