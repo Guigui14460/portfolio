@@ -1,5 +1,5 @@
 import "./accordion.css";
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
 import Chevron from "./Chevron";
 
 const Accordion = (props: { title: string; children: ReactNode; id?: string, isOpen?: boolean }) => {
@@ -22,16 +22,16 @@ const Accordion = (props: { title: string; children: ReactNode; id?: string, isO
         }
     }, []);
 
-    useEffect(() => {
-        toggleAccordion()
-    }, [props.isOpen])
-
-    function toggleAccordion() {
+    const toggleAccordion = useCallback(() => {
         setActive(!active);
         if(null !== content.current)
             setHeight(content.current.scrollHeight);
         setRotate(active ? "" : "rotate");
-    }
+    }, [])
+
+    useEffect(() => {
+        toggleAccordion()
+    }, [props.isOpen, toggleAccordion])
 
     return <div className="accordion" id={props.id}>
         <button className={`accordion__title ${active && "active"}`} onClick={toggleAccordion}>{props.title}<Chevron className={`accordion__icon ${rotate}`} /></button>

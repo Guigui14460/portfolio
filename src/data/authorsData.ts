@@ -73,7 +73,7 @@ const authorsList: Map<string, ProjectAuthor> = new Map<string, ProjectAuthor>([
     ["rl", {
         id: "rl",
         name: "Raphaëlle Lemaire",
-        // githubProfile: "",
+        githubProfile: "https://github.com/Seirihiri",
         linkedInProfile: "https://www.linkedin.com/in/raphaelle-lemaire-a785b3231/",
     }],
 ]);

@@ -8,7 +8,6 @@ import { Tab, TabPanel } from '../../components/tabs';
 import Accordion from '../../components/accordion';
 import { skillsTabData } from '../../model/Skill';
 import { hardSkillData } from "../../data";
-import { useState } from "react";
 
 const SkillItem = styled.a`
   display: flex;
@@ -40,8 +39,7 @@ const annualProjectIds: string[] = [
 
 const SkillsPage = () => {
     const { hash } = useLocation()
-
-    const [selectedAnnualProject, setSelectedAnnualProject] = useState(annualProjectIds.indexOf(hash.slice(1)))
+    const id = annualProjectIds.indexOf(hash.slice(1))
 
     return <>
       <h1>Skills</h1>
@@ -105,7 +103,7 @@ const SkillsPage = () => {
         project management skills, learn new things that we don't have time in courses or to go deeper in a specific field. The chosen project made by an algorithm
         developed to associate each student in a group and try to satisfies the projects ordering made by students.</p>
         
-        <Accordion title='Annual project 3rd year of BSc' id="annual-project-b3" isOpen={selectedAnnualProject === annualProjectIds.indexOf("annual-project-b3")}>
+        <Accordion title='Annual project 3rd year of BSc' id="annual-project-b3" isOpen={id === annualProjectIds.indexOf("annual-project-b3")}>
           <>
             <h4><a className='link' href="https://github.com/Guigui14460/recommender-system" target="_blank" rel="noreferrer">Movie recommendation system</a></h4>
             <p className='justify'>
@@ -124,7 +122,7 @@ const SkillsPage = () => {
           </>
         </Accordion>
         <Marginer direction='vertical' margin={8} />
-        <Accordion title='Annual project 1st year of MSc' id="annual-project-m1" isOpen={selectedAnnualProject === annualProjectIds.indexOf("annual-project-m1")}>
+        <Accordion title='Annual project 1st year of MSc' id="annual-project-m1" isOpen={id === annualProjectIds.indexOf("annual-project-m1")}>
           <>
             <h4><a className='link' href="https://github.com/Guigui14460/multi-agents-knowledge-based-programs-interpreter" target="_blank" rel="noreferrer">Multi-agent knowledge-based program interpreter</a></h4>
             <p className='justify'>
@@ -144,7 +142,7 @@ const SkillsPage = () => {
           </>
         </Accordion>
         <Marginer direction='vertical' margin={8} />
-        <Accordion title='Annual project 2nd year of MSc' id="annual-project-m2" isOpen={selectedAnnualProject === annualProjectIds.indexOf("annual-project-m2")}>
+        <Accordion title='Annual project 2nd year of MSc' id="annual-project-m2" isOpen={id === annualProjectIds.indexOf("annual-project-m2")}>
           <>
             <h4><Link to="/documents/annual_project_report_5th_year.pdf" className="link">Automatic segmentation of soft tissue flaps by artificial intelligence for postoperative radiotherapy of head and neck cancer patients</Link></h4>
             <p className="justify">
