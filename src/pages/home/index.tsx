@@ -2,6 +2,7 @@ import { Fragment, ReactElement, useEffect, useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import ReactTooltip from 'react-tooltip';
 import styled, { CSSProperties } from 'styled-components';
+import { ExpType } from "../../model/Experience"
 import Marginer from '../../components/marginer';
 import Grid from '../../components/grid';
 import Card from '../../components/card';
