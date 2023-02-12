@@ -27,6 +27,7 @@ const Accordion = (props: { title: string; children: ReactNode; id?: string, isO
         if(null !== content.current)
             setHeight(content.current.scrollHeight);
         setRotate(active ? "" : "rotate");
+        // eslint-disable-next-line
     }, [])
 
     useEffect(() => {
