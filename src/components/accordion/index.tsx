@@ -1,9 +1,9 @@
 import "./accordion.css";
-import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import Chevron from "./Chevron";
 
 const Accordion = (props: { title: string; children: ReactNode; id?: string, isOpen?: boolean }) => {
-    const [active, setActive] = useState(!props.isOpen);
+    const [active, setActive] = useState(false);
     const [height, setHeight] = useState(0);
     const [rotate, setRotate] = useState("");
 
@@ -22,17 +22,23 @@ const Accordion = (props: { title: string; children: ReactNode; id?: string, isO
         }
     }, []);
 
-    const toggleAccordion = useCallback(() => {
+    const toggleAccordion = () => {
         setActive(!active);
         if(null !== content.current)
             setHeight(content.current.scrollHeight);
         setRotate(active ? "" : "rotate");
         // eslint-disable-next-line
-    }, [])
+    }
 
     useEffect(() => {
-        toggleAccordion()
-    }, [props.isOpen, toggleAccordion])
+        const value = !!props.isOpen;
+        if(value) {
+            setActive(true);
+            if(null !== content.current)
+                setHeight(content.current.scrollHeight);
+            setRotate("");
+        }
+    }, [props.isOpen])
 
     return <div className="accordion" id={props.id}>
         <button className={`accordion__title ${active && "active"}`} onClick={toggleAccordion}>{props.title}<Chevron className={`accordion__icon ${rotate}`} /></button>

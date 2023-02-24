@@ -61,7 +61,7 @@ const AboutPage = () => {
             <h2 id="certifications">Certifications</h2>
             <ul>
                 <li>
-                    Sep 2021: <a className='link' target="_blank" href="https://www.credly.com/badges/af6413b1-706b-4c2f-b5f7-31143daefdd5">IBM Quantum Challenge Africa 2021 Achievement</a>
+                    Sep 2021: <a className='link' target="_blank" rel="noreferrer" href="https://www.credly.com/badges/af6413b1-706b-4c2f-b5f7-31143daefdd5">IBM Quantum Challenge Africa 2021 Achievement</a>
                     <p>Building and solving application models in Qiskit, in the areas of optimisation, finance and chemistry.</p>
                 </li>
             </ul>
