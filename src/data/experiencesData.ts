@@ -25,7 +25,7 @@ export const experiencesData: ExpType[] = [
     },
     {
         employementType: "Research Intern",
-        title: "Research Intern",
+        title: "Data Scientist",
         from: "February 2023",
         to: "August 2023",
         location: "Palaiseau, France",
