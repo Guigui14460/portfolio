@@ -80,8 +80,8 @@ const HomePage = () => {
             <h2>Resume download section</h2>
             <p className='justify'>You can download my resume with the two following buttons:</p>
             <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'space-evenly' }}>
-                <ButtonExternalLink title="English resume" targetLink="/documents/english_resume_guillaume_letellier.pdf" target="_blank" className='primary' size={1.2}>English (version)</ButtonExternalLink>
-                <ButtonExternalLink title="French resume" targetLink="/documents/french_resume_guillaume_letellier.pdf" target="_blank" className='ternary' size={1.2}>French (version)</ButtonExternalLink>
+                <ButtonExternalLink title="English resume" targetLink="/documents/english_resume_guillaume_letellier.pdf" target="_blank" className='primary' size={1.2}>English version</ButtonExternalLink>
+                <ButtonExternalLink title="French resume" targetLink="/documents/french_resume_guillaume_letellier.pdf" target="_blank" className='ternary' size={1.2}>French version</ButtonExternalLink>
             </div>
         </section>
         <section>
