@@ -29,7 +29,7 @@ export const experiencesData: ExpType[] = [
         from: "February 2023",
         to: "August 2023",
         location: "Palaiseau, France",
-        entreprise: "CEA (Commissariat à l'Énerge Atomique)",
+        entreprise: "CEA (Commissariat à l'Énerge Atomique et aux Énergie Alternatives)",
         entrepriseLogo: "/images/enterprises/cea.webp",
         entrepriseUrl: "https://list.cea.fr/en/",
         keywords: ["deep learning", "pattern recognition", "computer vision", "sport", "video", "detection", "tracking"],

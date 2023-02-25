@@ -98,7 +98,7 @@ const HomePage = () => {
                         <Grid column sm={12} md={5} lg={4} style={{ padding: 0, textAlign: "center" }}>
                             <ImageIcon style={{ borderRadius: "8px", maxWidth: "300px", height: "auto" }} src={value.entrepriseLogo} alt={value.entreprise + " logo"} />
                         </Grid>
-                        <Grid column sm={12} md={7} lg={6} style={matchesMobileDevice ? {padding: 0, textAlign: "left"} : {paddingRight: 0, textAlign: "right", alignSelf: "center"}}>
+                        <Grid column sm={12} md={7} lg={6} style={matchesMobileDevice ? {padding: 0, textAlign: "left"} : {paddingRight: 0, textAlign: "left", alignSelf: "center"}}>
                             <div style={{ backgroundColor: "var(--background-color-darker)", borderRadius: "8px", padding: "0.5em 1em" }}>
                                 <h3 style={{ marginTop: 0 }}>{value.title}{value.entreprise && <> at {value.entrepriseUrl ? <a target="_blank" rel="noreferrer" className='link' href={value.entrepriseUrl}>{value.entreprise}</a>: value.entreprise}</>} • {value.employementType}</h3>
                                 <span>From {value.from} to {value.to === undefined ? "Today" : value.to}</span><br />
