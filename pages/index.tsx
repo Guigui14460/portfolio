@@ -34,7 +34,7 @@ export default function Home() {
           id='project-author-links' getContent={(dataTip) => authorsList.has(dataTip) && ProjectAuthorTooltipContent(authorsList.get(dataTip))} 
           effect="solid" delayHide={250} delayShow={200} delayUpdate={100} place="bottom" border type='light' scrollHide resizeHide />;
   
-  const [matchesMobileDevice, setMatchesMobileDevice] = useState()
+  const [matchesMobileDevice, setMatchesMobileDevice] = useState(true)
 
   useEffect(() => {
     setMatchesMobileDevice(window.matchMedia(`(max-width: ${deviceSize.mobile}px)`).matches)

@@ -1,5 +1,5 @@
 import '@/styles/index.css'
-import type { AppProps, NextWebVitalsMetric } from 'next/app'
+import type { AppProps } from 'next/app'
 import React from 'react'
 import Head from 'next/head'
 import Header from '@/components/ui/header'
