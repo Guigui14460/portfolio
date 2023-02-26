@@ -12,8 +12,8 @@ export function pathToUrl(path: string) {
     if(path.includes("http")) return path
   
     if(path[0] === "/") {
-      return `${process.env.NODE_ENV === "test" ? "https://www.guillaume-letellier.com" : process.env.SITE_URL}${path}`
+      return `${process.env.SITE_URL}${path}`
     }
   
-    return `${process.env.NODE_ENV === "test" ? "https://www.guillaume-letellier.com" : process.env.SITE_URL}/${path}`
+    return `${process.env.SITE_URL}/${path}`
 }

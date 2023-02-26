@@ -81,7 +81,7 @@ const PageMetaTags: FC<PageMetaTagsProps> = (props) => {
       <link data-testid="link-canonical" rel="canonical" href={pagePath} />
 
       {/* Open Graph / Facebook */}
-      <meta data-testid="meta-og-sitename" property="og:site_name" content="Khôllector" />
+      {/* <meta data-testid="meta-og-sitename" property="og:site_name" content="Guillaume Letellier's Portfolio" />
       <meta data-testid="meta-og-type" property="og:type" content="website" />
       <meta data-testid="meta-og-url" property="og:url" content={pagePath} />
       <meta data-testid="meta-og-title" property="og:title" content={title} />
@@ -93,11 +93,11 @@ const PageMetaTags: FC<PageMetaTagsProps> = (props) => {
           <meta data-testid="meta-og-image-height" property="og:image:height" content={`${image.height}`} />
           <meta data-testid="meta-og-image-alt" property="og:image:alt" content={image.alt} />
         </>
-      }
+      } */}
 
       {/* Twitter */}
       {/* <meta name="twitter:site" content="@khollector" /> */}
-      <meta data-testid="meta-twitter-card" name="twitter:card" content={`summary${props.image ? "_large_image" : ""}`} />
+      {/* <meta data-testid="meta-twitter-card" name="twitter:card" content={`summary${props.image ? "_large_image" : ""}`} />
       <meta data-testid="meta-twitter-url" name="twitter:url" content={pagePath} />
       <meta data-testid="meta-twitter-title" name="twitter:title" content={title} />
       <meta data-testid="meta-twitter-description" name="twitter:description" content={description} />
@@ -105,7 +105,7 @@ const PageMetaTags: FC<PageMetaTagsProps> = (props) => {
         props.image && <>
           <meta data-testid="meta-twitter-image" name="twitter:image" content={image.path} />
         </>
-      }
+      } */}
     </Head>
   )
 }
