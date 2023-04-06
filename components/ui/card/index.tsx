@@ -60,7 +60,7 @@ const Card = (props: { project: Project, padding?: string }) => {
     const isGithubRepo = repoUrl && repoUrl.includes("github");
     const isGitlabRepo = repoUrl && repoUrl.includes("gitlab");
     const icon = (isGithubRepo ? "github" : (isGitlabRepo ? "gitlab" : "reddit")); // reddit icon because we can't have a null icon
-    const iconsElement = <span style={{ width: "1em", height: "auto", paddingLeft: "5px", textAlign: "right" }}>{(icon !== "reddit" ? <span><FontAwesomeIcon size="1x" iconName="github" type="brand" /> {(isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />)}</span>: (isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />))}</span>;
+    const iconsElement = <span style={{ flex: "0 0 1em", paddingLeft: "5px", textAlign: "right" }}>{(icon !== "reddit" ? <span><FontAwesomeIcon size="1x" iconName="github" type="brand" /> {(isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />)}</span>: (isPrivate && <FontAwesomeIcon size="1x" iconName="lock" type="solid" />))}</span>;
     const titleElement = <h3 className="project__name">{name} {iconsElement}</h3>;
     const descriptionElement = <p className="project__description">{description}</p>;
     return <CardWrapper notFinished={notFinished} padding={props.padding} className="project">

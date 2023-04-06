@@ -75,7 +75,7 @@ const nextConfig = {
     reactRemoveProperties: { properties: ['^data-testid$'] },
   },
   env: {
-    SITE_URL: process.env.SITE_URL,
+    SITE_URL: "https://guillaume-letellier.com",
   },
   images: {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],

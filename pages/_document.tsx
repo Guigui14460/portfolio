@@ -11,8 +11,6 @@ export default class MyDocument extends Document {
           <meta httpEquiv='X-UA-Compatible' content='ie=edge,chrome=1' />
 
           {/* Copyrights and site property */}
-          <meta name="application-name" content="Khôllector" />
-          <meta name="copyright" content="© Khôllector" />
           <meta name="hostname" content={process.env.SITE_URL} />
           {/* <meta name="google-site-verification" content="" /> */}
 
