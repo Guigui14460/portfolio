@@ -52,7 +52,8 @@ const AboutPage = () => {
                 <li>
                     From Sep 2021 to Today: <a href="https://www.unicaen.fr/" target="_blank" rel="noreferrer" className="link">University of Caen Normandy</a>, <a href="https://caen.fr/" target="_blank" rel="noreferrer" className="link">Caen</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a> (MSc in Computer Science)
                     <ul>
-                        <li><a target="_blank" className='link' href="/documents/university_fourth_year.pdf">Marks of 1st year in MSc (4th out of 5 in total)</a></li>
+                        <li><a target="_blank" className='link' href="/documents/university_fourth_year.pdf">Marks of 1st year in MSc</a></li>
+                        <li><a target="_blank" className='link' href="/documents/university_fifth_year.pdf">Marks of 2nd year in MSc</a></li>
                     </ul>
                 </li>
             </ul>
