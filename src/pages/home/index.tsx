@@ -115,7 +115,9 @@ const HomePage = () => {
                                 {value.description && <>{value.description}</>}
                             </p>}
                         {isInstanceOfInternship(value) && <p>
-                            My referent: <a target="_blank" rel="noreferrer" className='link' href={value.referent.url}>{value.referent.firstName} {value.referent.lastName}</a>, {value.referent.jobDescription}
+                            My referent{value.referents.length > 1 && "s"}: {value.referents.map((referent, index) => (
+                                <><a target="_blank" rel="noreferrer" className='link' href={referent.url}>{referent.firstName} {referent.lastName}</a>, {referent.jobDescription}{index !== value.referents.length - 1 ? "; " : "."}</>
+                            ))}
                         </p>}
                         {value.keywords && <Keywords>Keywords: {value.keywords.map((value2, index2) => {
                             return <span key={index2} style={{ backgroundColor: "#ffd090", color: (contrast(hexToRgb("#ffd090"), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}>{value2}</span>

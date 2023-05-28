@@ -20,14 +20,14 @@ export interface Referent {
 
 export interface Internship extends Experience {
     subject: string;
-    referent: Referent;
+    referents: Referent[];
     projectUrl?: string;
     associatedTo?: string;
     associatedToUrl?: string;
 };
 
 export function isInstanceOfInternship(instance: any): instance is Internship {
-    return "referent" in instance && "subject" in instance;
+    return "referents" in instance && "subject" in instance;
 };
 
 export type ExpType = Experience | Internship;
