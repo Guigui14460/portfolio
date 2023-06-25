@@ -1,4 +1,4 @@
-import { FontAwesomeIcon, SocialIcon } from "../../components/icons"
+import { FontAwesomeIcon, ImageIcon, SocialIcon } from "../../components/icons"
 import styled from 'styled-components';
 import { emailAddress, phoneLongVersion, phoneShortVersion, socialAccounts } from '../../data';
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -33,6 +33,13 @@ const ListElement = styled.li`
 const ContactPage = () => {
     return <>
         <h1>Contact me</h1>
+        <section id="for-short">
+            <h2>For short</h2>
+            <p>Through this QR code and link, you can access to <a className="link" href="https://linktr.ee/hadesguigui" rel="noreferrer" target="_blank">my LinkTree page</a> that combines all related links to myself.</p>
+            <div style={{ textAlign: "center" }}>
+                <ImageIcon style={{ borderRadius: "8px", maxWidth: "250px", height: "auto" }} src="/images/linktree.png" alt="LinkTree QR code" />
+            </div>
+        </section>
         <section id="mail">
             <h2>Via email (recommended)</h2>
             <p>You can contact me at this email address: <a className="link" href={`mailto:${emailAddress}`} >{emailAddress}</a></p>
