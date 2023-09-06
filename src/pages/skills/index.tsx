@@ -73,12 +73,12 @@ const SkillsPage = () => {
       <section>
         <h2>Hard skills</h2>
         <Tab contentTabStyle={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, 100px)", justifyContent: "center", padding: "2em", gridGap: "3.3em" }}>
-          {skillsTabData.map((tabTitle, tabIndex) => {
-            return <TabPanel title={tabTitle} key={tabIndex}>
+          {skillsTabData.map(tabTitle => {
+            return <TabPanel title={tabTitle} key={tabTitle.split(" ").join("-")}>
               {hardSkillData.filter(value => {
                 return value.tabs.includes(tabTitle)
-              }).map((skill, skillIndex) => {
-                return <SkillItem key={skillIndex} href={skill.link} target="_blank" rel="noreferrer" title={skill.name}>
+              }).map(skill => {
+                return <SkillItem key={skill.name.split(" ").join("-")} href={skill.link} target="_blank" rel="noreferrer" title={skill.name}>
                   <ImageIcon height={60} src={skill.logoUrl} alt={`${skill.name} icon`} />
                   <span>{skill.name}&nbsp;<sup>{skill.level}</sup></span>
                 </SkillItem>

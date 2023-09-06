@@ -12,7 +12,7 @@ library.add(faGithub, faGitlab, faLock);
 
 const CardWrapper = styled.div<{ notFinished?: boolean, padding?: string }>`
     color: var(--color);
-    padding: ${({ padding }) => { if(padding) return padding; return "0" }};
+    padding: ${({ padding }) => { if(padding) {return padding} else {return "0"} }};
     transition: all 250ms ease;
     height: 100%;
 
@@ -72,19 +72,19 @@ const Card = (props: { project: Project, padding?: string }) => {
                     <a href={officialSiteUrl} className="link" rel="noreferrer" target="_blank">{officialSiteUrlTitle}</a>
                     : <HashLink to={officialSiteUrl} className="link">{officialSiteUrlTitle}</HashLink>
            }.</p>}
-        <p className="project__languages">Languages: {languages.map((value, languageIndex) =>
-            <a key={languageIndex} style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}
+        <p className="project__languages">Languages: {languages.map(value =>
+            <a key={value.name.split(" ").join("-")} style={{ backgroundColor: value.color, color: (contrast(hexToRgb(value.color), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}
                 href={value.link} target="_blank" rel="noreferrer">{value.name}</a>
         )}</p>
-        {keywords && <p className="project__languages" style={{ fontSize: "0.8em" }}>Keywords: {keywords.map((value, keywordIndex) =>
-            <span key={keywordIndex} style={{ backgroundColor: "#cccccc", color: "#333333" }}>{value}</span>
+        {keywords && <p className="project__languages" style={{ fontSize: "0.8em" }}>Keywords: {keywords.map(value =>
+            <span key={value.split(" ").join("-")} style={{ backgroundColor: "#cccccc", color: "#333333" }}>{value}</span>
         )}</p>}
         {authors && <p className='project__authors'>Authors: {authors.map((value, authorIndex) => {
             const hasLinks = !authorHasNoLinks(value);
             let isLeader = false;
             if(value === leader) isLeader = true;
 
-            return <Fragment key={authorIndex}>
+            return <Fragment key={value.name.split(" ").join("-")}>
                 {(authorIndex !== 0) && <>, </>}
                 <span className={hasLinks ? "project__authors__link" : undefined} style={{ fontWeight: (isLeader ? "bold" : "normal") }} 
                       data-for="project-author-links" data-tip={value.id} tabIndex={0}>

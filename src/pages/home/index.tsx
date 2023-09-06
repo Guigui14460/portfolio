@@ -35,10 +35,10 @@ const HomePage = () => {
         .addEventListener('change', e => setMatchesMobileDevice( e.matches ));
     }, [matchesMobileDevice]);
 
-    var today = new Date()
-    var birthDate = new Date(2000, 6, 26)
-    var age = today.getFullYear() - birthDate.getFullYear()
-    var m = today.getMonth() - birthDate.getMonth()
+    const today = new Date()
+    const birthDate = new Date(2000, 6, 26)
+    let age = today.getFullYear() - birthDate.getFullYear()
+    const m = today.getMonth() - birthDate.getMonth()
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
         age--
     }
@@ -54,9 +54,6 @@ const HomePage = () => {
                 You can go to <HashLink to="/projects" className='link'>projects</HashLink> and <HashLink to="/about#educational" className='link'>about</HashLink> pages.
             </p>
             <p className='justify'>
-                In the future, I would like to continue my studies as a PhD student to help research (especially in the fields of Deep Learning, Reinforcement Learning or Quantum AI).
-            </p>
-            <p className='justify'>
                 After seeing my different projects, I invite you to contact me if you want to hire me, learn more about my projects/background or even just talk about anything!
             </p>
             <div style={{ textAlign: 'center' }}>
@@ -70,10 +67,9 @@ const HomePage = () => {
                 I think that these fields can really help society to evolve, whether in medicine or in science (chemistry, physics, biology).
             </p>
             <p className='justify'>
-                I would also like to do a PhD in order to advance research in Data Science and more particularly in deep learning and reinforcement learning.
                 Research attracts me because it allows me to invent new techniques or optimise existing ones to help society.
                 Moreover, I have always sought to deepen my knowledge in different fields ranging from the death of stars to DNA and new advances in computer science such as artificial intelligence or quantum computing.
-                Participating in global research would allow me to continue this quest for knowledge for the benefit of society.
+                Participating in global research allows me to continue this quest for knowledge for the benefit of society.
             </p>
         </section>
         <section>
@@ -93,7 +89,7 @@ const HomePage = () => {
                     gridRowStyle.borderRadius = "8px";
                     gridRowStyle.paddingTop = "1em";
                 }
-                return <Fragment key={index}>
+                return <Fragment key={value.title.split(" ").join("-")}>
                     <Grid row style={gridRowStyle}>
                         <Grid column sm={12} md={5} lg={4} style={{ padding: 0, textAlign: "center" }}>
                             <ImageIcon style={{ borderRadius: "8px", maxWidth: "300px", height: "auto" }} src={value.entrepriseLogo} alt={value.entreprise + " logo"} />
@@ -101,7 +97,7 @@ const HomePage = () => {
                         <Grid column sm={12} md={7} lg={6} style={matchesMobileDevice ? {padding: 0, textAlign: "left"} : {paddingRight: 0, textAlign: "left", alignSelf: "center"}}>
                             <div style={{ backgroundColor: "var(--background-color-darker)", borderRadius: "8px", padding: "0.5em 1em" }}>
                                 <h3 style={{ marginTop: 0 }}>{value.title}{value.entreprise && <> at {value.entrepriseUrl ? <a target="_blank" rel="noreferrer" className='link' href={value.entrepriseUrl}>{value.entreprise}</a>: value.entreprise}</>} • {value.employementType}</h3>
-                                <span>From {value.from} to {value.to === undefined ? "Today" : value.to}</span><br />
+                                <span>From {value.from} to {value.to ?? "Today"}</span><br />
                                 <span>in {value.location}</span>
                             </div>
                         </Grid>
@@ -115,12 +111,12 @@ const HomePage = () => {
                                 {value.description && <>{value.description}</>}
                             </p>}
                         {isInstanceOfInternship(value) && <p>
-                            My referent{value.referents.length > 1 && "s"}: {value.referents.map((referent, index) => (
-                                <><a target="_blank" rel="noreferrer" className='link' href={referent.url}>{referent.firstName} {referent.lastName}</a>, {referent.jobDescription}{index !== value.referents.length - 1 ? "; " : "."}</>
+                            My referent{value.referents.length > 1 && "s"}: {value.referents.map((referent, referentIndex) => (
+                                <><a target="_blank" rel="noreferrer" className='link' href={referent.url}>{referent.firstName} {referent.lastName}</a>, {referent.jobDescription}{referentIndex !== value.referents.length - 1 ? "; " : "."}</>
                             ))}
                         </p>}
-                        {value.keywords && <Keywords>Keywords: {value.keywords.map((value2, index2) => {
-                            return <span key={index2} style={{ backgroundColor: "#ffd090", color: (contrast(hexToRgb("#ffd090"), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}>{value2}</span>
+                        {value.keywords && <Keywords>Keywords: {value.keywords.map(value2 => {
+                            return <span key={value2.split(" ").join("-")} style={{ backgroundColor: "#ffd090", color: (contrast(hexToRgb("#ffd090"), hexToRgb("#000000")) < 4.5 ? "#ffffff" : "#000000") }}>{value2}</span>
                         })}</Keywords>}
                     </article>
                     {experiencesData.length - 1 !== index ?? <Marginer direction="vertical" margin={4} />}
@@ -130,8 +126,8 @@ const HomePage = () => {
         <section>
             <h2>Works in progress</h2>
             <Grid row>
-                {worksInProgressProjectsData.map((value, index) => {
-                    return <Grid key={index} column sm={12} md={6} lg={4} padding="0">
+                {worksInProgressProjectsData.map(value => {
+                    return <Grid key={value.name.split(" ").join("-")} column sm={12} md={6} lg={4} padding="0">
                         <Card project={value} padding="0.75rem" />
                     </Grid>
                 })}

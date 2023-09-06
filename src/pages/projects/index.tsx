@@ -18,11 +18,11 @@ const ProjectsPage = () => {
     const authorsLinksTooltip: ReactElement = <ReactTooltip 
             id='project-author-links' getContent={(dataTip) => authorsList.has(dataTip) && ProjectAuthorTooltipContent(authorsList.get(dataTip))} 
             effect="solid" delayHide={250} delayShow={200} delayUpdate={100} place="bottom" border type='light' />;
-    const universityProjectsGrid = universityProjectsData.filter(value => hasLanguagesOrKeywords(value, filters)).map((value, index) =>
-        <Grid key={index} column sm={12} md={6} lg={4} padding="0"><Card key={index} project={value} padding="0.75rem" /></Grid>
+    const universityProjectsGrid = universityProjectsData.filter(value => hasLanguagesOrKeywords(value, filters)).map(value =>
+        <Grid key={value.name.split(" ").join("-")} column sm={12} md={6} lg={4} padding="0"><Card key={value.name.split(" ").join("-")} project={value} padding="0.75rem" /></Grid>
     );
-    const personalProjectsGrid = projectsData.filter(value => hasLanguagesOrKeywords(value, filters)).map((value, index) => 
-        <Grid key={index} column sm={12} md={6} lg={4} padding="0"><Card key={index} project={value} padding="0.75rem" /></Grid>
+    const personalProjectsGrid = projectsData.filter(value => hasLanguagesOrKeywords(value, filters)).map(value => 
+        <Grid key={value.name.split(" ").join("-")} column sm={12} md={6} lg={4} padding="0"><Card key={value.name.split(" ").join("-")} project={value} padding="0.75rem" /></Grid>
     );
 
     return <>

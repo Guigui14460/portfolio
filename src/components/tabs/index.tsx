@@ -26,11 +26,11 @@ export const Tab = (props: { active?: number; children: React.ReactNode | React.
         <ul className="tab__list" style={props.tabListStyle}>
             {tabsData.map((value, index) => {
                 const style = index === activeTab ? "selected" : "";
-                return <li key={index} className={`tab__list-item ${style}`} onClick={() => setActiveTab(index)}>
+                return <li key={value.title.split(" ").join("-")} className={`tab__list-item ${style}`} onClick={() => setActiveTab(index)}>
                     <button>{value.title}</button>
                 </li>
             })}
         </ul>
-        <div className="tab__content" style={props.contentTabStyle}>{tabsData[activeTab] && tabsData[activeTab].children}</div>
+        <div className="tab__content" style={props.contentTabStyle}>{tabsData[activeTab]?.children}</div>
     </div>
 };

@@ -49,8 +49,8 @@ const ContactPage = () => {
             <h2>Via social networks (recommended)</h2>
             <p>You can contact me via different social networks:</p>
             <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-evenly", alignItems: "center"}}>
-                {socialAccounts.map<JSX.Element>((value, index) => {return <SocialDiv key={index} href={value.url} rel="noreferrer" target="_blank" >
-                    <SocialIcon key={index} size="2x" colorused={value.iconColor} icon={value.iconProperties} />
+                {socialAccounts.map<JSX.Element>(value => {return <SocialDiv key={value.name.split(" ").join("-")} href={value.url} rel="noreferrer" target="_blank" >
+                    <SocialIcon key={value.name.split(" ").join("-")} size="2x" colorused={value.iconColor} icon={value.iconProperties} />
                     <span>{value.name}<span>({value.username})</span></span>
                 </SocialDiv>})}
             </div>
