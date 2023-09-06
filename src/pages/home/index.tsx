@@ -90,6 +90,7 @@ const HomePage = () => {
                     gridRowStyle.paddingTop = "1em";
                 }
                 return <Fragment key={value.title.split(" ").join("-")}>
+                    {index !== 0 && <Marginer direction='vertical' margin="3em" />}
                     <Grid row style={gridRowStyle}>
                         <Grid column sm={12} md={5} lg={4} style={{ padding: 0, textAlign: "center" }}>
                             <ImageIcon style={{ borderRadius: "8px", maxWidth: "300px", height: "auto" }} src={value.entrepriseLogo} alt={value.entreprise + " logo"} />

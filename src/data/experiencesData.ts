@@ -34,7 +34,7 @@ export const experiencesData: ExpType[] = [
         entrepriseUrl: "https://list.cea.fr/en/",
         keywords: ["computer vision", "deep learning", "sport", "pattern recognition", "image", "video", "detection", "tracking"],
 
-        description: "The first objective is to estimate the depth of the scene in order to be able to determine the position of the ball and the players in the match relative to the camera position. When the ball is occluded, an estimate of the probability of the ball's position is required. The second is to determine the ball carrier as best as possible using the previous estimation and a calibration of the field with a priori data in order to reason in 3D.",
+        description: "The first aim was to be able to locate the ball in images taken from videos of team sports games. The second was to find the ball carrier by associating the players with the ball in an intelligent way (algorithms, learned models). An existing dataset was enriched to solve this task and to evaluate our criteria. Finally, the last objective was to apply this to video and fill in the detection gaps from the previous two objectives.",
         subject: "Detection and tracking of the ball holder in videos of team sports matches",
         referents: [
             {
@@ -48,6 +48,28 @@ export const experiencesData: ExpType[] = [
                 lastName: "Maglo",
                 jobDescription: "Computer Vision Engineer and Researcher",
                 url: "https://fr.linkedin.com/in/adrien-maglo-0590a050",
+            },
+        ],
+    },
+    {
+        employementType: "Research",
+        title: "PhD Student",
+        from: "September 2023",
+        to: "August 2026",
+        location: "Caen, France",
+        entreprise: "GREYC (affiliated to University of Caen Normandy)",
+        entrepriseLogo: "/images/enterprises/greyc-unicaen.webp",
+        entrepriseUrl: "https://www.greyc.fr/",
+        keywords: ["computer vision", "deep learning", "self-supervision", "3D point cloud"],
+
+        description: "The main objective of this thesis is to improve existing methods and develop new, more efficient methods in the field of neural networks for 3D point clouds. More specifically, my work will aim to cover a part called \"self-supervised learning of representations\" which makes it possible to learn general characteristics of 3D objects using no data via one or more pretextual tasks. Such models can then be used as information encoders for a more precise target task.",
+        subject: "Self-supervised learning of 3D point cloud representations",
+        referents: [
+            {
+                firstName: "Frédéric",
+                lastName: "Jurie",
+                jobDescription: "University Professor, reasearcher at GREYC in Artificial Intelligence applied to Computer Vision",
+                url: "https://jurie.users.greyc.fr/",
             },
         ],
     }
