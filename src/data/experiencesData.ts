@@ -62,7 +62,7 @@ export const experiencesData: ExpType[] = [
         entrepriseUrl: "https://www.greyc.fr/",
         keywords: ["computer vision", "deep learning", "self-supervision", "3D point cloud"],
 
-        description: "The main objective of this thesis is to improve existing methods and develop new, more efficient methods in the field of neural networks for 3D point clouds. More specifically, my work will aim to cover a part called \"self-supervised learning of representations\" which makes it possible to learn general characteristics of 3D objects using no data via one or more pretextual tasks. Such models can then be used as information encoders for a more precise target task.",
+        description: "The main objective of this thesis is to improve existing methods and develop new, more efficient methods in the field of neural networks for 3D point clouds. More specifically, my work will aim to cover a part called \"self-supervised learning of representations\" which makes it possible to learn general features of 3D objects using no labelled data via one or more pretextual tasks. Such models can then be used as information encoders for a more precise target task.",
         subject: "Self-supervised learning of 3D point cloud representations",
         referents: [
             {
