@@ -54,7 +54,7 @@ const PublicationCard = (props: { publication: Publication}) => {
         <CardWrapper>
             <Grid row alignItems='center'>
                 <Grid column sm={3} md={3} lg={3} padding="8">
-                    <img src={image} alt={`Image of "${name}" project`} style={{ width: "100%", height: "auto" }} />
+                    <img src={image} alt={`View of the "${name}" project`} style={{ width: "100%", height: "auto" }} />
                 </Grid>
                 <Grid column sm={9} md={9} lg={9} padding="4">
                     {publicationLink ? <a href={publicationLink} title="Repository link" target="_blank" rel="noreferrer">{titleElement}</a>: titleElement}
