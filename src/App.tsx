@@ -8,6 +8,7 @@ import ScrollToTop from "./ScrollToTop";
 import { DotsLoader } from './components/loader';
 const HomePageComponent = lazy(() => import("./pages/home"));
 const ProjectsPageComponent = lazy(() => import("./pages/projects"));
+const PublicationsPageComponent = lazy(() => import("./pages/publications"));
 const AboutPageComponent = lazy(() => import("./pages/about"));
 const ContactPageComponent = lazy(() => import("./pages/contact"));
 const SkillsPageComponent = lazy(() => import("./pages/skills"));
@@ -37,6 +38,7 @@ function App() {
           <Route path="/about" exact component={() => <Page element={<AboutPageComponent />} />} />
           <Route path="/contact" exact component={() => <Page element={<ContactPageComponent />} />} />
           <Route path="/projects" exact component={() => <Page element={<ProjectsPageComponent />} />} />
+          <Route path="/publications" exact component={() => <Page element={<PublicationsPageComponent />} />} />
           <Route path="/skills" exact component={() => <Page element={<SkillsPageComponent />} />} />
           <Route render={() => <Redirect to="/" />} />
         </Switch>

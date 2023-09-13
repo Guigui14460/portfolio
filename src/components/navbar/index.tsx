@@ -56,6 +56,8 @@ const Navbar = (props: { useTransparent: boolean; }) => {
     return <NavbarContainer verySmallMobile={verySmallMobile} className="container" useTransparent={useTransparent}>
         <BrandLogo fontSize={!isMobile ? 22 : undefined} to="/">Guillaume Letellier</BrandLogo>
         <AccessibilityContainer verySmallMobile={verySmallMobile}>
+            <AnchorLink fontSize={!isMobile ? 16 : undefined} activeClassName="active" to="/publications">Publications</AnchorLink>
+            <Marginer direction="horizontal" margin={10} />
             <AnchorLink fontSize={!isMobile ? 16 : undefined} activeClassName="active" to="/projects">Projects</AnchorLink>
             <Marginer direction="horizontal" margin={10} />
             <AnchorLink fontSize={!isMobile ? 16 : undefined} activeClassName="active" to="/skills">Skills</AnchorLink>

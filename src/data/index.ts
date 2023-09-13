@@ -8,6 +8,7 @@ import {
 } from "./generalData";
 import { experiencesData } from "./experiencesData";
 import { projectsData, universityProjectsData, worksInProgressProjectsData } from "./projectsData";
+import { publicationsData } from "./publicationsData"
 
 export {
     languageInformations,
@@ -18,4 +19,5 @@ export {
     address, socialAccounts, me,
     experiencesData,
     projectsData, universityProjectsData, worksInProgressProjectsData,
+    publicationsData,
 };
