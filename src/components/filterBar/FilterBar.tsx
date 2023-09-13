@@ -1,9 +1,8 @@
 import './FilterBar.css';
-import Select, { MultiValue, Theme } from "react-select";
+import Select, { MultiValue, OptionsOrGroups, Theme } from "react-select";
 import makeAnimated from 'react-select/animated';
 import { CSSProperties } from "styled-components";
 import { GroupedOption, KeywordOption, LanguageOption } from "../../model/Options";
-import { groupedOptions } from "../../data";
 
 // animation on select
 const animatedComponents = makeAnimated();
@@ -33,7 +32,7 @@ const formatGroupLabel = (data: GroupedOption) => (
     </div>
 );
 
-const ProjectsFilterBar = ({onChange}: { onChange: (value: MultiValue<LanguageOption | KeywordOption>) => void; }) => {
+const ProjectsFilterBar = ({onChange, options}: { onChange: (value: MultiValue<LanguageOption | KeywordOption>) => void, options?: OptionsOrGroups<LanguageOption | KeywordOption, GroupedOption> }) => {
     function customTheme(theme: Theme) {
         return {
             ...theme,
@@ -52,7 +51,7 @@ const ProjectsFilterBar = ({onChange}: { onChange: (value: MultiValue<LanguageOp
         name="projects-search-bar" className="multi-select" classNamePrefix="select" isMulti
         closeMenuOnSelect={false} closeMenuOnScroll={true} placeholder="Select options to filter projects"
         noOptionsMessage={() => "No more languages or keywords to select 😢"} components={animatedComponents}
-        options={groupedOptions} formatGroupLabel={formatGroupLabel} onChange={onChange} theme={customTheme}
+        options={options} formatGroupLabel={formatGroupLabel} onChange={onChange} theme={customTheme}
         aria-label="Searchable select"
     />
 };

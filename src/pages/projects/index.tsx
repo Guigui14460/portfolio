@@ -6,10 +6,10 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import Card from '../../components/card';
 import Grid from '../../components/grid';
 import { ProjectAuthorTooltipContent } from '../../components/tooltips';
-import ProjectsFilterBar from './FilterBar';
+import ProjectsFilterBar from '../../components/filterBar/FilterBar';
 import { hasLanguagesOrKeywords } from '../../model/Project';
 import { KeywordOption, LanguageOption } from '../../model/Options';
-import { authorsList, projectsData, universityProjectsData } from '../../data';
+import { authorsList, groupedOptions, projectsData, universityProjectsData } from '../../data';
 library.add(faGlobe);
 
 const ProjectsPage = () => {
@@ -29,7 +29,7 @@ const ProjectsPage = () => {
         <h1>Projects</h1>
         <p style={{ color: "#c51010", fontWeight: 700 }}>Only large projects are present. To have more, I advise you to look at my github and gitlab profiles to see a larger panel of projects (small as well as large).</p>
         <p style={{ color: "#bfa110", fontWeight: 700 }}>Each section are ordered by most recent to more older.</p>
-        <ProjectsFilterBar onChange={setFilters} />
+        <ProjectsFilterBar onChange={setFilters} options={groupedOptions} />
 
         {
             universityProjectsGrid.length !== 0 && 
