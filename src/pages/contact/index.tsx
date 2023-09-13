@@ -42,11 +42,17 @@ const ContactPage = () => {
         </section>
         <section id="mail">
             <h2>Via email (recommended)</h2>
-            <p>You can contact me at this email address: <a className="link" href={`mailto:${emailAddress}`} >{emailAddress}</a></p>
-            <p>If you don't want your message to be read by anyone, I encourage you to use my Proton email address which is <a href={`mailto:letellier.guillaume@protonmail.com`} className="link">letellier.guillaume@protonmail.com</a></p>
+            <p>There is several email addresses where I can be reached:</p>
+            <ul>
+                Professional addresses:
+                <li><a className="link" href="mailto:guillaume.letellier@unicaen.fr" >guillaume.letellier@unicaen.fr</a></li>
+                Personal addresses:
+                <li><a className="link" href={`mailto:${emailAddress}`} >{emailAddress}</a></li>
+                <li><a className="link" href="mailto:letellier.guillaume@protonmail.com" >letellier.guillaume@protonmail.com</a></li>
+            </ul>
         </section>
         <section id="social-networks">
-            <h2>Via social networks (recommended)</h2>
+            <h2>Via social networks</h2>
             <p>You can contact me via different social networks:</p>
             <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-evenly", alignItems: "center"}}>
                 {socialAccounts.map<JSX.Element>(value => {return <SocialDiv key={value.name.split(" ").join("-")} href={value.url} rel="noreferrer" target="_blank" >
