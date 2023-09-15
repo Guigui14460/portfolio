@@ -98,7 +98,13 @@ const PublicationsPage = () => {
 
     return <>
         <h1>Publications</h1>
-        <ProjectsFilterBar onChange={setFilters} options={publicationGroupedOptions} />
+        <ProjectsFilterBar
+            onChange={setFilters}
+            options={publicationGroupedOptions}
+            name="publications-search-bar"
+            noOptionsMessage="No more keywords to select 😢"
+            placeholder="Select options to filter publications"
+        />
         <Marginer direction='vertical' margin={20} />
 
         {publicationsGrid}

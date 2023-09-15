@@ -29,7 +29,13 @@ const ProjectsPage = () => {
         <h1>Projects</h1>
         <p style={{ color: "#c51010", fontWeight: 700 }}>Only large projects are present. To have more, I advise you to look at my github and gitlab profiles to see a larger panel of projects (small as well as large).</p>
         <p style={{ color: "#bfa110", fontWeight: 700 }}>Each section are ordered by most recent to more older.</p>
-        <ProjectsFilterBar onChange={setFilters} options={groupedOptions} />
+        <ProjectsFilterBar
+            onChange={setFilters}
+            options={groupedOptions}
+            name="projects-search-bar"
+            noOptionsMessage="No more languages or keywords to select 😢"
+            placeholder="Select options to filter projects"
+        />
 
         {
             universityProjectsGrid.length !== 0 && 

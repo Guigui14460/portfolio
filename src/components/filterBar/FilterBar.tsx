@@ -32,7 +32,19 @@ const formatGroupLabel = (data: GroupedOption) => (
     </div>
 );
 
-const ProjectsFilterBar = ({onChange, options}: { onChange: (value: MultiValue<LanguageOption | KeywordOption>) => void, options?: OptionsOrGroups<LanguageOption | KeywordOption, GroupedOption> }) => {
+const ProjectsFilterBar = ({
+    onChange,
+    name,
+    placeholder,
+    noOptionsMessage,
+    options,
+}: {
+    onChange: (value: MultiValue<LanguageOption | KeywordOption>) => void,
+    name: string,
+    placeholder: string,
+    noOptionsMessage: string,
+    options?: OptionsOrGroups<LanguageOption | KeywordOption, GroupedOption>,
+}) => {
     function customTheme(theme: Theme) {
         return {
             ...theme,
@@ -48,9 +60,9 @@ const ProjectsFilterBar = ({onChange, options}: { onChange: (value: MultiValue<L
 
     return <Select<LanguageOption | KeywordOption, true, GroupedOption> 
         isDisabled={false} isLoading={false} isClearable isRtl={false} isSearchable
-        name="projects-search-bar" className="multi-select" classNamePrefix="select" isMulti
-        closeMenuOnSelect={false} closeMenuOnScroll={true} placeholder="Select options to filter projects"
-        noOptionsMessage={() => "No more languages or keywords to select 😢"} components={animatedComponents}
+        name={name} className="multi-select" classNamePrefix="select" isMulti
+        closeMenuOnSelect={false} closeMenuOnScroll={true} placeholder={placeholder}
+        noOptionsMessage={() => noOptionsMessage} components={animatedComponents}
         options={options} formatGroupLabel={formatGroupLabel} onChange={onChange} theme={customTheme}
         aria-label="Searchable select"
     />
