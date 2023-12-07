@@ -144,7 +144,7 @@ const SkillsPage = () => {
         <Marginer direction='vertical' margin={8} />
         <Accordion title='Annual project 2nd year of MSc' id="annual-project-m2" isOpen={id === annualProjectIds.indexOf("annual-project-m2")}>
           <>
-            <h4><Link to="/documents/annual_project_report_5th_year.pdf" className="link">Automatic segmentation of soft tissue flaps by artificial intelligence for postoperative radiotherapy of head and neck cancer patients</Link></h4>
+            <h4>Automatic segmentation of soft tissue flaps by artificial intelligence for postoperative radiotherapy of head and neck cancer patients</h4>
             <p className="justify">
               The main goal of this project, proposed by <a className='link' href="https://chahir.users.greyc.fr/" target="_blank" rel="noreferrer">Youssef Chahir</a>&nbsp;
               and <a className='link' href="https://lechervy.users.greyc.fr/" target="_blank" rel="noreferrer">Alexis Lechervy</a> from  the <a className='link' href="https://www.greyc.fr/en/equipes/image/" target="_blank" rel="noreferrer">IMAGE team</a>&nbsp;
