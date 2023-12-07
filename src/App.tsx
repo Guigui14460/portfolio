@@ -9,6 +9,7 @@ import { DotsLoader } from './components/loader';
 const HomePageComponent = lazy(() => import("./pages/home"));
 const ProjectsPageComponent = lazy(() => import("./pages/projects"));
 const PublicationsPageComponent = lazy(() => import("./pages/publications"));
+const TeachingPageComponent = lazy(() => import("./pages/teaching"));
 const AboutPageComponent = lazy(() => import("./pages/about"));
 const ContactPageComponent = lazy(() => import("./pages/contact"));
 const SkillsPageComponent = lazy(() => import("./pages/skills"));
@@ -40,6 +41,7 @@ function App() {
           <Route path="/projects" exact component={() => <Page element={<ProjectsPageComponent />} />} />
           <Route path="/publications" exact component={() => <Page element={<PublicationsPageComponent />} />} />
           <Route path="/skills" exact component={() => <Page element={<SkillsPageComponent />} />} />
+          <Route path="/teaching" exact component={() => <Page element={<TeachingPageComponent />} />} />
           <Route render={() => <Redirect to="/" />} />
         </Switch>
       </main>

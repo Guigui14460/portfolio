@@ -5,7 +5,7 @@ import Marginer from "../marginer";
 import { deviceSize } from "../Responsive";
 
 const NavbarContainer = styled.nav<{ useTransparent: boolean, verySmallMobile: boolean }>`
-    height: ${({ verySmallMobile }) => (!verySmallMobile ? "65px" : "65px")};
+    height: ${({ verySmallMobile }) => (!verySmallMobile ? "65px" : "auto")};
     display: ${({ verySmallMobile }) => (!verySmallMobile ? "flex" : "block")};
     text-align: ${({ verySmallMobile }) => (!verySmallMobile ? "initial" : "center")};
     align-items: center;
@@ -19,6 +19,7 @@ const AccessibilityContainer = styled.div<{ verySmallMobile: boolean }>`
     align-items: center;
     justify-content: ${({ verySmallMobile }) => (!verySmallMobile ? "initial" : "center")};
     margin-top: ${({ verySmallMobile }) => (!verySmallMobile ? "initial" : "1em")};
+    flex-wrap: wrap;
 `;
 
 const AnchorLink = styled(NavLink)<{ fontSize: number | undefined }>`
@@ -51,12 +52,14 @@ const BrandLogo = styled(Link)<{ fontSize: number | undefined }>`
 
 const Navbar = (props: { useTransparent: boolean; }) => {
     const { useTransparent } = props;
-    const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
-    const verySmallMobile = useMediaQuery({ maxWidth: 360 });
+    const isMobile = useMediaQuery({ maxWidth: deviceSize.tablet });
+    const verySmallMobile = useMediaQuery({ maxWidth: 650 });
     return <NavbarContainer verySmallMobile={verySmallMobile} className="container" useTransparent={useTransparent}>
         <BrandLogo fontSize={!isMobile ? 22 : undefined} to="/">Guillaume Letellier</BrandLogo>
         <AccessibilityContainer verySmallMobile={verySmallMobile}>
             <AnchorLink fontSize={!isMobile ? 16 : undefined} activeClassName="active" to="/publications">Publications</AnchorLink>
+            <Marginer direction="horizontal" margin={10} />
+            <AnchorLink fontSize={!isMobile ? 16 : undefined} activeClassName="active" to="/teaching">Teaching</AnchorLink>
             <Marginer direction="horizontal" margin={10} />
             <AnchorLink fontSize={!isMobile ? 16 : undefined} activeClassName="active" to="/projects">Projects</AnchorLink>
             <Marginer direction="horizontal" margin={10} />
