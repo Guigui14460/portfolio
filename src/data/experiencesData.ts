@@ -60,7 +60,7 @@ export const experiencesData: ExpType[] = [
         entreprise: "GREYC (affiliated to University of Caen Normandy)",
         entrepriseLogo: "/images/enterprises/greyc-unicaen.webp",
         entrepriseUrl: "https://www.greyc.fr/",
-        keywords: ["computer vision", "deep learning", "self-supervision", "3D point cloud"],
+        keywords: ["computer vision", "deep learning", "self-supervision", "representation learning", "3D point cloud"],
 
         description: "The main objective of this thesis is to improve existing methods and develop new, more efficient methods in the field of neural networks for 3D point clouds. More specifically, my work will aim to cover a part called \"self-supervised learning of representations\" which makes it possible to learn general features of 3D objects using no labelled data via one or more pretextual tasks. Such models can then be used as information encoders for a more precise target task.",
         subject: "Self-supervised learning of 3D point cloud representations",
@@ -70,6 +70,12 @@ export const experiencesData: ExpType[] = [
                 lastName: "Jurie",
                 jobDescription: "University Professor, reasearcher at GREYC in Artificial Intelligence applied to Computer Vision",
                 url: "https://jurie.users.greyc.fr/",
+            },
+            {
+                firstName: "Gaurav",
+                lastName: "Sharma",
+                jobDescription: "Head of AI Research at Typeface, reasearcher in Artificial Intelligence applied to Computer Vision",
+                url: "https://grvsharma.com/",
             },
         ],
     }

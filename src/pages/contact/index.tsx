@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { emailAddress, phoneLongVersion, phoneShortVersion, socialAccounts } from '../../data';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
-library.add(faPhone);
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+library.add(faPhone, faBriefcase);
 
 const SocialDiv = styled.a`
     display: flex;
@@ -67,6 +68,9 @@ const ContactPage = () => {
             <ul style={{ listStyle: "none", fontSize: 17 }}>
                 <ListElement>
                     <FontAwesomeIcon iconName="phone" type="solid" size="1x" /> <a className="link" href={`tel:${phoneShortVersion}`}>{phoneLongVersion}</a>
+                </ListElement>
+                <ListElement>
+                    <FontAwesomeIcon iconName="briefcase" type="solid" size="1x" />&nbsp;<a rel="noreferrer" target="_blank" href="https://www.google.com/maps/place/Laboratoire+GREYC/@49.2144937,-0.3697877,17.64z/data=!4m6!3m5!1s0x480a5d47a4bb051d:0xaaaf93ededd034fb!8m2!3d49.214891!4d-0.368952!16s%2Fg%2F11b7720l9j?entry=ttu">GREYC - UMR CNRS 6072 - University of Caen Normandy - 6 Boulevard du Maréchal Juin - ENSICAEN Building F - Office FB224</a>
                 </ListElement>
             </ul>
         </section>
