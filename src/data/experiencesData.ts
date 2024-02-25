@@ -2,26 +2,32 @@ import { ExpType } from "../model/Experience";
 
 export const experiencesData: ExpType[] = [
     {
-        employementType: "Technical Intern",
-        title: "Data Scientist",
-        from: "April 2021",
-        to: "June 2021",
+        employementType: "Research",
+        title: "PhD Student",
+        from: "September 2023",
+        to: "August 2026",
         location: "Caen, France",
-        entreprise: "Orange Labs",
-        entrepriseLogo: "/images/enterprises/orange.webp",
-        entrepriseUrl: "https://www.orange.com",
-        keywords: ["machine learning", "deep learning", "simulation", "finance", "data science"],
-        
-        description: "I explored and visualized data from the production platform. From this, I then created a test simulator generating financial transactions in order to create Machine Learning models to verify the realism of this simulator. Then, I interpreted these models in order to continuously improve the simulator. Finally, I used Deep Learning techniques to go further in the realism analysis.",
-        subject: "Development of a demonstrator in Python as part of research work on the simulation of financial transactions",
-        referents: [{
-            firstName: "Étienne",
-            lastName: "Daspe",
-            jobDescription: "Software engineer",
-            url: "https://fr.linkedin.com/in/etiennedaspe",
-        }],
-        associatedTo: "Orange Money",
-        associatedToUrl: "https://orangemoney.fr/",
+        entreprise: "GREYC (affiliated to University of Caen Normandy)",
+        entrepriseLogo: "/images/enterprises/greyc-unicaen.webp",
+        entrepriseUrl: "https://www.greyc.fr/",
+        keywords: ["computer vision", "deep learning", "self-supervision", "representation learning", "3D point cloud"],
+
+        description: "The main objective of this thesis is to improve existing methods and develop new, more efficient methods in the field of neural networks for 3D point clouds. More specifically, my work will aim to cover a part called \"self-supervised learning of representations\" which makes it possible to learn general features of 3D objects using no labelled data via one or more pretextual tasks. Such models can then be used as information encoders for a more precise target task.",
+        subject: "Self-supervised learning of 3D point cloud representations",
+        referents: [
+            {
+                firstName: "Frédéric",
+                lastName: "Jurie",
+                jobDescription: "University Professor, reasearcher at GREYC in Artificial Intelligence applied to Computer Vision",
+                url: "https://jurie.users.greyc.fr/",
+            },
+            {
+                firstName: "Gaurav",
+                lastName: "Sharma",
+                jobDescription: "Head of AI Research at Typeface, reasearcher in Artificial Intelligence applied to Computer Vision",
+                url: "https://grvsharma.com/",
+            },
+        ],
     },
     {
         employementType: "Research Intern",
@@ -52,31 +58,25 @@ export const experiencesData: ExpType[] = [
         ],
     },
     {
-        employementType: "Research",
-        title: "PhD Student",
-        from: "September 2023",
-        to: "August 2026",
+        employementType: "Technical Intern",
+        title: "Data Scientist",
+        from: "April 2021",
+        to: "June 2021",
         location: "Caen, France",
-        entreprise: "GREYC (affiliated to University of Caen Normandy)",
-        entrepriseLogo: "/images/enterprises/greyc-unicaen.webp",
-        entrepriseUrl: "https://www.greyc.fr/",
-        keywords: ["computer vision", "deep learning", "self-supervision", "representation learning", "3D point cloud"],
-
-        description: "The main objective of this thesis is to improve existing methods and develop new, more efficient methods in the field of neural networks for 3D point clouds. More specifically, my work will aim to cover a part called \"self-supervised learning of representations\" which makes it possible to learn general features of 3D objects using no labelled data via one or more pretextual tasks. Such models can then be used as information encoders for a more precise target task.",
-        subject: "Self-supervised learning of 3D point cloud representations",
-        referents: [
-            {
-                firstName: "Frédéric",
-                lastName: "Jurie",
-                jobDescription: "University Professor, reasearcher at GREYC in Artificial Intelligence applied to Computer Vision",
-                url: "https://jurie.users.greyc.fr/",
-            },
-            {
-                firstName: "Gaurav",
-                lastName: "Sharma",
-                jobDescription: "Head of AI Research at Typeface, reasearcher in Artificial Intelligence applied to Computer Vision",
-                url: "https://grvsharma.com/",
-            },
-        ],
+        entreprise: "Orange Labs",
+        entrepriseLogo: "/images/enterprises/orange.webp",
+        entrepriseUrl: "https://www.orange.com",
+        keywords: ["machine learning", "deep learning", "simulation", "finance", "data science"],
+        
+        description: "I explored and visualized data from the production platform. From this, I then created a test simulator generating financial transactions in order to create Machine Learning models to verify the realism of this simulator. Then, I interpreted these models in order to continuously improve the simulator. Finally, I used Deep Learning techniques to go further in the realism analysis.",
+        subject: "Development of a demonstrator in Python as part of research work on the simulation of financial transactions",
+        referents: [{
+            firstName: "Étienne",
+            lastName: "Daspe",
+            jobDescription: "Software engineer",
+            url: "https://fr.linkedin.com/in/etiennedaspe",
+        }],
+        associatedTo: "Orange Money",
+        associatedToUrl: "https://orangemoney.fr/",
     }
 ];

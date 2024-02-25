@@ -82,7 +82,7 @@ const HomePage = () => {
         </section>
         <section>
             <h2>Professional experience</h2>
-            {experiencesData.toReversed().map((value, index) => {
+            {experiencesData.map((value, index) => {
                 const gridRowStyle: CSSProperties = { justifyContent: "center", maxWidth: "100%" };
                 if(matchesMobileDevice) {
                     gridRowStyle.backgroundColor = "var(--background-color-darker)";
