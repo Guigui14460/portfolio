@@ -36,25 +36,12 @@ const AboutPage = () => {
                 <li>From Sep 2011 to July 2015: Henri Sellier Lower Secondary School, <a href="https://www.colombelles.fr/" target="_blank" rel="noreferrer" className="link">Colombelles</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a></li>
                 <li>
                     From Sep 2015 to July 2018: <a href="https://lycee-salvador-allende.etab.ac-caen.fr/" target="_blank" rel="noreferrer" className="link">Salvador Allende High School</a>, <a href="https://www.herouville.net/"  target="_blank" rel="noreferrer" className="link">Hérouville-Saint-Clair</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a>
-                    <ul>
-                        <li><a target="_blank" className='link' href="/documents/high_school_diploma.pdf">High School diploma (scientific option)</a></li>
-                    </ul>
                 </li>
                 <li>
                     From Sep 2018 to June 2021: <a href="https://www.unicaen.fr/" target="_blank" rel="noreferrer" className="link">University of Caen Normandy</a>, <a href="https://caen.fr/" target="_blank" rel="noreferrer" className="link">Caen</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a> (BSc in Computer Science)
-                    <ul>
-                        <li><a target="_blank" className='link' href="/documents/bachelor_diploma.jpg">Bachelor Science diploma</a></li>
-                        <li><a target="_blank" className='link' href="/documents/university_first_year.pdf">Marks of 1st year</a></li>
-                        <li><a target="_blank" className='link' href="/documents/university_second_year.pdf">Marks of 2nd year</a></li>
-                        <li><a target="_blank" className='link' href="/documents/university_third_year.pdf">Marks of 3rd year</a></li>
-                    </ul>
                 </li>
                 <li>
                     From Sep 2021 to Today: <a href="https://www.unicaen.fr/" target="_blank" rel="noreferrer" className="link">University of Caen Normandy</a>, <a href="https://caen.fr/" target="_blank" rel="noreferrer" className="link">Caen</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a> (MSc in Computer Science)
-                    <ul>
-                        <li><a target="_blank" className='link' href="/documents/university_fourth_year.pdf">Marks of 1st year in MSc</a></li>
-                        <li>Marks of 2nd year in MSc: <a target="_blank" className='link' href="/documents/university_fifth_year_semester1.pdf">1<sup>st</sup> semester</a> | <a target="_blank" className='link' href="/documents/university_fifth_year_semester2.pdf">2<sup>nd</sup> semester</a></li>
-                    </ul>
                 </li>
             </ul>
         </section>
