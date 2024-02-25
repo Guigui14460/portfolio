@@ -41,7 +41,10 @@ const AboutPage = () => {
                     From Sep 2018 to June 2021: <a href="https://www.unicaen.fr/" target="_blank" rel="noreferrer" className="link">University of Caen Normandy</a>, <a href="https://caen.fr/" target="_blank" rel="noreferrer" className="link">Caen</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a> (BSc in Computer Science)
                 </li>
                 <li>
-                    From Sep 2021 to Today: <a href="https://www.unicaen.fr/" target="_blank" rel="noreferrer" className="link">University of Caen Normandy</a>, <a href="https://caen.fr/" target="_blank" rel="noreferrer" className="link">Caen</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a> (MSc in Computer Science)
+                    From Sep 2021 to Sep 2023: <a href="https://www.unicaen.fr/" target="_blank" rel="noreferrer" className="link">University of Caen Normandy</a>, <a href="https://caen.fr/" target="_blank" rel="noreferrer" className="link">Caen</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a> (MSc in Computer Science)
+                </li>
+                <li>
+                    From Sep 2023 to today: <a href="https://www.unicaen.fr/" target="_blank" rel="noreferrer" className="link">University of Caen Normandy</a>, <a href="https://caen.fr/" target="_blank" rel="noreferrer" className="link">Caen</a>, <a href="https://en.wikipedia.org/wiki/France" target="_blank" rel="noreferrer" className="link">France</a> (PhD in Computer Science)
                 </li>
             </ul>
         </section>
