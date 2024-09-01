@@ -32,7 +32,7 @@ const formatGroupLabel = (data: GroupedOption) => (
     </div>
 );
 
-const ProjectsFilterBar = ({
+const ObjectFilterBar = ({
     onChange,
     name,
     placeholder,
@@ -68,4 +68,4 @@ const ProjectsFilterBar = ({
     />
 };
 
-export default ProjectsFilterBar;
+export default ObjectFilterBar;

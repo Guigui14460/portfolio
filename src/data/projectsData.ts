@@ -5,18 +5,18 @@ import { me } from "./generalData";
 import languageInformations from "./languagesData";
 
 export const projectsData: Project[] = [
-    {
-        date: 2024,
-        type: "personal",
-        name: "Quantum Machine Learning",
-        description: "Training in the more advanced use of quantum computing (theoretical and practical) to create quantum AIs for a variety of applications and through different learning paradigms (supervised, self-supervised, etc.).",
-        leader: me,
-        authors: getOnlyAuthors([me]),
-        languages: [languageInformations["python"]],
-        isPrivate: true,
-        notFinished: true,
-        keywords: ["artificial intelligence", "machine learning", "deep learning", "pennylane"],
-    },
+    // {
+    //     date: 2024,
+    //     type: "personal",
+    //     name: "Quantum Machine Learning",
+    //     description: "Training in the more advanced use of quantum computing (theoretical and practical) to create quantum AIs for a variety of applications and through different learning paradigms (supervised, self-supervised, etc.).",
+    //     leader: me,
+    //     authors: getOnlyAuthors([me]),
+    //     languages: [languageInformations["python"]],
+    //     isPrivate: true,
+    //     notFinished: true,
+    //     keywords: ["artificial intelligence", "machine learning", "deep learning", "pennylane"],
+    // },
     {
         date: 2022,
         type: "personal",
@@ -38,7 +38,6 @@ export const projectsData: Project[] = [
         authors: getOnlyAuthors([authorsList.get("eg"), me]),
         languages: [languageInformations["typescript"], languageInformations["sass"]],
         isPrivate: true,
-        notFinished: true,
         keywords: ["nodejs", "nextjs", "web development", "e-commerce"],
     },
     {

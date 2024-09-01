@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { MultiValue } from 'react-select';
-import ProjectsFilterBar from '../../components/filterBar/FilterBar';
+import ObjectFilterBar from '../../components/filterBar/FilterBar';
 import { Publication, hasLanguagesOrKeywords } from '../../model/Publication';
 import { KeywordOption } from '../../model/Options';
 import { publicationsData } from '../../data';
@@ -98,7 +98,7 @@ const PublicationsPage = () => {
 
     return <>
         <h1>Publications</h1>
-        <ProjectsFilterBar
+        <ObjectFilterBar
             onChange={setFilters}
             options={publicationGroupedOptions}
             name="publications-search-bar"
